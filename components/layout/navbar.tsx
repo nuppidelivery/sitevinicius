@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export function Navbar() {
   return (
@@ -20,10 +21,10 @@ export function Navbar() {
         </div>
 
         <nav className="hidden md:flex items-center gap-8">
-          <a href="#" className="text-sm font-medium text-muted hover:text-foreground transition-colors">Serviços</a>
-          <a href="#" className="text-sm font-medium text-muted hover:text-foreground transition-colors">Cases</a>
-          <a href="#" className="text-sm font-medium text-muted hover:text-foreground transition-colors">Método</a>
-          <a href="#" className="text-sm font-medium text-muted hover:text-foreground transition-colors">Sobre</a>
+          <Link href="#" className="text-sm font-medium text-muted hover:text-foreground transition-colors">Serviços</Link>
+          <Link href="#" className="text-sm font-medium text-muted hover:text-foreground transition-colors">Cases</Link>
+          <Link href="#" className="text-sm font-medium text-muted hover:text-foreground transition-colors">Método</Link>
+          <Link href="#" className="text-sm font-medium text-muted hover:text-foreground transition-colors">Sobre</Link>
         </nav>
 
         <div className="flex items-center gap-4">

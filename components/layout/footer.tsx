@@ -1,4 +1,5 @@
 import { ArrowRight, Github, Instagram, Linkedin, Twitter } from "lucide-react";
+import Link from "next/link";
 
 export function Footer() {
   return (
@@ -17,30 +18,30 @@ export function Footer() {
               A agência parceira para empresas que exigem alta performance, design de elite e engenharia de conversão.
             </p>
             <div className="flex items-center gap-4 text-muted">
-              <a href="#" className="hover:text-primary transition-colors"><Instagram className="w-5 h-5" /></a>
-              <a href="#" className="hover:text-primary transition-colors"><Linkedin className="w-5 h-5" /></a>
-              <a href="#" className="hover:text-primary transition-colors"><Twitter className="w-5 h-5" /></a>
-              <a href="#" className="hover:text-primary transition-colors"><Github className="w-5 h-5" /></a>
+              <Link href="#" className="hover:text-primary transition-colors"><Instagram className="w-5 h-5" /></Link>
+              <Link href="#" className="hover:text-primary transition-colors"><Linkedin className="w-5 h-5" /></Link>
+              <Link href="#" className="hover:text-primary transition-colors"><Twitter className="w-5 h-5" /></Link>
+              <Link href="#" className="hover:text-primary transition-colors"><Github className="w-5 h-5" /></Link>
             </div>
           </div>
 
           <div>
             <h4 className="font-bold mb-6 text-foreground">Especialidades</h4>
             <ul className="space-y-4 text-sm text-muted">
-              <li><a href="#" className="hover:text-primary transition-colors">Web Development</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Performance Marketing</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Growth & CRO</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Automação com IA</a></li>
+              <li><Link href="#" className="hover:text-primary transition-colors">Web Development</Link></li>
+              <li><Link href="#" className="hover:text-primary transition-colors">Performance Marketing</Link></li>
+              <li><Link href="#" className="hover:text-primary transition-colors">Growth & CRO</Link></li>
+              <li><Link href="#" className="hover:text-primary transition-colors">Automação com IA</Link></li>
             </ul>
           </div>
 
           <div>
             <h4 className="font-bold mb-6 text-foreground">Empresa</h4>
             <ul className="space-y-4 text-sm text-muted">
-              <li><a href="#" className="hover:text-primary transition-colors">Sobre nós</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Cases de Sucesso</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Carreiras</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Contato</a></li>
+              <li><Link href="#" className="hover:text-primary transition-colors">Sobre nós</Link></li>
+              <li><Link href="#" className="hover:text-primary transition-colors">Cases de Sucesso</Link></li>
+              <li><Link href="#" className="hover:text-primary transition-colors">Carreiras</Link></li>
+              <li><Link href="#" className="hover:text-primary transition-colors">Contato</Link></li>
             </ul>
           </div>
 
@@ -64,8 +65,8 @@ export function Footer() {
         <div className="border-t border-surface-border pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-muted">
           <p>© {new Date().getFullYear()} Vorté Agência. Todos os direitos reservados.</p>
           <div className="flex gap-4">
-            <a href="#" className="hover:text-foreground transition-colors">Termos de Uso</a>
-            <a href="#" className="hover:text-foreground transition-colors">Política de Privacidade</a>
+            <Link href="#" className="hover:text-foreground transition-colors">Termos de Uso</Link>
+            <Link href="#" className="hover:text-foreground transition-colors">Política de Privacidade</Link>
           </div>
         </div>
       </div>
