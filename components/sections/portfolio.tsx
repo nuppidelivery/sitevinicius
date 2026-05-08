@@ -27,7 +27,7 @@ const projects = [
 
 export function Portfolio() {
   return (
-    <section className="py-32 relative">
+    <section id="cases" className="py-32 relative">
       <div className="container mx-auto px-4">
         
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">

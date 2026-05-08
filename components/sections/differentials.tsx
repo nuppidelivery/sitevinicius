@@ -14,7 +14,7 @@ const features = [
 
 export function Differentials() {
   return (
-    <section className="py-32 bg-surface/20 relative overflow-hidden">
+    <section id="sobre" className="py-32 bg-surface/20 relative overflow-hidden">
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-secondary/10 blur-[120px] rounded-full pointer-events-none" />
       
       <div className="container mx-auto px-4 relative z-10">

@@ -50,11 +50,11 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
         >
-          <Button size="lg" className="group">
+          <Button size="lg" className="group" onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })}>
             Solicitar diagnóstico gratuito
             <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Button>
-          <Button variant="glass" size="lg">
+          <Button variant="glass" size="lg" onClick={() => document.getElementById('cases')?.scrollIntoView({ behavior: 'smooth' })}>
             <Play className="mr-2 h-4 w-4" />
             Ver projetos
           </Button>

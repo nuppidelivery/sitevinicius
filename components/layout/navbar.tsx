@@ -21,15 +21,15 @@ export function Navbar() {
         </div>
 
         <nav className="hidden md:flex items-center gap-8">
-          <Link href="#" className="text-sm font-medium text-muted hover:text-foreground transition-colors">Serviços</Link>
-          <Link href="#" className="text-sm font-medium text-muted hover:text-foreground transition-colors">Cases</Link>
-          <Link href="#" className="text-sm font-medium text-muted hover:text-foreground transition-colors">Método</Link>
-          <Link href="#" className="text-sm font-medium text-muted hover:text-foreground transition-colors">Sobre</Link>
+          <Link href="#servicos" className="text-sm font-medium text-muted hover:text-foreground transition-colors">Serviços</Link>
+          <Link href="#cases" className="text-sm font-medium text-muted hover:text-foreground transition-colors">Cases</Link>
+          <Link href="#metodo" className="text-sm font-medium text-muted hover:text-foreground transition-colors">Método</Link>
+          <Link href="#sobre" className="text-sm font-medium text-muted hover:text-foreground transition-colors">Sobre</Link>
         </nav>
 
         <div className="flex items-center gap-4">
-          <Button variant="ghost" className="hidden sm:inline-flex">Entrar</Button>
-          <Button size="sm">Começar Agora</Button>
+          <Button variant="ghost" className="hidden sm:inline-flex" onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })}>Entrar</Button>
+          <Button size="sm" onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })}>Começar Agora</Button>
         </div>
       </div>
     </motion.header>
