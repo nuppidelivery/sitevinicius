@@ -16,7 +16,7 @@ export function Logo({ className = "" }: { className?: string }) {
         <path 
           d="M 2 2 L 16 2 L 28 32 L 40 2 L 54 2 L 28 44 Z" 
           fill="none" 
-          stroke="currentColor" 
+          stroke="#F5F5F5" 
           strokeWidth="1.5" 
           strokeLinejoin="round"
         />
@@ -34,13 +34,13 @@ export function Logo({ className = "" }: { className?: string }) {
       <div className="flex flex-col justify-center pt-1">
         <span 
           className="font-heading font-bold text-xl leading-none tracking-[0.15em] text-transparent" 
-          style={{ WebkitTextStroke: '1px currentColor' }}
+          style={{ WebkitTextStroke: '1px #F5F5F5' }}
         >
           VINÍCIUS
         </span>
         <span 
           className="font-heading font-bold text-xl leading-[1.1] tracking-[0.15em] text-transparent" 
-          style={{ WebkitTextStroke: '1px currentColor' }}
+          style={{ WebkitTextStroke: '1px #F5F5F5' }}
         >
           VALENTE
         </span>
