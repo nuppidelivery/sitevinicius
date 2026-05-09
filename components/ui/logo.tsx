@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export function Logo({ className = "" }: { className?: string }) {
   return (
-    <div className={`flex items-center gap-3 ${className}`}>
+    <div className={`flex items-center gap-3 bg-white px-4 py-2 rounded-lg ${className}`}>
       {/* SVG Icon */}
       <svg 
         width="60" 
@@ -12,10 +12,10 @@ export function Logo({ className = "" }: { className?: string }) {
         xmlns="http://www.w3.org/2000/svg"
         className="shrink-0"
       >
-        {/* V Esquerdo (Outline preto, fill branco) */}
+        {/* V Esquerdo (Vazado com contorno preto) */}
         <path 
           d="M 2 2 L 16 2 L 28 32 L 40 2 L 54 2 L 28 44 Z" 
-          fill="#FFFFFF" 
+          fill="transparent" 
           stroke="#000000" 
           strokeWidth="1.5" 
           strokeLinejoin="round"
@@ -30,18 +30,18 @@ export function Logo({ className = "" }: { className?: string }) {
       {/* Textos */}
       <div className="flex flex-col justify-center pt-1">
         <span 
-          className="font-heading font-bold text-xl leading-none tracking-[0.15em]" 
-          style={{ WebkitTextStroke: '1px #000000', color: '#FFFFFF' }}
+          className="font-heading font-bold text-xl leading-none tracking-[0.15em] text-transparent" 
+          style={{ WebkitTextStroke: '1px #000000' }}
         >
           VINÍCIUS
         </span>
         <span 
-          className="font-heading font-bold text-xl leading-[1.1] tracking-[0.15em]" 
-          style={{ WebkitTextStroke: '1px #000000', color: '#FFFFFF' }}
+          className="font-heading font-bold text-xl leading-[1.1] tracking-[0.15em] text-transparent" 
+          style={{ WebkitTextStroke: '1px #000000' }}
         >
           VALENTE
         </span>
-        <span className="text-primary text-[0.55rem] font-bold tracking-[0.12em] mt-0.5">
+        <span className="text-[#1DB954] text-[0.55rem] font-bold tracking-[0.12em] mt-0.5">
           MARKETING DE PERFORMANCE
         </span>
       </div>
