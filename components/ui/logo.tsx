@@ -12,35 +12,32 @@ export function Logo({ className = "" }: { className?: string }) {
         xmlns="http://www.w3.org/2000/svg"
         className="shrink-0"
       >
-        {/* V Esquerdo (Outline) */}
+        {/* V Esquerdo (Outline preto, fill branco) */}
         <path 
           d="M 2 2 L 16 2 L 28 32 L 40 2 L 54 2 L 28 44 Z" 
-          fill="none" 
-          stroke="#F5F5F5" 
+          fill="#FFFFFF" 
+          stroke="#000000" 
           strokeWidth="1.5" 
           strokeLinejoin="round"
         />
-        {/* V Direito (Verde Sólido com borda escura para criar o recorte) */}
+        {/* V Direito (Verde Sólido, sem stroke) */}
         <path 
           d="M 22 22 L 32 22 L 44 44 L 56 2 L 68 2 L 44 56 Z" 
           fill="#1DB954" 
-          stroke="#0D0D0D" 
-          strokeWidth="4" 
-          strokeLinejoin="round"
         />
       </svg>
 
       {/* Textos */}
       <div className="flex flex-col justify-center pt-1">
         <span 
-          className="font-heading font-bold text-xl leading-none tracking-[0.15em] text-transparent" 
-          style={{ WebkitTextStroke: '1px #F5F5F5' }}
+          className="font-heading font-bold text-xl leading-none tracking-[0.15em]" 
+          style={{ WebkitTextStroke: '1px #000000', color: '#FFFFFF' }}
         >
           VINÍCIUS
         </span>
         <span 
-          className="font-heading font-bold text-xl leading-[1.1] tracking-[0.15em] text-transparent" 
-          style={{ WebkitTextStroke: '1px #F5F5F5' }}
+          className="font-heading font-bold text-xl leading-[1.1] tracking-[0.15em]" 
+          style={{ WebkitTextStroke: '1px #000000', color: '#FFFFFF' }}
         >
           VALENTE
         </span>
