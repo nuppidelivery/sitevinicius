@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { Logo } from "@/components/ui/logo";
 
 export function Navbar() {
   return (
@@ -12,13 +13,9 @@ export function Navbar() {
       className="fixed top-0 left-0 right-0 z-50 border-b border-surface-border bg-background/80 backdrop-blur-md"
     >
       <div className="container mx-auto px-4 h-20 flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          {/* Logo Placeholder */}
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white font-bold text-xl">
-            V
-          </div>
-          <span className="font-heading font-bold text-xl tracking-wide">Vorté</span>
-        </div>
+        <Link href="/" className="hover:opacity-90 transition-opacity">
+          <Logo />
+        </Link>
 
         <nav className="hidden md:flex items-center gap-8">
           <Link href="#servicos" className="text-sm font-medium text-muted hover:text-foreground transition-colors">Serviços</Link>

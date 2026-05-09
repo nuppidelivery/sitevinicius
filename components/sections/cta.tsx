@@ -40,7 +40,7 @@ export function Cta() {
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            <Button size="lg" className="w-full sm:w-auto h-16 px-10 text-lg shadow-[0_0_40px_rgba(37,99,235,0.4)]" onClick={() => window.open('https://wa.me/5591996286994?text=Olá%2C%20vim%20pelo%20site%20da%20Vorté%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços.', '_blank')}>
+            <Button size="lg" className="w-full sm:w-auto h-16 px-10 text-lg shadow-[0_0_40px_rgba(29,185,84,0.4)]" onClick={() => window.open('https://wa.me/5591996286994?text=Olá%2C%20vim%20pelo%20site%20do%20Vinícius%20Valente%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços.', '_blank')}>
               <Zap className="mr-2 h-5 w-5 fill-current" />
               Solicitar diagnóstico gratuito
             </Button>

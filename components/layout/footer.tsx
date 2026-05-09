@@ -1,5 +1,6 @@
 import { ArrowRight, Github, Instagram, Linkedin, Twitter } from "lucide-react";
 import Link from "next/link";
+import { Logo } from "@/components/ui/logo";
 
 export function Footer() {
   return (
@@ -8,12 +9,9 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-2 mb-6">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white font-bold text-xl">
-                V
-              </div>
-              <span className="font-heading font-bold text-xl tracking-wide">Vorté</span>
-            </div>
+            <Link href="/" className="inline-block mb-6 hover:opacity-90 transition-opacity">
+              <Logo className="scale-90 origin-left" />
+            </Link>
             <p className="text-muted text-sm leading-relaxed mb-6">
               A agência parceira para empresas que exigem alta performance, design de elite e engenharia de conversão.
             </p>
@@ -63,7 +61,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-surface-border pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-muted">
-          <p>© {new Date().getFullYear()} Vorté Agência. Todos os direitos reservados.</p>
+          <p>© {new Date().getFullYear()} Vinícius Valente. Todos os direitos reservados.</p>
           <div className="flex gap-4">
             <Link href="#" className="hover:text-foreground transition-colors">Termos de Uso</Link>
             <Link href="#" className="hover:text-foreground transition-colors">Política de Privacidade</Link>

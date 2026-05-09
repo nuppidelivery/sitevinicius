@@ -9,37 +9,37 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#050505",
-        foreground: "#ffffff",
+        background: "#0D0D0D",
+        foreground: "#F5F5F5",
         primary: {
-          DEFAULT: "#2563eb",
-          foreground: "#ffffff",
-          dark: "#1d4ed8",
+          DEFAULT: "#1DB954",
+          foreground: "#0D0D0D",
+          dark: "#179b44",
         },
         secondary: {
-          DEFAULT: "#8b5cf6",
-          foreground: "#ffffff",
-          dark: "#7c3aed",
+          DEFAULT: "#2B2B2B",
+          foreground: "#F5F5F5",
+          dark: "#1a1a1a",
         },
         surface: {
-          DEFAULT: "#111111",
-          light: "#1a1a1a",
-          border: "#2a2a2a",
+          DEFAULT: "#2B2B2B",
+          light: "#3a3a3a",
+          border: "#404040",
         },
         muted: {
-          DEFAULT: "#a1a1aa",
-          dark: "#71717a",
+          DEFAULT: "#D9D9D9",
+          dark: "#a3a3a3",
         }
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        "hero-glow": "conic-gradient(from 180deg at 50% 50%, #2a8af633 0deg, #a853ba33 180deg, #e92a6733 360deg)",
+        "hero-glow": "conic-gradient(from 180deg at 50% 50%, #1DB95433 0deg, #179b4411 180deg, #1DB95433 360deg)",
       },
       fontFamily: {
         sans: ["var(--font-inter)"],
-        heading: ["var(--font-clash)"],
+        heading: ["var(--font-montserrat)"],
       },
     },
   },

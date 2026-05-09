@@ -4,8 +4,8 @@
 
 @layer base {
   :root {
-    --background: #050505;
-    --foreground: #ffffff;
+    --background: #0D0D0D;
+    --foreground: #F5F5F5;
   }
 
   body {
@@ -23,6 +23,6 @@
   }
   
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-[#179b44];
   }
 }
