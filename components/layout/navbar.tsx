@@ -19,14 +19,13 @@ export function Navbar() {
 
         <nav className="hidden md:flex items-center gap-8">
           <Link href="#servicos" className="text-sm font-medium text-muted hover:text-foreground transition-colors">Serviços</Link>
-          <Link href="#cases" className="text-sm font-medium text-muted hover:text-foreground transition-colors">Cases</Link>
-          <Link href="#metodo" className="text-sm font-medium text-muted hover:text-foreground transition-colors">Método</Link>
-          <Link href="#sobre" className="text-sm font-medium text-muted hover:text-foreground transition-colors">Sobre</Link>
+          <Link href="#processo" className="text-sm font-medium text-muted hover:text-foreground transition-colors">Processo</Link>
+          <Link href="#resultados" className="text-sm font-medium text-muted hover:text-foreground transition-colors">Resultados</Link>
+          <Link href="#faq" className="text-sm font-medium text-muted hover:text-foreground transition-colors">FAQ</Link>
         </nav>
 
         <div className="flex items-center gap-4">
-          <Button variant="ghost" className="hidden sm:inline-flex" onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })}>Entrar</Button>
-          <Button size="sm" onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })}>Começar Agora</Button>
+          <Button size="sm" onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })}>Falar com especialista</Button>
         </div>
       </div>
     </motion.header>

@@ -19,45 +19,69 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="inline-flex items-center rounded-full border border-surface-border bg-surface/50 px-3 py-1 text-sm text-muted mb-8 backdrop-blur-sm"
+          className="flex items-center mb-8"
         >
-          <span className="flex h-2 w-2 rounded-full bg-primary mr-2 animate-pulse"></span>
-          Escalando empresas para o próximo nível
+          <span className="flex h-[2px] w-8 bg-primary mr-3"></span>
+          <span className="font-mono text-xs md:text-sm tracking-[0.25em] text-primary uppercase font-bold">Performance Marketing · Automação · ROI em Escala</span>
         </motion.div>
 
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-5xl md:text-7xl font-bold tracking-tight mb-6 max-w-4xl"
+          className="text-5xl md:text-7xl lg:text-[96px] font-bold tracking-tight mb-8 max-w-5xl leading-[1.05]"
         >
-          Transformamos empresas comuns em <br className="hidden md:block" />
-          <span className="text-gradient">máquinas de vendas</span>
+          Tráfego que <span className="italic text-primary font-normal">vende.</span><br />
+          Não que<br className="hidden md:block" />apenas clica.
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-lg md:text-xl text-muted mb-10 max-w-2xl leading-relaxed"
+          className="text-lg md:text-xl text-muted mb-12 max-w-2xl leading-[1.7]"
         >
-          Através de tecnologia de ponta, estratégias de marketing avançadas e automação inteligente, escalamos seus resultados e consolidamos sua autoridade no mercado.
+          Transformamos investimento em mídia em receita previsível — com estratégia orientada por dados, criativos de alta conversão e automação comercial que trabalha enquanto você dorme.
         </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
+          className="flex flex-col sm:flex-row gap-6 w-full sm:w-auto"
         >
-          <Button size="lg" className="group" onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })}>
-            Solicitar diagnóstico gratuito
+          <Button size="lg" className="h-14 px-8 text-sm font-bold tracking-[0.1em] uppercase" onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })}>
+            Quero resultados reais
+          </Button>
+          <Button variant="ghost" size="lg" className="h-14 px-6 text-sm font-bold tracking-[0.05em] group" onClick={() => document.getElementById('resultados')?.scrollIntoView({ behavior: 'smooth' })}>
+            Ver casos de sucesso
             <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Button>
-          <Button variant="glass" size="lg" onClick={() => document.getElementById('cases')?.scrollIntoView({ behavior: 'smooth' })}>
-            <Play className="mr-2 h-4 w-4" />
-            Ver projetos
-          </Button>
+        </motion.div>
+
+        {/* Hero Metrics */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+          className="w-full max-w-5xl grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mt-20 pt-12 border-t border-surface-border text-left"
+        >
+          <div>
+            <div className="font-heading text-4xl md:text-5xl font-bold mb-2">+<span className="text-primary">320</span>%</div>
+            <div className="font-mono text-[11px] text-muted tracking-[0.15em] uppercase">Média de ROI<br/>nos primeiros 90 dias</div>
+          </div>
+          <div>
+            <div className="font-heading text-4xl md:text-5xl font-bold mb-2"><span className="text-primary">R$</span>12M+</div>
+            <div className="font-mono text-[11px] text-muted tracking-[0.15em] uppercase">Investimento em mídia<br/>gerenciado em 2024</div>
+          </div>
+          <div>
+            <div className="font-heading text-4xl md:text-5xl font-bold mb-2">87<span className="text-primary">%</span></div>
+            <div className="font-mono text-[11px] text-muted tracking-[0.15em] uppercase">Taxa de retenção<br/>de clientes</div>
+          </div>
+          <div>
+            <div className="font-heading text-4xl md:text-5xl font-bold mb-2"><span className="text-primary">+</span>140</div>
+            <div className="font-mono text-[11px] text-muted tracking-[0.15em] uppercase">Campanhas ativas<br/>em simultâneo</div>
+          </div>
         </motion.div>
       </div>
 
