@@ -41,7 +41,11 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-lg md:text-xl text-muted mb-12 max-w-2xl leading-[1.7]"
         >
-          Transformamos investimento em mídia em receita previsível — com estratégia orientada por dados, criativos de alta conversão e automação comercial que trabalha enquanto você dorme.
+          <span className="font-medium text-foreground">Empresas fortes não crescem no improviso, e seu concorrente sabe disso.</span>
+          <br /><br />
+          Enquanto muitos negócios apenas &quot;fazem marketing&quot;, marcas estratégicas estão construindo autoridade, aquisição previsível e crescimento consistente.
+          <br /><br />
+          Hoje, presença digital sem estratégia é apenas ruído.
         </motion.p>
 
         <motion.div
