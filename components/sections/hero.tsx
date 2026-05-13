@@ -29,9 +29,9 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-8 max-w-5xl leading-[1.1]"
+          className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-8 max-w-5xl leading-[1.1] text-primary"
         >
-          Empresas fortes não crescem no <span className="italic text-primary font-normal">improviso,</span><br className="hidden md:block" /> e seu concorrente sabe disso.
+          Empresas fortes não crescem no improviso,<br className="hidden md:block" /> e seu concorrente sabe disso.
         </motion.h1>
 
         <motion.p
