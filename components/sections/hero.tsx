@@ -29,7 +29,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 md:mb-8 max-w-[1000px] leading-[1.1] text-primary text-balance mx-auto"
+          className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 md:mb-8 max-w-[1000px] leading-[1.1] text-primary mx-auto"
         >
           Empresas fortes não crescem no improviso, e seu concorrente sabe disso.
         </motion.h1>

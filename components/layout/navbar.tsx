@@ -26,8 +26,8 @@ export function Navbar() {
 
         <div className="flex items-center gap-4">
           <Button size="sm" onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })}>
-            <span className="hidden sm:inline">Falar com especialista</span>
-            <span className="sm:hidden">Contato</span>
+            <span className="hidden md:inline">Falar com especialista</span>
+            <span className="md:hidden">Contato</span>
           </Button>
         </div>
       </div>
