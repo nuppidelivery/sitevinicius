@@ -29,10 +29,9 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-5xl md:text-7xl lg:text-[96px] font-bold tracking-tight mb-8 max-w-5xl leading-[1.05]"
+          className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-8 max-w-5xl leading-[1.1]"
         >
-          Tráfego que <span className="italic text-primary font-normal">vende.</span><br />
-          Não que<br className="hidden md:block" />apenas clica.
+          Empresas fortes não crescem no <span className="italic text-primary font-normal">improviso,</span><br className="hidden md:block" /> e seu concorrente sabe disso.
         </motion.h1>
 
         <motion.p
@@ -41,8 +40,6 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-lg md:text-xl text-muted mb-12 max-w-2xl leading-[1.7]"
         >
-          <span className="font-medium text-foreground">Empresas fortes não crescem no improviso, e seu concorrente sabe disso.</span>
-          <br /><br />
           Enquanto muitos negócios apenas &quot;fazem marketing&quot;, marcas estratégicas estão construindo autoridade, aquisição previsível e crescimento consistente.
           <br /><br />
           Hoje, presença digital sem estratégia é apenas ruído.
