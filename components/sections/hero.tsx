@@ -6,7 +6,7 @@ import { ArrowRight, Play } from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-32">
+    <section className="relative min-h-[100svh] flex items-center justify-center overflow-hidden pt-24 pb-20 md:pt-20 md:pb-32">
       {/* Background Effects */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-hero-glow opacity-30 blur-[120px] rounded-full mix-blend-screen" />
@@ -29,7 +29,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-8 max-w-[1000px] leading-[1.1] text-primary text-balance mx-auto"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 md:mb-8 max-w-[1000px] leading-[1.1] text-primary text-balance mx-auto"
         >
           Empresas fortes não crescem no improviso, e seu concorrente sabe disso.
         </motion.h1>
@@ -49,12 +49,12 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="flex flex-col sm:flex-row gap-6 w-full sm:w-auto"
+          className="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full sm:w-auto px-4 sm:px-0"
         >
-          <Button size="lg" className="h-14 px-8 text-sm font-bold tracking-[0.1em] uppercase" onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })}>
+          <Button size="lg" className="h-14 w-full sm:w-auto px-8 text-xs sm:text-sm font-bold tracking-[0.1em] uppercase" onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })}>
             Quero resultados reais
           </Button>
-          <Button variant="ghost" size="lg" className="h-14 px-6 text-sm font-bold tracking-[0.05em] group" onClick={() => document.getElementById('resultados')?.scrollIntoView({ behavior: 'smooth' })}>
+          <Button variant="ghost" size="lg" className="h-14 w-full sm:w-auto px-6 text-xs sm:text-sm font-bold tracking-[0.05em] group" onClick={() => document.getElementById('resultados')?.scrollIntoView({ behavior: 'smooth' })}>
             Ver casos de sucesso
             <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Button>
@@ -65,7 +65,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="w-full max-w-5xl grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mt-20 pt-12 border-t border-surface-border text-left"
+          className="w-full max-w-5xl grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-12 mt-16 md:mt-20 pt-10 md:pt-12 border-t border-surface-border text-left"
         >
           <div>
             <div className="font-heading text-4xl md:text-5xl font-bold mb-2">+<span className="text-primary">320</span>%</div>

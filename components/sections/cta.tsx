@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 export function Cta() {
   return (
-    <section id="contato" className="py-32 relative overflow-hidden text-center z-10 border-b border-surface-border">
+    <section id="contato" className="py-20 md:py-32 relative overflow-hidden text-center z-10 border-b border-surface-border px-4 md:px-0">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[radial-gradient(circle,rgba(29,185,84,0.06)_0%,transparent_70%)] pointer-events-none" />
       
       <div className="container mx-auto px-4 max-w-[800px] relative z-10">
@@ -19,7 +19,7 @@ export function Cta() {
             <span className="font-mono text-[11px] tracking-[0.25em] text-primary uppercase font-bold">Próximo passo</span>
           </div>
 
-          <h2 className="text-4xl md:text-5xl lg:text-[72px] font-bold mb-6 leading-[1.1] text-balance mx-auto">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[72px] font-bold mb-6 leading-[1.1] text-balance mx-auto">
             Pronto para parar de <em className="italic font-normal text-primary">adivinhar</em> e começar a crescer?
           </h2>
           

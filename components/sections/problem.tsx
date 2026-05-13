@@ -28,7 +28,7 @@ export function Problem() {
   ];
 
   return (
-    <section id="problema" className="py-24 border-b border-surface-border relative z-10">
+    <section id="problema" className="py-16 md:py-24 border-b border-surface-border relative z-10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -41,7 +41,7 @@ export function Problem() {
             <span className="flex h-[1px] w-8 bg-primary mr-3"></span>
             <span className="font-mono text-[11px] tracking-[0.25em] text-primary uppercase font-bold">O problema que você enfrenta</span>
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold max-w-3xl mb-6 leading-[1.1] text-balance">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold max-w-3xl mb-6 leading-[1.1] text-balance">
             Você investe em tráfego, mas o <em className="italic font-normal text-primary">caixa não fecha.</em>
           </h2>
           <p className="text-lg text-muted max-w-2xl leading-[1.7] text-pretty">
@@ -57,7 +57,7 @@ export function Problem() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="bg-surface hover:bg-surface-light transition-colors duration-300 p-10 lg:p-12"
+              className="bg-surface hover:bg-surface-light transition-colors duration-300 p-8 md:p-10 lg:p-12"
             >
               <div className="mb-6 opacity-80">{problem.icon}</div>
               <h3 className="font-heading text-2xl font-bold mb-4 leading-snug">{problem.title}</h3>

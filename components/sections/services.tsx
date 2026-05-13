@@ -28,9 +28,9 @@ export function Services() {
   ];
 
   return (
-    <section id="servicos" className="py-24 border-b border-surface-border relative z-10">
+    <section id="servicos" className="py-16 md:py-24 border-b border-surface-border relative z-10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 mb-20 items-start">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 mb-16 lg:mb-20 items-start">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -41,7 +41,7 @@ export function Services() {
               <span className="flex h-[1px] w-8 bg-primary mr-3"></span>
               <span className="font-mono text-[11px] tracking-[0.25em] text-primary uppercase font-bold">O que fazemos</span>
             </div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] text-balance">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] text-balance">
               Performance que <em className="italic font-normal text-primary">escala</em> com inteligência
             </h2>
           </motion.div>
@@ -66,7 +66,7 @@ export function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: idx * 0.1 }}
-              className="group bg-background hover:bg-surface transition-all duration-300 p-8 lg:p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-8 border-l-[3px] border-transparent hover:border-primary cursor-pointer"
+              className="group bg-background hover:bg-surface transition-all duration-300 p-6 md:p-8 lg:p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 md:gap-8 border-l-[3px] border-transparent hover:border-primary cursor-pointer"
             >
               <div className="flex flex-col md:flex-row items-start md:items-center gap-6 lg:gap-12 flex-1">
                 <div className="font-mono text-sm text-primary tracking-[0.1em]">{service.number}</div>

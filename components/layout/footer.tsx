@@ -7,11 +7,11 @@ export function Footer() {
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 flex-wrap">
           
-          <div className="flex items-center gap-4">
+          <div className="flex flex-col md:flex-row items-center gap-4 text-center md:text-left">
             <Link href="/" className="inline-block hover:opacity-90 transition-opacity">
-              <Logo className="scale-75 origin-left" />
+              <Logo className="scale-75 origin-center md:origin-left" />
             </Link>
-            <div className="font-mono text-xs text-muted tracking-[0.1em] border-l border-surface-border pl-4">
+            <div className="font-mono text-xs text-muted tracking-[0.1em] border-t md:border-t-0 md:border-l border-surface-border pt-4 md:pt-0 md:pl-4 mt-2 md:mt-0">
               © {new Date().getFullYear()} — Todos os direitos reservados
             </div>
           </div>

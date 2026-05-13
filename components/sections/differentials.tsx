@@ -14,7 +14,7 @@ const features = [
 
 export function Differentials() {
   return (
-    <section id="sobre" className="py-32 bg-surface/20 relative overflow-hidden">
+    <section id="sobre" className="py-16 md:py-32 bg-surface/20 relative overflow-hidden">
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-secondary/10 blur-[120px] rounded-full pointer-events-none" />
       
       <div className="container mx-auto px-4 relative z-10">
@@ -27,7 +27,7 @@ export function Differentials() {
             transition={{ duration: 0.6 }}
             className="w-full lg:w-1/2"
           >
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-balance">Por que somos a escolha de <span className="text-gradient">líderes</span> do mercado?</h2>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-balance">Por que somos a escolha de <span className="text-gradient">líderes</span> do mercado?</h2>
             <p className="text-lg text-muted mb-8 leading-relaxed text-pretty">
               O modelo tradicional de agências está quebrado. Nós unimos inteligência artificial, engenharia de software e copy persuasiva para criar soluções que geram resultados concretos e escaláveis.
             </p>

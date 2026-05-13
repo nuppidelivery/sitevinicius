@@ -31,7 +31,7 @@ export function FAQ() {
   ];
 
   return (
-    <section id="faq" className="py-24 border-b border-surface-border relative z-10">
+    <section id="faq" className="py-16 md:py-24 border-b border-surface-border relative z-10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -44,7 +44,7 @@ export function FAQ() {
             <span className="flex h-[1px] w-8 bg-primary mr-3"></span>
             <span className="font-mono text-[11px] tracking-[0.25em] text-primary uppercase font-bold">Perguntas frequentes</span>
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold max-w-3xl mb-6 leading-[1.1] text-balance">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold max-w-3xl mb-6 leading-[1.1] text-balance">
             Dúvidas comuns antes de <em className="italic font-normal text-primary">fechar.</em>
           </h2>
         </motion.div>
