@@ -41,10 +41,10 @@ export function Results() {
             <span className="flex h-[1px] w-8 bg-primary mr-3"></span>
             <span className="font-mono text-[11px] tracking-[0.25em] text-primary uppercase font-bold">Prova de resultado</span>
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold max-w-3xl mb-6 leading-[1.1]">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold max-w-3xl mb-6 leading-[1.1] text-balance">
             Números que o <em className="italic font-normal text-primary">mercado</em> respeita
           </h2>
-          <p className="text-lg text-muted max-w-2xl leading-[1.7]">
+          <p className="text-lg text-muted max-w-2xl leading-[1.7] text-pretty">
             Cases reais, dados verificáveis. Cada resultado tem nome, contexto e estratégia por trás.
           </p>
         </motion.div>
@@ -73,7 +73,7 @@ export function Results() {
                 )}
                 <span className="text-primary">{result.metricSymbol}</span>
               </div>
-              <div className="text-[15px] text-muted mb-8 leading-relaxed flex-grow">
+              <div className="text-[15px] text-muted mb-8 leading-relaxed flex-grow text-pretty">
                 {result.label}
               </div>
               <div className="pt-6 border-t border-surface-border font-mono text-[11px] text-muted tracking-[0.1em]">

@@ -32,8 +32,8 @@ export function Portfolio() {
         
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
           <div className="max-w-2xl">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">Resultados que <span className="text-gradient">falam por si</span></h2>
-            <p className="text-lg text-muted">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-balance">Resultados que <span className="text-gradient">falam por si</span></h2>
+            <p className="text-lg text-muted text-pretty">
               Veja como transformamos negócios comuns em líderes de mercado através de design e tecnologia de alta performance.
             </p>
           </div>

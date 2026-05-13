@@ -44,7 +44,7 @@ export function FAQ() {
             <span className="flex h-[1px] w-8 bg-primary mr-3"></span>
             <span className="font-mono text-[11px] tracking-[0.25em] text-primary uppercase font-bold">Perguntas frequentes</span>
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold max-w-3xl mb-6 leading-[1.1]">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold max-w-3xl mb-6 leading-[1.1] text-balance">
             Dúvidas comuns antes de <em className="italic font-normal text-primary">fechar.</em>
           </h2>
         </motion.div>
@@ -71,7 +71,7 @@ export function FAQ() {
               <div
                 className={`overflow-hidden transition-all duration-300 ease-in-out ${openIndex === idx ? 'max-h-[500px] opacity-100 pb-8' : 'max-h-0 opacity-0'}`}
               >
-                <p className="text-muted leading-[1.8] text-base pr-8">
+                <p className="text-muted leading-[1.8] text-base pr-8 text-pretty">
                   {faq.a}
                 </p>
               </div>

@@ -41,10 +41,10 @@ export function Problem() {
             <span className="flex h-[1px] w-8 bg-primary mr-3"></span>
             <span className="font-mono text-[11px] tracking-[0.25em] text-primary uppercase font-bold">O problema que você enfrenta</span>
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold max-w-3xl mb-6 leading-[1.1]">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold max-w-3xl mb-6 leading-[1.1] text-balance">
             Você investe em tráfego, mas o <em className="italic font-normal text-primary">caixa não fecha.</em>
           </h2>
-          <p className="text-lg text-muted max-w-2xl leading-[1.7]">
+          <p className="text-lg text-muted max-w-2xl leading-[1.7] text-pretty">
             A maioria das empresas joga dinheiro em anúncios sem estrutura, sem processo e sem dados — e depois culpa a plataforma.
           </p>
         </motion.div>
@@ -61,7 +61,7 @@ export function Problem() {
             >
               <div className="mb-6 opacity-80">{problem.icon}</div>
               <h3 className="font-heading text-2xl font-bold mb-4 leading-snug">{problem.title}</h3>
-              <p className="text-muted leading-[1.7]">{problem.desc}</p>
+              <p className="text-muted leading-[1.7] text-pretty">{problem.desc}</p>
             </motion.div>
           ))}
         </div>

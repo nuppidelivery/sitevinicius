@@ -29,16 +29,16 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-8 max-w-5xl leading-[1.1] text-primary"
+          className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-8 max-w-[1000px] leading-[1.1] text-primary text-balance mx-auto"
         >
-          Empresas fortes não crescem no improviso,<br className="hidden md:block" /> e seu concorrente sabe disso.
+          Empresas fortes não crescem no improviso, e seu concorrente sabe disso.
         </motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-lg md:text-xl text-muted mb-12 max-w-2xl leading-[1.7]"
+          className="text-lg md:text-xl text-muted mb-12 max-w-2xl leading-[1.7] text-pretty mx-auto"
         >
           Enquanto muitos negócios apenas &quot;fazem marketing&quot;, marcas estratégicas estão construindo autoridade, aquisição previsível e crescimento consistente.
           <br /><br />

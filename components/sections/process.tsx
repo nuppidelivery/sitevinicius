@@ -40,10 +40,10 @@ export function Process() {
             <span className="flex h-[1px] w-8 bg-primary mr-3"></span>
             <span className="font-mono text-[11px] tracking-[0.25em] text-primary uppercase font-bold">Como funciona</span>
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold max-w-3xl mb-6 leading-[1.1]">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold max-w-3xl mb-6 leading-[1.1] text-balance">
             Do <em className="italic font-normal text-primary">diagnóstico</em> ao resultado em 4 etapas
           </h2>
-          <p className="text-lg text-muted max-w-2xl leading-[1.7]">
+          <p className="text-lg text-muted max-w-2xl leading-[1.7] text-pretty">
             Nenhum projeto começa sem entender profundamente o seu negócio, mercado e metas. Sem atalhos.
           </p>
         </motion.div>
@@ -63,7 +63,7 @@ export function Process() {
                 {step.number}
               </div>
               <h3 className="font-heading text-lg font-bold mb-4 text-foreground">{step.title}</h3>
-              <p className="text-muted text-sm leading-[1.65]">{step.desc}</p>
+              <p className="text-muted text-sm leading-[1.65] text-pretty">{step.desc}</p>
             </motion.div>
           ))}
         </div>

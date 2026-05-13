@@ -27,8 +27,8 @@ export function Differentials() {
             transition={{ duration: 0.6 }}
             className="w-full lg:w-1/2"
           >
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">Por que somos a escolha de <span className="text-gradient">líderes</span> do mercado?</h2>
-            <p className="text-lg text-muted mb-8 leading-relaxed">
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-balance">Por que somos a escolha de <span className="text-gradient">líderes</span> do mercado?</h2>
+            <p className="text-lg text-muted mb-8 leading-relaxed text-pretty">
               O modelo tradicional de agências está quebrado. Nós unimos inteligência artificial, engenharia de software e copy persuasiva para criar soluções que geram resultados concretos e escaláveis.
             </p>
 

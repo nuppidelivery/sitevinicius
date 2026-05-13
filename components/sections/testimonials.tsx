@@ -44,7 +44,7 @@ export function Testimonials() {
             <span className="flex h-[1px] w-8 bg-primary mr-3"></span>
             <span className="font-mono text-[11px] tracking-[0.25em] text-primary uppercase font-bold">O que os clientes dizem</span>
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold max-w-3xl mb-6 leading-[1.1]">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold max-w-3xl mb-6 leading-[1.1] text-balance">
             Não acredite em nós. <em className="italic font-normal text-primary">Acredite neles.</em>
           </h2>
         </motion.div>
@@ -60,7 +60,7 @@ export function Testimonials() {
               className="bg-surface border border-surface-border p-10 rounded-sm hover:border-primary/30 transition-colors duration-300 flex flex-col"
             >
               <span className="font-heading text-6xl text-primary leading-[0.5] block mb-6 opacity-60">"</span>
-              <p className="text-base leading-[1.8] text-foreground mb-8 grow">
+              <p className="text-base leading-[1.8] text-foreground mb-8 grow text-pretty">
                 {item.text}
               </p>
               <div className="flex items-center gap-4 border-t border-surface-border pt-6 mt-auto">
