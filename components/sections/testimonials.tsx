@@ -57,7 +57,7 @@ export function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="bg-surface border border-surface-border p-8 md:p-10 rounded-sm hover:border-primary/30 transition-colors duration-300 flex flex-col"
+              className="bg-surface border border-surface-border p-6 sm:p-8 md:p-10 rounded-sm hover:border-primary/30 transition-colors duration-300 flex flex-col"
             >
               <span className="font-heading text-6xl text-primary leading-[0.5] block mb-6 opacity-60">"</span>
               <p className="text-base leading-[1.8] text-foreground mb-8 grow text-pretty">

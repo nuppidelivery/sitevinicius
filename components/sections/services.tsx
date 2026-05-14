@@ -30,7 +30,7 @@ export function Services() {
   return (
     <section id="servicos" className="py-16 md:py-24 border-b border-surface-border relative z-10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 mb-16 lg:mb-20 items-start">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-24 mb-12 lg:mb-20 items-start">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

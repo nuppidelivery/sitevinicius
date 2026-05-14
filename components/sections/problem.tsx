@@ -57,7 +57,7 @@ export function Problem() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="bg-surface hover:bg-surface-light transition-colors duration-300 p-8 md:p-10 lg:p-12"
+              className="bg-surface hover:bg-surface-light transition-colors duration-300 p-6 sm:p-8 md:p-10 lg:p-12"
             >
               <div className="mb-6 opacity-80">{problem.icon}</div>
               <h3 className="font-heading text-2xl font-bold mb-4 leading-snug">{problem.title}</h3>

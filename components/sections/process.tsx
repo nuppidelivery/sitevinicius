@@ -56,7 +56,7 @@ export function Process() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="bg-surface p-8 md:p-10 lg:p-8 relative group"
+              className="bg-surface p-6 sm:p-8 md:p-10 lg:p-8 relative group"
             >
               <div className="absolute top-0 left-0 right-0 h-[2px] bg-primary transform scale-x-0 origin-left transition-transform duration-400 group-hover:scale-x-100" />
               <div className="font-mono text-5xl font-medium text-surface-light mb-8 leading-none" style={{ WebkitTextStroke: '1px var(--border)' }}>

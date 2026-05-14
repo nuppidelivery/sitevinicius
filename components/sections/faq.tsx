@@ -61,7 +61,7 @@ export function FAQ() {
             >
               <button
                 onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
-                className="w-full py-8 flex items-center justify-between text-left focus:outline-none group"
+                className="w-full py-6 md:py-8 flex items-center justify-between text-left focus:outline-none group"
               >
                 <span className="text-lg md:text-xl font-medium text-foreground group-hover:text-primary transition-colors">
                   {faq.q}

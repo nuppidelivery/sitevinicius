@@ -49,7 +49,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full sm:w-auto px-4 sm:px-0"
+          className="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full sm:w-auto"
         >
           <Button size="lg" className="h-14 w-full sm:w-auto px-8 text-xs sm:text-sm font-bold tracking-[0.1em] uppercase" onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })}>
             Quero resultados reais
@@ -65,7 +65,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="w-full max-w-5xl grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-12 mt-16 md:mt-20 pt-10 md:pt-12 border-t border-surface-border text-left"
+          className="w-full max-w-5xl grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-12 mt-16 md:mt-20 pt-10 md:pt-12 border-t border-surface-border text-left"
         >
           <div>
             <div className="font-heading text-4xl md:text-5xl font-bold mb-2">+<span className="text-primary">320</span>%</div>
