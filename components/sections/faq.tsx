@@ -10,23 +10,23 @@ export function FAQ() {
   const faqs = [
     {
       q: "Qual é o investimento mínimo em mídia que vocês trabalham?",
-      a: "Trabalhamos com clientes a partir de R$5.000/mês em investimento de mídia. Abaixo disso, o volume de dados é insuficiente para otimizações consistentes e os resultados ficam limitados. Se você está abaixo desse valor, posso indicar uma trilha de crescimento para chegar lá primeiro."
+      a: "O investimento varia conforme o momento, objetivo e demanda de cada negócio. A partir disso, montamos uma proposta personalizada e alinhada ao cenário do cliente."
     },
     {
       q: "Quanto tempo leva para ver resultados?",
-      a: "Depende do histórico da conta e do segmento. Contas novas passam por um período de aprendizado de 30 a 45 dias — é o algoritmo coletando dados. A partir do 2º mês, os resultados começam a se consolidar. Projetamos metas realistas para 30, 60 e 90 dias logo no diagnóstico."
+      a: "O tempo pode variar de acordo com o nicho, posicionamento e estrutura do negócio. Em muitos casos, os primeiros sinais de evolução aparecem nas primeiras semanas."
     },
     {
       q: "Vocês também criam os criativos (artes e vídeos)?",
-      a: "Sim. Temos uma equipe interna de criação focada em performance — não em estética. Cada peça é desenvolvida com um ângulo de copy claro, testada contra variações e substituída quando começa a saturar. Também treinamos equipes internas do cliente que preferem produzir internamente."
+      a: "Sim. Desenvolvemos os criativos estratégicos utilizados nas campanhas."
     },
     {
       q: "Como funciona o contrato? Tem fidelidade?",
-      a: "Temos contratos mínimos de 3 meses — o tempo mínimo para estruturar uma operação com dados e entregar resultados consistentes. Não acreditamos em contratos longos: preferimos que você fique porque os resultados justificam, não porque está preso."
+      a: "Os detalhes contratuais são apresentados durante a proposta comercial, sempre alinhados ao escopo e necessidade de cada projeto. Nosso objetivo é construir parcerias de longo prazo através de resultado e confiança."
     },
     {
       q: "Tenho acesso às minhas próprias campanhas e dados?",
-      a: "Sempre. As contas de mídia são suas — você tem acesso total a todo momento. Nunca gerenciamos contas que não pertencem ao cliente. Além disso, entregamos um dashboard personalizado com os KPIs principais atualizado em tempo real."
+      a: "Sim. Prezamos pela transparência em toda a operação."
     }
   ];
 
