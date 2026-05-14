@@ -31,7 +31,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 md:mb-8 max-w-[1000px] leading-[1.1] text-primary mx-auto"
         >
-          Empresas fortes não crescem no improviso, e seu concorrente sabe disso.
+          Empresas fortes não crescem no improviso.
         </motion.h1>
 
         <motion.p
