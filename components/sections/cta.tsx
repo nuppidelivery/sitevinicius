@@ -25,7 +25,7 @@ export function Cta() {
           
           <p className="text-lg md:text-xl text-muted mb-12 max-w-2xl mx-auto leading-[1.7] text-pretty">
             Agende uma conversa de 30 minutos sem compromisso. Vamos analisar sua operação atual e te dizer honestamente se — e como — podemos ajudar.
-          </p
+          </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center w-full sm:w-auto">
             <Button size="lg" className="h-14 px-8 text-sm font-bold tracking-[0.1em] uppercase w-full sm:w-auto" onClick={() => window.open('https://wa.me/5591996286994?text=Olá!%20Quero%20saber%20mais%20sobre%20gestão%20de%20tráfego', '_blank')}>
