@@ -18,17 +18,17 @@ export function Footer() {
 
           <ul className="flex flex-wrap items-center justify-center gap-6 list-none">
             <li>
-              <Link href="#" className="text-xs text-muted hover:text-primary transition-colors tracking-[0.05em] uppercase">
+              <Link href="/privacidade" className="text-xs text-muted hover:text-primary transition-colors tracking-[0.05em] uppercase">
                 Política de privacidade
               </Link>
             </li>
             <li>
-              <Link href="#" className="text-xs text-muted hover:text-primary transition-colors tracking-[0.05em] uppercase">
+              <Link href="https://www.instagram.com/viniciusvalent_/" target="_blank" rel="noopener noreferrer" className="text-xs text-muted hover:text-primary transition-colors tracking-[0.05em] uppercase">
                 Instagram
               </Link>
             </li>
             <li>
-              <Link href="#" className="text-xs text-muted hover:text-primary transition-colors tracking-[0.05em] uppercase">
+              <Link href="https://www.linkedin.com/in/vin%C3%ADcius-valente-7098231a3/" target="_blank" rel="noopener noreferrer" className="text-xs text-muted hover:text-primary transition-colors tracking-[0.05em] uppercase">
                 LinkedIn
               </Link>
             </li>
