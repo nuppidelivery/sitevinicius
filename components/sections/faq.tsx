@@ -17,10 +17,6 @@ export function FAQ() {
       a: "O tempo pode variar de acordo com o nicho, posicionamento e estrutura do negócio. Em muitos casos, os primeiros sinais de evolução aparecem nas primeiras semanas."
     },
     {
-      q: "Vocês também criam os criativos (artes e vídeos)?",
-      a: "Sim. Desenvolvemos os criativos estratégicos utilizados nas campanhas."
-    },
-    {
       q: "Como funciona o contrato? Tem fidelidade?",
       a: "Os detalhes contratuais são apresentados durante a proposta comercial, sempre alinhados ao escopo e necessidade de cada projeto. Nosso objetivo é construir parcerias de longo prazo através de resultado e confiança."
     },
