@@ -26,7 +26,7 @@ export function Hero() {
           className="flex items-center mb-6 md:mb-8"
         >
           <span className="flex h-[2px] w-8 bg-primary mr-3"></span>
-          <span className="font-mono text-xs md:text-sm tracking-[0.25em] text-primary uppercase font-bold">Performance Marketing · Automação</span>
+          <span className="font-mono text-xs md:text-sm tracking-[0.25em] text-primary uppercase font-bold">Engenharia de Aquisição</span>
         </motion.div>
 
         <motion.h1
@@ -35,7 +35,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-4 md:mb-8 max-w-[1000px] leading-[1.1] text-foreground mx-auto"
         >
-          Transformamos seu negócio em uma <span className="text-primary">máquina de vendas.</span>
+          Empresas fortes não crescem no <span className="text-primary italic font-normal">improviso.</span>
         </motion.h1>
 
         <motion.p
@@ -44,7 +44,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-base md:text-xl text-muted mb-8 md:mb-12 max-w-2xl leading-[1.6] text-pretty mx-auto hidden sm:block"
         >
-          Escalamos o faturamento da sua empresa através de tráfego pago focado em ROI e previsibilidade de caixa.
+          Enquanto o mercado aposta em &quot;testes cegos&quot; e métricas de vaidade, nós implementamos ecossistemas de vendas validados. Substitua a adivinhação por lucro previsível.
         </motion.p>
 
         <motion.div
