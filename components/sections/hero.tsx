@@ -26,7 +26,7 @@ export function Hero() {
           className="flex items-center mb-6 md:mb-8"
         >
           <span className="flex h-[2px] w-8 bg-primary mr-3"></span>
-          <span className="font-mono text-xs md:text-sm tracking-[0.25em] text-primary uppercase font-bold">Performance para E-commerce</span>
+          <span className="font-mono text-xs md:text-sm tracking-[0.25em] text-primary uppercase font-bold">Performance Marketing · Automação</span>
         </motion.div>
 
         <motion.h1
@@ -35,7 +35,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-4 md:mb-8 max-w-[1000px] leading-[1.1] text-foreground mx-auto"
         >
-          Transformamos seu e-commerce local em uma <span className="text-primary">máquina de vendas.</span>
+          Transformamos seu negócio em uma <span className="text-primary">máquina de vendas.</span>
         </motion.h1>
 
         <motion.p
@@ -44,7 +44,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-base md:text-xl text-muted mb-8 md:mb-12 max-w-2xl leading-[1.6] text-pretty mx-auto hidden sm:block"
         >
-          Escalamos o faturamento da sua loja através de tráfego pago focado em ROI e previsibilidade de caixa.
+          Escalamos o faturamento da sua empresa através de tráfego pago focado em ROI e previsibilidade de caixa.
         </motion.p>
 
         <motion.div

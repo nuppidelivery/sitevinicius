@@ -10,7 +10,7 @@ export function FAQ() {
   const faqs = [
     {
       q: "Qual é o investimento mínimo em mídia que vocês trabalham?",
-      a: "Para que possamos gerar resultado real e escala para o seu e-commerce, recomendamos um investimento a partir de R$ 1.500 em gestão + R$ 2.000 em verba de mídia por mês."
+      a: "Para que possamos gerar resultado real e escala para o seu negócio, recomendamos um investimento a partir de R$ 1.500 em gestão + R$ 2.000 em verba de mídia por mês."
     },
     {
       q: "Quanto tempo leva para ver resultados?",

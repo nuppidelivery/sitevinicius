@@ -5,25 +5,25 @@ import { motion } from "framer-motion";
 export function Results() {
   const results = [
     {
-      tag: "E-commerce · Moda",
+      tag: "Varejo · Local",
       metricValue: "8.2",
       metricSymbol: "x",
-      label: "ROAS médio em 4 meses de operação com Google Shopping + Meta Advantage+",
-      client: "// Cliente · Segmento: vestuário feminino"
+      label: "ROAS médio em 4 meses de operação com campanhas de alta conversão regional",
+      client: "// Cliente · Segmento: varejo físico e online"
     },
     {
-      tag: "E-commerce · Beleza",
-      metricValue: "+145",
+      tag: "Saúde · Clínica",
+      metricValue: "-61",
       metricSymbol: "%",
-      label: "Aumento no volume de vendas diárias focando em tráfego regional e WhatsApp",
-      client: "// Cliente · Segmento: cosméticos"
+      label: "Redução no custo por agendamento com automação de qualificação via WhatsApp",
+      client: "// Cliente · Segmento: saúde preventiva"
     },
     {
-      tag: "E-commerce · Eletrônicos",
-      metricValue: "-42",
+      tag: "SaaS · B2B",
+      metricValue: "+480",
       metricSymbol: "%",
-      label: "Redução no custo de aquisição (CAC) com reestruturação completa de catálogo",
-      client: "// Cliente · Segmento: acessórios tech"
+      label: "Crescimento em MQLs qualificados após reestruturação completa de funil e criativos",
+      client: "// Cliente · Segmento: tecnologia"
     }
   ];
 
