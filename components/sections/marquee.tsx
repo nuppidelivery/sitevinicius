@@ -18,7 +18,7 @@ export function Marquee() {
   return (
     <div className="bg-surface py-8 overflow-hidden relative z-10 border-y border-surface-border">
       <div className="container mx-auto px-4 mb-6 text-center">
-        <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-muted">Empresas que confiam na engenharia de aquisição</span>
+        <span className="font-mono text-xs md:text-sm tracking-[0.25em] uppercase text-primary font-bold">Empresas que confiam na engenharia de aquisição</span>
       </div>
       
       {/* Gradient masks for smooth fade effect on edges */}
