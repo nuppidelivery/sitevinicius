@@ -57,7 +57,7 @@ export function Comparison() {
               {withoutService.map((item, idx) => (
                 <li key={idx} className="flex items-start">
                   <div className="bg-destructive/10 p-1 rounded-full shrink-0 mt-0.5 mr-3">
-                    <X className="w-5 h-5 text-destructive" />
+                    <X strokeWidth={3} className="w-5 h-5 text-destructive" />
                   </div>
                   <span className="text-muted leading-relaxed text-[15px]">{item}</span>
                 </li>
