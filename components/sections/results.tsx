@@ -9,21 +9,21 @@ export function Results() {
       metricValue: "8.2",
       metricSymbol: "x",
       label: "ROAS médio em 4 meses de operação com Google Shopping + Meta Advantage+",
-      client: "// Cliente A · Segmento: varejo online"
+      client: "// Cliente · Segmento: vestuário feminino"
     },
     {
-      tag: "Saúde · Clínica",
-      metricValue: "-61",
+      tag: "E-commerce · Beleza",
+      metricValue: "+145",
       metricSymbol: "%",
-      label: "Redução no custo por agendamento com automação de qualificação via WhatsApp",
-      client: "// Cliente B · Segmento: saúde preventiva"
+      label: "Aumento no volume de vendas diárias focando em tráfego regional e WhatsApp",
+      client: "// Cliente · Segmento: cosméticos"
     },
     {
-      tag: "SaaS · B2B",
-      metricValue: "+480",
+      tag: "E-commerce · Eletrônicos",
+      metricValue: "-42",
       metricSymbol: "%",
-      label: "Crescimento em MQLs qualificados após reestruturação completa de funil e criativos",
-      client: "// Cliente C · Segmento: tecnologia"
+      label: "Redução no custo de aquisição (CAC) com reestruturação completa de catálogo",
+      client: "// Cliente · Segmento: acessórios tech"
     }
   ];
 
