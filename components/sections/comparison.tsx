@@ -50,13 +50,15 @@ export function Comparison() {
             className="bg-surface border border-surface-border p-6 sm:p-8 md:p-10 rounded-sm relative overflow-hidden"
           >
             <div className="absolute top-0 right-0 w-32 h-32 bg-destructive/5 blur-[50px] -mr-16 -mt-16 rounded-full" />
-            <h3 className="text-xl md:text-2xl font-bold mb-8 text-foreground flex items-center">
+            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 text-foreground flex items-center">
               Como é <span className="text-destructive ml-2">hoje</span>
             </h3>
             <ul className="space-y-4 md:space-y-6">
               {withoutService.map((item, idx) => (
                 <li key={idx} className="flex items-start">
-                  <X className="w-5 h-5 text-destructive shrink-0 mt-0.5 mr-3" />
+                  <div className="bg-destructive/10 p-1 rounded-full shrink-0 mt-0.5 mr-3">
+                    <X className="w-5 h-5 text-destructive" />
+                  </div>
                   <span className="text-muted leading-relaxed text-[15px]">{item}</span>
                 </li>
               ))}
@@ -72,13 +74,15 @@ export function Comparison() {
             className="bg-surface border border-primary/30 p-6 sm:p-8 md:p-10 rounded-sm relative overflow-hidden shadow-[0_0_30px_rgba(29,185,84,0.05)]"
           >
             <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 blur-[50px] -mr-16 -mt-16 rounded-full" />
-            <h3 className="text-xl md:text-2xl font-bold mb-8 text-foreground flex items-center">
+            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 text-foreground flex items-center">
               Como será <span className="text-primary ml-2">com a Valente</span>
             </h3>
             <ul className="space-y-4 md:space-y-6">
               {withService.map((item, idx) => (
                 <li key={idx} className="flex items-start">
-                  <Check className="w-5 h-5 text-primary shrink-0 mt-0.5 mr-3" />
+                  <div className="bg-primary/10 p-1 rounded-full shrink-0 mt-0.5 mr-3">
+                    <Check className="w-5 h-5 text-primary" />
+                  </div>
                   <span className="text-foreground leading-relaxed text-[15px] font-medium">{item}</span>
                 </li>
               ))}
