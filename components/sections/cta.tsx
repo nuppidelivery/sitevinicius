@@ -10,7 +10,11 @@ export function Cta() {
 
   return (
     <section id="contato" className="py-20 md:py-32 relative overflow-hidden text-center z-10 border-b border-surface-border px-4 md:px-0">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[radial-gradient(circle,rgba(29,185,84,0.06)_0%,transparent_70%)] pointer-events-none" />
+      <motion.div 
+        animate={{ opacity: [0.06, 0.15, 0.06], scale: [1, 1.05, 1] }}
+        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[radial-gradient(circle,rgba(29,185,84,1)_0%,transparent_70%)] pointer-events-none blur-[50px]" 
+      />
       
       <div className="container mx-auto px-4 max-w-[800px] relative z-10">
         <motion.div
@@ -28,7 +32,7 @@ export function Cta() {
           </h2>
           
           <p className="text-lg md:text-xl text-muted mb-12 max-w-2xl mx-auto leading-[1.7] text-pretty">
-            Agende uma conversa de 30 minutos sem compromisso. Vamos analisar sua operação atual e te dizer honestamente se — e como — podemos ajudar.
+            Uma análise estratégica de 30 minutos sem compromisso para diagnosticar a maturidade do funil comercial e revelar as alavancas ocultas de escala do seu negócio.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center w-full sm:w-auto">

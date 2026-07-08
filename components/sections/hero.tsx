@@ -12,9 +12,17 @@ export function Hero() {
   return (
     <section className="relative min-h-[100svh] flex items-center justify-center overflow-hidden pt-24 pb-16 md:pt-20 md:pb-32">
       {/* Background Effects */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-hero-glow opacity-30 blur-[120px] rounded-full mix-blend-screen" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/20 blur-[150px] rounded-full" />
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <motion.div 
+          animate={{ scale: [1, 1.1, 1], opacity: [0.3, 0.5, 0.3] }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute inset-0 bg-hero-glow blur-[120px] rounded-full mix-blend-screen pointer-events-none" 
+        />
+        <motion.div 
+          animate={{ scale: [1, 1.2, 1], opacity: [0.2, 0.4, 0.2] }}
+          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/30 blur-[150px] rounded-full pointer-events-none" 
+        />
       </div>
 
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
@@ -44,7 +52,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-base md:text-xl text-muted mb-8 md:mb-12 max-w-2xl leading-[1.6] text-pretty mx-auto hidden sm:block"
         >
-          Enquanto o mercado aposta em &quot;testes cegos&quot; e métricas de vaidade, nós implementamos ecossistemas de vendas validados. Substitua a adivinhação por lucro previsível.
+          Enquanto o mercado aposta em &quot;testes cegos&quot; e métricas de vaidade, a engenharia de aquisição estrutura ecossistemas de vendas validados. Substitua a adivinhação por lucro previsível.
         </motion.p>
 
         <motion.div
