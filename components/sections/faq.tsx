@@ -34,13 +34,14 @@ export function FAQ() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-16"
+          className="mb-16 text-center flex flex-col items-center"
         >
-          <div className="flex items-center mb-6">
+          <div className="flex items-center justify-center mb-6">
             <span className="flex h-[1px] w-8 bg-primary mr-3"></span>
             <span className="font-mono text-[11px] tracking-[0.25em] text-primary uppercase font-bold">Perguntas frequentes</span>
+            <span className="flex h-[1px] w-8 bg-primary ml-3"></span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold max-w-3xl mb-6 leading-[1.1] text-balance">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold max-w-3xl mb-6 leading-[1.1] text-balance mx-auto">
             Dúvidas comuns antes de <em className="italic font-normal text-primary">fechar.</em>
           </h2>
         </motion.div>
