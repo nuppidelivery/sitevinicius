@@ -17,7 +17,7 @@ export function About() {
       <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[500px] h-[500px] bg-primary/10 blur-[120px] rounded-full pointer-events-none" />
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center lg:items-start">
           
           {/* Image Side */}
           <motion.div
@@ -25,17 +25,17 @@ export function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="w-full lg:w-[45%] max-w-[500px] mx-auto lg:mx-0"
+            className="w-full lg:w-[40%] max-w-[400px] mx-auto lg:mx-0 lg:mt-4"
           >
             <div className="relative group rounded-xl overflow-hidden shadow-[0_0_40px_rgba(29,185,84,0.15)] border border-surface-border p-2 bg-surface">
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none" />
-              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-lg bg-surface-border">
+              <div className="relative aspect-square md:aspect-[4/5] w-full overflow-hidden rounded-lg bg-surface-border">
                 <Image
                   src="/quem-sou-eu.jpeg"
                   alt="Vinícius Valente"
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  sizes="(max-width: 768px) 100vw, 40vw"
                 />
               </div>
             </div>
@@ -47,7 +47,7 @@ export function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="w-full lg:w-[55%] flex flex-col"
+            className="w-full lg:w-[60%] flex flex-col"
           >
             <div className="flex items-center mb-6">
               <span className="flex h-[1px] w-8 bg-primary mr-3"></span>

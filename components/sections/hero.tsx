@@ -57,9 +57,6 @@ export function Hero() {
             <p>
               Não gerencio anúncios. Estruturo processos de aquisição de clientes. Analiso a jornada completa, identifico pontos de perda, valido hipóteses e otimizo continuamente cada etapa para que o investimento em mídia gere crescimento sustentável.
             </p>
-            <p className={`mt-2 ${isExpanded ? "block" : "hidden sm:block"}`}>
-              Quando a estratégia está certa, o tráfego deixa de ser custo e passa a ser um acelerador de resultados.
-            </p>
             {!isExpanded && (
               <div className="absolute bottom-0 left-0 w-full h-12 bg-gradient-to-t from-background to-transparent sm:hidden"></div>
             )}
