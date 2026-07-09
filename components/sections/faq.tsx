@@ -9,8 +9,8 @@ export function FAQ() {
 
   const faqs = [
     {
-      q: "Qual é o investimento mínimo em mídia que vocês trabalham?",
-      a: "Para que possamos gerar resultado real e escala para o seu negócio, recomendamos um investimento a partir de R$ 1.500 em gestão + R$ 2.000 em verba de mídia por mês."
+      q: "Qual é o investimento mínimo em mídia que você trabalha?",
+      a: "Para que eu possa gerar resultado real e escala para o seu negócio, recomendo um investimento a partir de R$ 1.500 em gestão + R$ 2.000 em verba de mídia por mês."
     },
     {
       q: "Quanto tempo leva para ver resultados?",
@@ -18,11 +18,11 @@ export function FAQ() {
     },
     {
       q: "Como funciona o contrato? Tem fidelidade?",
-      a: "Os detalhes contratuais são apresentados durante a proposta comercial, sempre alinhados ao escopo e necessidade de cada projeto. Nosso objetivo é construir parcerias de longo prazo através de resultado e confiança."
+      a: "Os detalhes contratuais são apresentados durante a proposta comercial, sempre alinhados ao escopo e necessidade de cada projeto. Meu objetivo é construir parcerias de longo prazo através de resultado e confiança."
     },
     {
       q: "Tenho acesso às minhas próprias campanhas e dados?",
-      a: "Sim. Prezamos pela transparência em toda a operação."
+      a: "Sim. Prezo pela transparência em toda a operação."
     }
   ];
 

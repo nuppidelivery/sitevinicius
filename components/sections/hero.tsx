@@ -8,6 +8,7 @@ import { QualifyModal } from "@/components/ui/qualify-modal";
 
 export function Hero() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   return (
     <section className="relative min-h-[100svh] flex items-center justify-center overflow-hidden pt-24 pb-16 md:pt-20 md:pb-32">
@@ -46,14 +47,30 @@ export function Hero() {
           Empresas fortes não crescem no <span className="text-primary italic font-normal">improviso.</span>
         </motion.h1>
 
-        <motion.p
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-base md:text-xl text-muted mb-8 md:mb-12 max-w-2xl leading-[1.6] text-pretty mx-auto hidden sm:block"
+          className="text-base md:text-xl text-muted mb-8 md:mb-12 max-w-3xl leading-[1.6] text-pretty mx-auto flex flex-col items-center"
         >
-          Enquanto o mercado aposta em &quot;testes cegos&quot; e métricas de vaidade, a engenharia de aquisição estrutura ecossistemas de vendas validados. Substitua a adivinhação por lucro previsível.
-        </motion.p>
+          <div className={`transition-all duration-500 overflow-hidden ${isExpanded ? "max-h-[800px]" : "max-h-[120px] sm:max-h-[800px] relative"}`}>
+            <p>
+              Não gerencio anúncios. Estruturo processos de aquisição de clientes. Analiso a jornada completa, identifico pontos de perda, valido hipóteses e otimizo continuamente cada etapa para que o investimento em mídia gere crescimento sustentável.
+            </p>
+            <p className={`mt-2 ${isExpanded ? "block" : "hidden sm:block"}`}>
+              Quando a estratégia está certa, o tráfego deixa de ser custo e passa a ser um acelerador de resultados.
+            </p>
+            {!isExpanded && (
+              <div className="absolute bottom-0 left-0 w-full h-12 bg-gradient-to-t from-background to-transparent sm:hidden"></div>
+            )}
+          </div>
+          <button 
+            onClick={() => setIsExpanded(!isExpanded)} 
+            className="sm:hidden mt-2 text-primary text-sm font-bold tracking-wide uppercase hover:underline"
+          >
+            {isExpanded ? "Ler menos" : "Ler mais"}
+          </button>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}

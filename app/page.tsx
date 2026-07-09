@@ -5,6 +5,7 @@ import { Comparison } from "@/components/sections/comparison";
 import { Services } from "@/components/sections/services";
 import { Process } from "@/components/sections/process";
 import { Results } from "@/components/sections/results";
+import { About } from "@/components/sections/about";
 import { FAQ } from "@/components/sections/faq";
 import { Cta } from "@/components/sections/cta";
 
@@ -18,6 +19,7 @@ export default function Home() {
       <Services />
       <Process />
       <Results />
+      <About />
       <FAQ />
       <Cta />
     </main>

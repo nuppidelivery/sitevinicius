@@ -39,7 +39,7 @@ export function Services() {
           >
             <div className="flex items-center mb-6">
               <span className="flex h-[1px] w-8 bg-primary mr-3"></span>
-              <span className="font-mono text-[11px] tracking-[0.25em] text-primary uppercase font-bold">O que fazemos</span>
+              <span className="font-mono text-[11px] tracking-[0.25em] text-primary uppercase font-bold">O que eu faço</span>
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] text-balance">
               Performance que <em className="italic font-normal text-primary">escala</em> com inteligência
@@ -53,7 +53,7 @@ export function Services() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <p className="text-lg text-muted leading-[1.7] text-pretty">
-              Não vendemos pacotes genéricos. Construímos uma operação de tráfego sob medida para o momento e objetivo do seu negócio — com tecnologia, dados e processo.
+              Não vendo pacotes genéricos. Construo uma operação de tráfego sob medida para o momento e objetivo do seu negócio — com tecnologia, dados e processo.
             </p>
           </motion.div>
         </div>

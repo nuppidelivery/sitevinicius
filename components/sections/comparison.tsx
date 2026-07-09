@@ -75,7 +75,7 @@ export function Comparison() {
           >
             <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 blur-[50px] -mr-16 -mt-16 rounded-full" />
             <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 text-foreground flex items-center">
-              Como será <span className="text-primary ml-2">com a Valente</span>
+              Como será <span className="text-primary ml-2">comigo</span>
             </h3>
             <ul className="space-y-4 md:space-y-6">
               {withService.map((item, idx) => (

@@ -32,7 +32,7 @@ export function Cta() {
           </h2>
           
           <p className="text-lg md:text-xl text-muted mb-12 max-w-2xl mx-auto leading-[1.7] text-pretty">
-            Uma análise estratégica de 30 minutos sem compromisso para diagnosticar a maturidade do funil comercial e revelar as alavancas ocultas de escala do seu negócio.
+            Uma análise estratégica de 30 minutos sem compromisso onde diagnosticarei a maturidade do funil comercial e revelarei as alavancas ocultas de escala do seu negócio.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center w-full sm:w-auto">

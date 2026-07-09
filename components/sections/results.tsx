@@ -58,9 +58,10 @@ export function Results() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="bg-surface border border-surface-border p-6 sm:p-8 md:p-10 rounded-sm hover:border-primary/40 transition-colors duration-300 flex flex-col"
+              className="group relative bg-surface border border-surface-border p-6 sm:p-8 md:p-10 rounded-xl hover:border-primary/50 transition-all duration-500 flex flex-col overflow-hidden shadow-lg hover:shadow-[0_0_30px_rgba(29,185,84,0.15)]"
             >
-              <div className="font-mono text-[10px] tracking-[0.2em] uppercase text-primary bg-primary/10 py-1.5 px-3 rounded-sm self-start mb-8">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+              <div className="font-mono text-[10px] tracking-[0.2em] uppercase text-primary bg-primary/10 py-1.5 px-3 rounded-full self-start mb-8 border border-primary/20 shadow-[0_0_10px_rgba(29,185,84,0.1)] relative z-10">
                 {result.tag}
               </div>
               <div className="font-heading text-5xl md:text-6xl font-bold text-foreground leading-none mb-3">
