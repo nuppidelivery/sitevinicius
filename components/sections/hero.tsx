@@ -97,7 +97,7 @@ export function Hero() {
           </div>
 
           <h1 className="hero-reveal text-3xl sm:text-4xl lg:text-[2.75rem] font-bold tracking-tight mb-5 leading-[1.15] text-foreground text-balance max-w-xl mx-auto lg:mx-0">
-            O seu próximo cliente está sendo comprado pelo seu <span className="text-primary italic font-normal">concorrente.</span>
+            O seu próximo cliente está sendo comprado <br className="hidden lg:block" /> pelo seu <span className="text-primary italic font-normal">concorrente.</span>
           </h1>
 
           <div className="hero-reveal text-sm md:text-base text-muted mb-8 leading-[1.6] text-pretty max-w-xl mx-auto lg:mx-0">
@@ -150,7 +150,7 @@ export function Hero() {
 
         {/* Lado Direito - Imagem dos Sócios */}
         {/* Usamos absolute alignment na base via lg:h-[85vh] para garantir que ela sempre toque o final da section */}
-        <div className="w-full lg:w-[50%] xl:w-[55%] lg:absolute lg:right-[-2%] lg:bottom-0 relative h-[400px] sm:h-[500px] lg:h-[90vh] flex items-end justify-center z-20 -mt-8 sm:-mt-12 lg:mt-0 pointer-events-none hero-image-reveal">
+        <div className="w-full lg:w-[50%] xl:w-[55%] lg:absolute lg:right-[-2%] lg:bottom-0 relative h-[400px] sm:h-[500px] lg:h-[90vh] flex items-end justify-center z-20 -mt-16 sm:-mt-20 lg:mt-0 pointer-events-none hero-image-reveal">
            <div className="relative w-[100%] sm:w-[85%] lg:w-full h-full flex items-end justify-center lg:justify-end">
               <Image 
                 src="/VINICIUS_GLAUBER.png" 
@@ -162,18 +162,18 @@ export function Hero() {
               />
               
               {/* Tags de Nome Flutuantes */}
-              <div className="absolute left-[12%] bottom-[35%] lg:left-[15%] lg:bottom-[45%] flex items-center gap-2 z-30 animate-in fade-in zoom-in duration-1000 delay-500 drop-shadow-md">
-                 <div className="w-1.5 h-6 sm:h-7 bg-primary rounded-full"></div>
+              <div className="absolute left-[18%] bottom-[32%] lg:left-[15%] lg:bottom-[45%] flex items-center gap-1.5 lg:gap-2 z-30 animate-in fade-in zoom-in duration-1000 delay-500 drop-shadow-md">
+                 <div className="w-1 lg:w-1.5 h-5 lg:h-7 bg-primary rounded-full"></div>
                  <div className="flex flex-col text-left justify-center">
-                    <span className="font-heading font-normal text-white text-[7px] sm:text-[9px] tracking-[0.2em] uppercase leading-none mb-0.5">VINÍCIUS</span>
-                    <span className="font-heading font-black text-white text-[9px] sm:text-[11px] tracking-[0.2em] uppercase leading-none">VALENTE</span>
+                    <span className="font-heading font-normal text-white text-[6px] sm:text-[9px] tracking-[0.2em] uppercase leading-none mb-0.5">VINÍCIUS</span>
+                    <span className="font-heading font-black text-white text-[7px] sm:text-[11px] tracking-[0.2em] uppercase leading-none">VALENTE</span>
                  </div>
               </div>
-              <div className="absolute right-[12%] bottom-[20%] lg:right-[25%] lg:bottom-[30%] flex items-center gap-2 z-30 animate-in fade-in zoom-in duration-1000 delay-700 drop-shadow-md">
-                 <div className="w-1.5 h-6 sm:h-7 bg-primary rounded-full"></div>
+              <div className="absolute right-[18%] bottom-[16%] lg:right-[25%] lg:bottom-[30%] flex items-center gap-1.5 lg:gap-2 z-30 animate-in fade-in zoom-in duration-1000 delay-700 drop-shadow-md">
+                 <div className="w-1 lg:w-1.5 h-5 lg:h-7 bg-primary rounded-full"></div>
                  <div className="flex flex-col text-left justify-center">
-                    <span className="font-heading font-normal text-white text-[7px] sm:text-[9px] tracking-[0.2em] uppercase leading-none mb-0.5">GLAUBER</span>
-                    <span className="font-heading font-black text-white text-[9px] sm:text-[11px] tracking-[0.2em] uppercase leading-none">LUCIANO</span>
+                    <span className="font-heading font-normal text-white text-[6px] sm:text-[9px] tracking-[0.2em] uppercase leading-none mb-0.5">GLAUBER</span>
+                    <span className="font-heading font-black text-white text-[7px] sm:text-[11px] tracking-[0.2em] uppercase leading-none">LUCIANO</span>
                  </div>
               </div>
            </div>
