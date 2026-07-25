@@ -1,13 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
-import { useState } from "react";
-import { QualifyModal } from "@/components/ui/qualify-modal";
 
 export function Cta() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
   return (
     <section id="contato" className="py-20 md:py-32 relative overflow-hidden text-center z-10 border-b border-surface-border px-4 md:px-0">
       <motion.div 
@@ -36,17 +31,23 @@ export function Cta() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center w-full sm:w-auto">
-            <Button size="lg" className="h-14 min-h-[56px] px-8 text-sm font-bold tracking-[0.1em] uppercase w-full sm:w-auto shadow-[0_0_20px_rgba(29,185,84,0.3)] hover:shadow-[0_0_30px_rgba(29,185,84,0.5)] transition-all" onClick={() => setIsModalOpen(true)}>
+            <a 
+              href="https://wa.me/5591996286994?text=Olá, Vinícius! Gostaria de agendar uma análise estratégica para o meu negócio."
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center justify-center h-14 min-h-[56px] px-8 text-sm font-bold tracking-[0.1em] uppercase w-full sm:w-auto shadow-[0_0_20px_rgba(29,185,84,0.3)] hover:shadow-[0_0_30px_rgba(29,185,84,0.5)] transition-all bg-primary text-primary-foreground rounded-sm hover:bg-primary/90"
+            >
               Falar no WhatsApp agora
-            </Button>
-            <Button variant="ghost" size="lg" className="h-14 min-h-[56px] px-6 text-sm font-bold tracking-[0.05em] w-full sm:w-auto border border-transparent hover:border-surface-border" onClick={() => window.location.href = 'mailto:contato@viniciusvalente.com.br'}>
+            </a>
+            <a 
+              href="mailto:contato@viniciusvalente.com.br"
+              className="inline-flex items-center justify-center h-14 min-h-[56px] px-6 text-sm font-bold tracking-[0.05em] w-full sm:w-auto border border-transparent hover:border-surface-border transition-colors text-foreground rounded-sm"
+            >
               Prefiro e-mail
-            </Button>
+            </a>
           </div>
         </motion.div>
       </div>
-
-      <QualifyModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </section>
   );
 }

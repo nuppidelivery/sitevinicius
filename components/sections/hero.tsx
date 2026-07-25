@@ -113,7 +113,7 @@ export function Hero() {
               {services.filter(s => s.group === 'contratar').map(service => (
                 <a 
                   key={service.id}
-                  href={`https://wa.me/5511999999999?text=${encodeURIComponent(service.whatsapp)}`}
+                  href={`https://wa.me/5591996286994?text=${encodeURIComponent(service.whatsapp)}`}
                   target="_blank"
                   rel="noreferrer"
                   onMouseEnter={() => setHoveredService(service)}
@@ -136,7 +136,7 @@ export function Hero() {
               {services.filter(s => s.group === 'aprender').map(service => (
                 <a 
                   key={service.id}
-                  href={`https://wa.me/5511999999999?text=${encodeURIComponent(service.whatsapp)}`}
+                  href={`https://wa.me/5591996286994?text=${encodeURIComponent(service.whatsapp)}`}
                   target="_blank"
                   rel="noreferrer"
                   onMouseEnter={() => setHoveredService(service)}
