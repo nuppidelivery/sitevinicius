@@ -11,23 +11,23 @@ export function Process() {
   const steps = [
     {
       number: "01",
-      title: "Diagnóstico Completo",
-      desc: "Auditoria das campanhas atuais, análise de concorrência, mapeamento do funil e identificação das maiores oportunidades de crescimento."
+      title: "Auditoria e Estancamento",
+      desc: "Antes de injetar dinheiro novo, identificamos por onde o lucro atual está vazando. Analisamos a saúde das suas campanhas atuais e cortamos o desperdício imediatamente."
     },
     {
       number: "02",
-      title: "Estratégia Personalizada",
-      desc: "Definição de canais, orçamento, público e oferta — com metas claras de CAC, ROAS e CPL alinhadas com a margem do seu negócio."
+      title: "Arquitetura da Oferta",
+      desc: "O anúncio só funciona se a oferta fizer sentido. Alinhamos sua mensagem de vendas para tocar nas dores exatas do cliente, reduzindo o esforço do time comercial."
     },
     {
       number: "03",
-      title: "Estruturação e Lançamento",
-      desc: "Criação das campanhas, automações e tracking com rastreamento completo. Primeiros 30 dias de otimização acelerada para encontrar os melhores ângulos."
+      title: "Automação e Velocidade",
+      desc: "Implementamos a infraestrutura invisível: rastreamento preciso (pixels) e respostas instantâneas no WhatsApp. Cada lead capturado entra em um funil imediato e implacável."
     },
     {
       number: "04",
-      title: "Escala e Governança",
-      desc: "Aumento de orçamento nos ângulos vencedores, documentação de processos e reuniões de alinhamento semanais com acesso ao dashboard em tempo real."
+      title: "Escala Calculada",
+      desc: "Com a esteira de vendas validada, nós não apenas dobramos o orçamento; nós injetamos capital apenas nos ângulos que já provaram trazer lucro de volta. Dinheiro que trabalha pelo negócio."
     }
   ];
 
@@ -74,10 +74,10 @@ export function Process() {
             <span className="flex h-[1px] w-8 bg-primary ml-3"></span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold max-w-3xl mb-6 leading-[1.1] text-balance mx-auto text-foreground">
-            Do <em className="italic font-normal text-primary">diagnóstico</em> ao resultado em 4 etapas
+            A engenharia por trás do lucro não aceita <em className="italic font-normal text-primary">atalhos.</em>
           </h2>
           <p className="text-lg text-muted max-w-2xl leading-[1.7] text-pretty mx-auto">
-            Nenhum projeto começa sem entender profundamente o seu negócio, mercado e metas. Sem atalhos.
+            Não acredito em modelos prontos que servem para todo mundo. Cada etapa do processo foi criada com um único objetivo: proteger e multiplicar a sua margem.
           </p>
         </div>
 

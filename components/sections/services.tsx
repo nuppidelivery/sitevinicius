@@ -8,22 +8,22 @@ export function Services() {
     {
       number: "01",
       title: "Gestão de Tráfego Pago",
-      desc: "Google Ads e Meta Ads gerenciados com estratégia de funil completo — da prospecção ao remarketing, com otimização diária baseada em dados reais."
+      desc: "Compra de atenção qualificada usando Google e Meta. O foco não é gerar cliques, é comprar tráfego por um valor menor do que o cliente deixa no seu caixa."
     },
     {
       number: "02",
       title: "Criativos de Alta Conversão",
-      desc: "Briefing, produção e teste de peças com copy e visual orientados a conversão — não a estética. Rotina de testes A/B contínua para identificar o que vende."
+      desc: "Design não vende, contraste e dor vendem. Produção contínua de anúncios desenhados estritamente para parar o dedo do cliente e forçar a conversão."
     },
     {
       number: "03",
       title: "Automação Comercial",
-      desc: "Fluxos automáticos de nutrição e qualificação de leads via WhatsApp, e-mail e CRM — para que nenhuma oportunidade esfrie enquanto o time está ocupado."
+      desc: "Implementação de respostas em 2 segundos e nutrição via IA. Um lead que esfria custa caro. A automação garante que nenhuma venda se perca por atraso."
     },
     {
       number: "04",
       title: "Analytics e Business Intelligence",
-      desc: "Dashboard centralizado com as métricas que realmente importam para o seu negócio — visibilidade total da operação em tempo real, sem depender de ninguém."
+      desc: "Você não pode escalar o que não consegue medir. Criação de painéis que mostram exatamente qual campanha traz lucro, permitindo decisões rápidas e seguras."
     }
   ];
 
@@ -42,7 +42,7 @@ export function Services() {
               <span className="font-mono text-[11px] tracking-[0.25em] text-primary uppercase font-bold">O que eu faço</span>
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] text-balance">
-              Performance que <em className="italic font-normal text-primary">escala</em> com inteligência
+              Infraestrutura focada no <em className="italic font-normal text-primary">retorno</em> do capital
             </h2>
           </motion.div>
           
@@ -53,7 +53,7 @@ export function Services() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <p className="text-lg text-muted leading-[1.7] text-pretty">
-              Não vendo pacotes genéricos. Construo uma operação de tráfego sob medida para o momento e objetivo do seu negócio — com tecnologia, dados e processo.
+              Não existem milagres na aquisição de clientes. Existe processo validado, tecnologia para rastrear e matemática para garantir que o dinheiro volte.
             </p>
           </motion.div>
         </div>

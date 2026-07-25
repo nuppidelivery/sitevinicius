@@ -5,21 +5,21 @@ import { Check, X } from "lucide-react";
 
 export function Comparison() {
   const withoutService = [
-    "Verba queimada sem saber o ROI exato",
-    "Dependência de indicações ou panfletagem digital",
-    "Campanhas genéricas que não convertem",
-    "Falta de previsibilidade no caixa",
-    "Vendedor parado esperando cliente",
-    "Zero acompanhamento estratégico"
+    "Dinheiro injetado em anúncios sem saber se volta",
+    "Comercial refém de indicações que demoram a chegar",
+    "Mensagens vazias que o cliente apenas ignora",
+    "Vendas na montanha-russa: um mês bom, três ruins",
+    "Vendedores implorando atenção de curiosos",
+    "Falta de controle, dados e governança estratégica"
   ];
 
   const withService = [
-    "ROI rastreado em cada centavo investido",
-    "Aquisição previsível e escalável todos os dias",
-    "Estratégia focada no comportamento do seu cliente",
-    "Previsibilidade de faturamento mensal",
-    "WhatsApp do time comercial sempre com leads",
-    "Reuniões de alinhamento e dashboard de resultados"
+    "Retorno medido sobre cada real investido",
+    "Esteira de aquisição que funciona todos os dias",
+    "Comunicação baseada no comportamento e dor do cliente",
+    "Faturamento escalável e margem protegida",
+    "WhatsApp com fluxo contínuo de clientes qualificados",
+    "Total visibilidade da operação em painéis ao vivo"
   ];
 
   return (

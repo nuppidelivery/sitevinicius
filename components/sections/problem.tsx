@@ -7,23 +7,23 @@ export function Problem() {
   const problems = [
     {
       icon: <Flame className="w-8 h-8 text-primary" />,
-      title: "Orçamento queimando sem retorno",
-      desc: "Campanhas no ar há meses, CPA subindo, ROAS despencando — e ninguém sabe exatamente por quê. Os relatórios existem mas não dizem o que fazer."
+      title: "Leads baratos que não pagam a conta",
+      desc: "Métrica de vaidade engana. Seu CPL (custo por lead) pode ser baixo, mas se eles não têm limite no cartão ou não respondem no WhatsApp, você está financiando curiosos em vez de atrair compradores."
     },
     {
       icon: <Target className="w-8 h-8 text-primary" />,
-      title: "Leads que não convertem",
-      desc: "Você gera lead, o comercial liga, não fecha. O problema não é volume — é qualidade e timing. Sem automação, você perde a janela de ouro."
+      title: "Demora fatal no atendimento",
+      desc: "Você gera o lead, mas seu time demora três horas para responder. Nesse intervalo, a emoção de compra evaporou e ele já acionou outra empresa. Você pagou por um cliente e deu de presente para a concorrência."
     },
     {
       icon: <TrendingDown className="w-8 h-8 text-primary" />,
-      title: "Criativos que cansam rápido",
-      desc: "O mesmo criativo funciona por 2 semanas e então o custo explode. Sem processo de produção e teste contínuo, você fica refém da fadiga criativa."
+      title: "Fadiga de anúncios sem renovação",
+      desc: "A mesma imagem rodando há meses. O algoritmo cansa, o custo dispara e sua empresa some do radar. Escala exige um processo fabril de criação, teste e descarte rápido daquilo que não funciona mais."
     },
     {
       icon: <Settings className="w-8 h-8 text-primary" />,
-      title: "Dependência total do gestor",
-      desc: "Se o gestor some, a operação para. Você não tem visibilidade real, não tem processos documentados, não tem controle sobre o que está acontecendo."
+      title: "A caixa-preta da sua agência",
+      desc: "Você não sabe qual campanha traz retorno e qual torra o dinheiro. Se a sua agência desaparecer hoje, você perde todo o histórico de inteligência. Sem governança de dados, você é refém."
     }
   ];
 
@@ -43,10 +43,10 @@ export function Problem() {
             <span className="flex h-[1px] w-8 bg-primary ml-3"></span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold max-w-3xl mb-6 leading-[1.1] text-balance mx-auto">
-            Você investe em tráfego, mas o <em className="italic font-normal text-primary">caixa não fecha.</em>
+            O seu problema de vendas não é falta de leads, é falta de <em className="italic font-normal text-primary">inteligência na conversão.</em>
           </h2>
           <p className="text-lg text-muted max-w-2xl leading-[1.7] text-pretty mx-auto">
-            A maioria das empresas joga dinheiro em anúncios sem estrutura, sem processo e sem dados — e depois culpa a plataforma.
+            Você aumenta a verba, mas o lucro encolhe. Essa conta não fecha porque você está tratando uma guerra de atenção com armas amadoras. O diagnóstico quase sempre é o mesmo:
           </p>
         </motion.div>
 

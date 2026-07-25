@@ -70,13 +70,13 @@ export function About() {
 
             <div className="space-y-6 text-muted text-lg leading-[1.7] text-pretty">
               <p>
-                Meu trabalho é ajudar empresas a transformar investimento em aquisição de clientes por meio de uma operação orientada por dados, testes e otimização contínua. Antes de pensar em anúncios, busco entender o negócio, identificar gargalos e construir uma estratégia capaz de gerar resultados consistentes.
+                Meu trabalho não é criar campanhas bonitinhas para gerar curtidas. Meu trabalho é construir ecossistemas de aquisição que compram clientes por um valor menor do que eles deixam no seu caixa.
               </p>
               <p>
-                Cada projeto é tratado de forma única. Não trabalho com fórmulas prontas, porque cada empresa possui um mercado, um público e desafios diferentes. Por isso, desenvolvo estratégias personalizadas que unem tráfego pago, análise de dados e melhoria da jornada do cliente para aumentar o retorno sobre o investimento.
+                Trato o seu dinheiro com o respeito de um investidor. Antes de subir qualquer campanha, identifico por onde a sua margem atual está vazando, estruturo a jornada de compra e implemento rastreamento preciso. Sem isso, tráfego é apenas aposta.
               </p>
               <p>
-                Mais do que gerir campanhas, meu objetivo é construir um sistema previsível de crescimento, onde cada decisão é tomada com base em dados e cada investimento precisa fazer sentido para o negócio.
+                O meu objetivo não é te entregar relatórios confusos para justificar gastos. É entregar previsibilidade financeira, onde a tecnologia e os dados trabalham a favor do seu faturamento, protegendo o seu tempo e a sua escala.
               </p>
             </div>
           </motion.div>

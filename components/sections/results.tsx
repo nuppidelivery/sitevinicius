@@ -8,21 +8,21 @@ export function Results() {
       tag: "Varejo · Local",
       metricValue: "8.2",
       metricSymbol: "x",
-      label: "ROAS médio em 4 meses de operação com campanhas de alta conversão regional",
+      label: "Retorno sobre o investimento gerado em 4 meses com engenharia de conversão regional.",
       client: "// Cliente · Segmento: varejo físico e online"
     },
     {
       tag: "Saúde · Clínica",
       metricValue: "-61",
       metricSymbol: "%",
-      label: "Redução no custo por agendamento com automação de qualificação via WhatsApp",
+      label: "Queda de desperdício no custo de aquisição através de inteligência artificial.",
       client: "// Cliente · Segmento: saúde preventiva"
     },
     {
       tag: "SaaS · B2B",
       metricValue: "+480",
       metricSymbol: "%",
-      label: "Crescimento em MQLs qualificados após reestruturação completa de funil e criativos",
+      label: "Aumento em fluxo de clientes prontos para compra após funil automatizado.",
       client: "// Cliente · Segmento: tecnologia"
     }
   ];
@@ -43,10 +43,10 @@ export function Results() {
             <span className="flex h-[1px] w-8 bg-primary ml-3"></span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold max-w-3xl mb-6 leading-[1.1] text-balance mx-auto">
-            Números que o <em className="italic font-normal text-primary">mercado</em> respeita
+            Números que provam o <em className="italic font-normal text-primary">retorno</em> do capital
           </h2>
           <p className="text-lg text-muted max-w-2xl leading-[1.7] text-pretty mx-auto">
-            Cases reais, dados verificáveis. Cada resultado tem nome, contexto e estratégia por trás.
+            Matemática pura. Sem projeções inventadas, apenas dados reais de negócios que pararam de gastar para começar a investir.
           </p>
         </motion.div>
 

@@ -23,21 +23,21 @@ export function Cta() {
           </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[72px] font-bold mb-6 leading-[1.1] text-balance mx-auto">
-            Pronto para parar de <em className="italic font-normal text-primary">adivinhar</em> e começar a crescer?
+            Decisões baseadas em achismos custam o futuro da sua <em className="italic font-normal text-primary">empresa.</em>
           </h2>
           
           <p className="text-lg md:text-xl text-muted mb-12 max-w-2xl mx-auto leading-[1.7] text-pretty">
-            Uma análise estratégica de 30 minutos sem compromisso onde diagnosticarei a maturidade do funil comercial e revelarei as alavancas ocultas de escala do seu negócio.
+            O dinheiro que você não está ganhando agora mesmo está indo para alguém mais preparado. Agende uma conversa estratégica e vamos desenhar um ecossistema focado no retorno do seu capital.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center w-full sm:w-auto">
             <a 
-              href="https://wa.me/5591996286994?text=Olá, Vinícius! Gostaria de agendar uma análise estratégica para o meu negócio."
+              href="https://wa.me/5591996286994?text=Olá, Vinícius! O meu negócio precisa de previsibilidade de caixa. Gostaria de agendar uma análise estratégica."
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center justify-center h-14 min-h-[56px] px-8 text-sm font-bold tracking-[0.1em] uppercase w-full sm:w-auto shadow-[0_0_20px_rgba(29,185,84,0.3)] hover:shadow-[0_0_30px_rgba(29,185,84,0.5)] transition-all bg-primary text-primary-foreground rounded-sm hover:bg-primary/90"
             >
-              Falar no WhatsApp agora
+              Mapear meu crescimento agora
             </a>
             <a 
               href="mailto:contato@viniciusvalente.com.br"
