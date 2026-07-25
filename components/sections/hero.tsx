@@ -89,7 +89,7 @@ export function Hero() {
             <span className="flex h-[2px] w-6 md:w-8 bg-primary ml-3 md:ml-4 lg:hidden" />
           </div>
 
-          <h1 className="hero-reveal text-2xl sm:text-3xl md:text-4xl lg:text-[3rem] font-bold tracking-tight mb-5 leading-[1.1] text-foreground text-balance max-w-2xl lg:max-w-none mx-auto lg:mx-0">
+          <h1 className="hero-reveal text-3xl sm:text-4xl lg:text-[2.75rem] font-bold tracking-tight mb-5 leading-[1.15] text-foreground text-balance max-w-xl mx-auto lg:mx-0">
             O seu próximo cliente está sendo comprado pelo seu <span className="text-primary italic font-normal">concorrente.</span>
           </h1>
 
@@ -143,23 +143,31 @@ export function Hero() {
 
         {/* Lado Direito - Imagem dos Sócios */}
         {/* Usamos absolute alignment na base via lg:h-[85vh] para garantir que ela sempre toque o final da section */}
-        <div className="w-full lg:w-[45%] lg:absolute lg:right-0 lg:bottom-0 relative h-[400px] sm:h-[500px] lg:h-[85vh] flex items-end justify-center z-20 hero-reveal mt-12 lg:mt-0 pointer-events-none">
-           <div className="relative w-[90%] sm:w-[75%] lg:w-full h-full flex items-end justify-center lg:justify-end">
+        <div className="w-full lg:w-[50%] xl:w-[55%] lg:absolute lg:right-[-2%] lg:bottom-0 relative h-[450px] sm:h-[550px] lg:h-[90vh] flex items-end justify-center z-20 hero-reveal mt-12 lg:mt-0 pointer-events-none">
+           <div className="relative w-[100%] sm:w-[85%] lg:w-full h-full flex items-end justify-center lg:justify-end">
               <Image 
                 src="/VINICIUS_GLAUBER.png" 
                 alt="Vinícius Valente e Glauber Luciano" 
                 fill 
                 className="object-contain object-bottom drop-shadow-[0_0_40px_rgba(0,0,0,0.6)]" 
                 priority
-                sizes="(max-width: 1024px) 90vw, 50vw"
+                sizes="(max-width: 1024px) 100vw, 55vw"
               />
               
               {/* Tags de Nome Flutuantes */}
-              <div className="absolute left-[0%] bottom-[35%] lg:left-[-5%] lg:bottom-[45%] bg-primary px-3 py-1.5 shadow-[0_0_20px_rgba(29,185,84,0.4)] rotate-[-4deg] animate-in fade-in zoom-in duration-1000 delay-500 z-30">
-                 <span className="font-heading font-black text-white text-[9px] sm:text-[10px] md:text-xs tracking-widest uppercase">VINÍCIUS VALENTE</span>
+              <div className="absolute left-[2%] bottom-[35%] lg:left-[5%] lg:bottom-[45%] flex items-center gap-2.5 z-30 animate-in fade-in zoom-in duration-1000 delay-500 drop-shadow-md">
+                 <div className="w-1.5 h-8 sm:h-9 bg-primary rounded-full"></div>
+                 <div className="flex flex-col text-left justify-center">
+                    <span className="font-heading font-normal text-white text-[10px] sm:text-xs tracking-[0.2em] uppercase leading-none mb-1">VINÍCIUS</span>
+                    <span className="font-heading font-black text-white text-xs sm:text-sm tracking-[0.2em] uppercase leading-none">VALENTE</span>
+                 </div>
               </div>
-              <div className="absolute right-[0%] bottom-[20%] lg:right-[-2%] lg:bottom-[30%] bg-primary px-3 py-1.5 shadow-[0_0_20px_rgba(29,185,84,0.4)] rotate-[4deg] animate-in fade-in zoom-in duration-1000 delay-700 z-30">
-                 <span className="font-heading font-black text-white text-[9px] sm:text-[10px] md:text-xs tracking-widest uppercase">GLAUBER LUCIANO</span>
+              <div className="absolute right-[2%] bottom-[20%] lg:right-[15%] lg:bottom-[30%] flex items-center gap-2.5 z-30 animate-in fade-in zoom-in duration-1000 delay-700 drop-shadow-md">
+                 <div className="w-1.5 h-8 sm:h-9 bg-primary rounded-full"></div>
+                 <div className="flex flex-col text-left justify-center">
+                    <span className="font-heading font-normal text-white text-[10px] sm:text-xs tracking-[0.2em] uppercase leading-none mb-1">GLAUBER</span>
+                    <span className="font-heading font-black text-white text-xs sm:text-sm tracking-[0.2em] uppercase leading-none">LUCIANO</span>
+                 </div>
               </div>
            </div>
         </div>
