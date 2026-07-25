@@ -15,10 +15,10 @@ export function MarqueeText({ phrases }: MarqueeTextProps) {
         {[...phrases, ...phrases, ...phrases, ...phrases].map((phrase, i) => (
           <div
             key={i}
-            className="font-mono text-sm md:text-base font-bold tracking-widest uppercase text-primary-foreground whitespace-nowrap opacity-90 flex items-center gap-12"
+            className="font-mono text-sm md:text-base font-bold tracking-widest uppercase text-white whitespace-nowrap opacity-90 flex items-center gap-12"
           >
             <span>{phrase}</span>
-            <span className="text-primary-foreground/50 text-xl">•</span>
+            <span className="text-white/50 text-xl">•</span>
           </div>
         ))}
       </div>

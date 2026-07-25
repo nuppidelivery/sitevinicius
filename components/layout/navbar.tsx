@@ -28,10 +28,12 @@ export function Navbar() {
             href="https://wa.me/5591996286994?text=Olá, Vinícius! Gostaria de agendar uma análise estratégica para o meu negócio."
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center justify-center bg-primary text-primary-foreground hover:bg-primary/90 min-h-[44px] px-4 rounded-sm text-sm"
+            className="group relative inline-flex items-center justify-center bg-primary text-white border border-primary hover:bg-primary/90 min-h-[44px] px-6 rounded-xl transition-all duration-500 overflow-hidden shadow-[0_0_15px_rgba(29,185,84,0.3)] hover:shadow-[0_0_30px_rgba(29,185,84,0.6)] drop-shadow-md"
           >
-            <span className="hidden md:inline font-bold">Falar no WhatsApp</span>
-            <span className="md:hidden font-bold">WhatsApp</span>
+            <span className="relative font-black uppercase tracking-widest text-[10px] sm:text-xs transition-colors duration-500 flex items-center justify-center">
+              <span className="hidden md:inline">Falar no WhatsApp</span>
+              <span className="md:hidden">WhatsApp</span>
+            </span>
           </a>
         </div>
       </div>
