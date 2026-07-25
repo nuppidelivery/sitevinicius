@@ -10,7 +10,7 @@ export function FAQ() {
   const faqs = [
     {
       q: "Qual é o investimento mínimo em mídia que você trabalha?",
-      a: "Para que eu possa gerar resultado real e escala para o seu negócio, recomendo um investimento a partir de R$ 1.500 em gestão + R$ 2.000 em verba de mídia por mês."
+      a: "O investimento ideal depende dos objetivos e do estágio atual do seu negócio. Na nossa reunião estratégica, avaliamos o seu cenário e estruturamos um orçamento inicial que faça sentido para trazer o retorno mais rápido possível, sem trabalhar com 'pacotes engessados'."
     },
     {
       q: "Quanto tempo leva para ver resultados?",
@@ -22,7 +22,7 @@ export function FAQ() {
     },
     {
       q: "Tenho acesso às minhas próprias campanhas e dados?",
-      a: "Sim. Prezo pela transparência em toda a operação."
+      a: "Com certeza. Além de todas as contas e ativos ficarem no seu nome, você terá acesso a um painel de administrador exclusivo, com login e senha. Nele, você poderá acompanhar em tempo real todos os dados, métricas e retornos das campanhas sempre que quiser."
     }
   ];
 
