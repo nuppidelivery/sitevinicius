@@ -33,7 +33,7 @@ export function Proof() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: idx * 0.1, duration: 0.5 }}
+              transition={{ delay: idx * 0.1, duration: 0.6 }}
               className="text-center"
             >
               <h3 className="text-4xl md:text-5xl font-bold text-foreground mb-2">{stat.value}</h3>

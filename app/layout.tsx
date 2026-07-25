@@ -20,6 +20,8 @@ export const metadata: Metadata = {
   },
 };
 
+import { SmoothScrollProvider } from "@/components/layout/smooth-scroll";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -48,9 +50,11 @@ export default function RootLayout({
           <img height="1" width="1" style={{ display: "none" }} src="https://www.facebook.com/tr?id=1341790971340686&ev=PageView&noscript=1" alt="" />
         </noscript>
         <PixelEvents />
-        <Navbar />
-        {children}
-        <Footer />
+        <SmoothScrollProvider>
+          <Navbar />
+          {children}
+          <Footer />
+        </SmoothScrollProvider>
       </body>
     </html>
   );

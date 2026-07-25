@@ -49,7 +49,7 @@ export function Portfolio() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: idx * 0.1, duration: 0.5 }}
+              transition={{ delay: idx * 0.1, duration: 0.6 }}
             >
               <Card className="h-full p-0 overflow-hidden group cursor-pointer border border-surface-border">
                 {/* Image Placeholder with Gradient */}

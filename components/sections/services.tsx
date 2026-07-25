@@ -65,7 +65,7 @@ export function Services() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: idx * 0.1 }}
+              transition={{ duration: 0.6, delay: idx * 0.1 }}
               className="group bg-background hover:bg-surface transition-all duration-300 p-6 md:p-8 lg:p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 md:gap-8 border-l-[3px] border-transparent hover:border-primary cursor-pointer"
             >
               <div className="flex flex-col md:flex-row items-start md:items-center gap-6 lg:gap-12 flex-1">

@@ -46,7 +46,7 @@ export function Comparison() {
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
             className="bg-surface border border-surface-border p-6 sm:p-8 md:p-10 rounded-sm relative overflow-hidden"
           >
             <div className="absolute top-0 right-0 w-32 h-32 bg-destructive/5 blur-[50px] -mr-16 -mt-16 rounded-full" />
@@ -70,7 +70,7 @@ export function Comparison() {
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
             className="bg-surface border border-primary/30 p-6 sm:p-8 md:p-10 rounded-sm relative overflow-hidden shadow-[0_0_30px_rgba(29,185,84,0.05)]"
           >
             <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 blur-[50px] -mr-16 -mt-16 rounded-full" />
