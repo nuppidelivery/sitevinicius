@@ -42,9 +42,9 @@ export function Hero() {
 
       // Image Scale & Fade Reveal
       tl.fromTo(".hero-image-reveal",
-        { opacity: 0, scale: 0.95, y: 30 },
-        { opacity: 1, scale: 1, y: 0, duration: 1.5, ease: "power3.out" },
-        "-=0.8"
+        { opacity: 0, scale: 1.05, y: 80, filter: "blur(15px)" },
+        { opacity: 1, scale: 1, y: 0, filter: "blur(0px)", duration: 2, ease: "expo.out" },
+        "-=1.0"
       );
 
       // Scroll Indicator
@@ -150,7 +150,7 @@ export function Hero() {
 
         {/* Lado Direito - Imagem dos Sócios */}
         {/* Usamos absolute alignment na base via lg:h-[85vh] para garantir que ela sempre toque o final da section */}
-        <div className="w-full lg:w-[50%] xl:w-[55%] lg:absolute lg:right-[-2%] lg:bottom-0 relative h-[400px] sm:h-[500px] lg:h-[90vh] flex items-end justify-center z-20 mt-2 lg:mt-0 pointer-events-none hero-image-reveal">
+        <div className="w-full lg:w-[50%] xl:w-[55%] lg:absolute lg:right-[-2%] lg:bottom-0 relative h-[400px] sm:h-[500px] lg:h-[90vh] flex items-end justify-center z-20 -mt-8 sm:-mt-12 lg:mt-0 pointer-events-none hero-image-reveal">
            <div className="relative w-[100%] sm:w-[85%] lg:w-full h-full flex items-end justify-center lg:justify-end">
               <Image 
                 src="/VINICIUS_GLAUBER.png" 
@@ -162,18 +162,18 @@ export function Hero() {
               />
               
               {/* Tags de Nome Flutuantes */}
-              <div className="absolute left-[8%] bottom-[35%] lg:left-[10%] lg:bottom-[45%] flex items-center gap-2.5 z-30 animate-in fade-in zoom-in duration-1000 delay-500 drop-shadow-md">
-                 <div className="w-1.5 h-7 sm:h-8 bg-primary rounded-full"></div>
+              <div className="absolute left-[12%] bottom-[35%] lg:left-[15%] lg:bottom-[45%] flex items-center gap-2 z-30 animate-in fade-in zoom-in duration-1000 delay-500 drop-shadow-md">
+                 <div className="w-1.5 h-6 sm:h-7 bg-primary rounded-full"></div>
                  <div className="flex flex-col text-left justify-center">
-                    <span className="font-heading font-normal text-white text-[9px] sm:text-[10px] tracking-[0.2em] uppercase leading-none mb-1">VINÍCIUS</span>
-                    <span className="font-heading font-black text-white text-[11px] sm:text-xs tracking-[0.2em] uppercase leading-none">VALENTE</span>
+                    <span className="font-heading font-normal text-white text-[7px] sm:text-[9px] tracking-[0.2em] uppercase leading-none mb-0.5">VINÍCIUS</span>
+                    <span className="font-heading font-black text-white text-[9px] sm:text-[11px] tracking-[0.2em] uppercase leading-none">VALENTE</span>
                  </div>
               </div>
-              <div className="absolute right-[5%] bottom-[20%] lg:right-[20%] lg:bottom-[30%] flex items-center gap-2.5 z-30 animate-in fade-in zoom-in duration-1000 delay-700 drop-shadow-md">
-                 <div className="w-1.5 h-7 sm:h-8 bg-primary rounded-full"></div>
+              <div className="absolute right-[12%] bottom-[20%] lg:right-[25%] lg:bottom-[30%] flex items-center gap-2 z-30 animate-in fade-in zoom-in duration-1000 delay-700 drop-shadow-md">
+                 <div className="w-1.5 h-6 sm:h-7 bg-primary rounded-full"></div>
                  <div className="flex flex-col text-left justify-center">
-                    <span className="font-heading font-normal text-white text-[9px] sm:text-[10px] tracking-[0.2em] uppercase leading-none mb-1">GLAUBER</span>
-                    <span className="font-heading font-black text-white text-[11px] sm:text-xs tracking-[0.2em] uppercase leading-none">LUCIANO</span>
+                    <span className="font-heading font-normal text-white text-[7px] sm:text-[9px] tracking-[0.2em] uppercase leading-none mb-0.5">GLAUBER</span>
+                    <span className="font-heading font-black text-white text-[9px] sm:text-[11px] tracking-[0.2em] uppercase leading-none">LUCIANO</span>
                  </div>
               </div>
            </div>
