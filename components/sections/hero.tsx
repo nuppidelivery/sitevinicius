@@ -96,24 +96,24 @@ export function Hero() {
           <span className="flex h-[2px] w-6 md:w-8 bg-primary ml-3 md:ml-4" />
         </div>
 
-        <div className="flex flex-col lg:flex-row items-center lg:items-stretch justify-between gap-12 w-full mt-4 lg:mt-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center w-full mt-4 lg:mt-8 z-20 relative">
           
-          {/* Lado Esquerdo - Textos e Botões */}
-          <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left w-full lg:max-w-[55%] z-20">
+          {/* Lado Esquerdo - Textos e Botões (7 colunas) */}
+          <div className="col-span-1 lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left w-full order-1">
             
-            <h1 className="hero-reveal text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-bold tracking-tight mb-6 leading-[1.1] text-foreground text-balance">
+            <h1 className="hero-reveal text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-5 leading-[1.1] text-foreground text-balance max-w-2xl lg:max-w-none mx-auto lg:mx-0">
               O seu próximo cliente está sendo comprado pelo seu <span className="text-primary italic font-normal">concorrente.</span>
             </h1>
 
-            <div className="hero-reveal text-sm md:text-base text-muted mb-8 leading-[1.7] text-pretty max-w-[90%] sm:max-w-full">
+            <div className="hero-reveal text-sm md:text-base text-muted mb-8 leading-[1.6] text-pretty max-w-xl mx-auto lg:mx-0">
               <p>
                 Não vendo cliques, estruturo engenharia de aquisição. O mercado chama de tráfego pago; eu chamo de comprar clientes por um valor menor do que eles deixam no seu caixa. Identifico o vazamento de dinheiro no seu funil e transformo o que antes era custo em investimento que se paga sozinho.
               </p>
             </div>
 
             {/* Action Groups na Esquerda */}
-            <div className="w-full flex flex-col gap-6 relative mt-4">
-              <div className="flex flex-col gap-4">
+            <div className="w-full flex flex-col gap-6 relative z-30 max-w-xl mx-auto lg:mx-0">
+              <div className="flex flex-col gap-3">
                 <h3 className="hero-reveal font-mono text-[10px] tracking-[0.2em] uppercase text-muted text-center lg:text-left">Para empresas: delegue a aquisição</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full">
                   {services.filter(s => s.group === 'contratar').map(service => (
@@ -124,9 +124,9 @@ export function Hero() {
                       rel="noreferrer"
                       onMouseEnter={() => handleMouseEnter(service)}
                       onMouseLeave={handleMouseLeave}
-                      className="btn-reveal group relative px-4 py-3 bg-background/50 backdrop-blur-sm border-2 border-primary hover:bg-primary/20 rounded-full transition-all duration-700 overflow-hidden shadow-[0_0_15px_rgba(29,185,84,0.3)] hover:shadow-[0_0_30px_rgba(29,185,84,0.6)] w-full text-center flex items-center justify-center"
+                      className="btn-reveal group relative px-4 py-3.5 bg-background/60 backdrop-blur-md border-2 border-primary hover:bg-primary/20 rounded-xl transition-all duration-500 overflow-hidden shadow-[0_0_15px_rgba(29,185,84,0.15)] hover:shadow-[0_0_25px_rgba(29,185,84,0.4)] w-full text-center flex items-center justify-center"
                     >
-                      <span className="relative font-bold uppercase tracking-wider text-[10px] sm:text-[11px] text-primary transition-colors duration-700 flex items-center justify-center gap-2">
+                      <span className="relative font-bold uppercase tracking-widest text-[10px] sm:text-xs text-primary transition-colors duration-500 flex items-center justify-center">
                         {service.label}
                       </span>
                     </a>
@@ -134,7 +134,7 @@ export function Hero() {
                 </div>
               </div>
 
-              <div className="flex flex-col gap-4">
+              <div className="flex flex-col gap-3">
                 <h3 className="hero-reveal font-mono text-[10px] tracking-[0.2em] uppercase text-muted text-center lg:text-left">Para profissionais: domine e lucre</h3>
                 <div className="flex justify-center lg:justify-start w-full">
                   {services.filter(s => s.group === 'aprender').map(service => (
@@ -145,9 +145,9 @@ export function Hero() {
                       rel="noreferrer"
                       onMouseEnter={() => handleMouseEnter(service)}
                       onMouseLeave={handleMouseLeave}
-                      className="btn-reveal group relative px-5 py-3.5 bg-primary text-primary-foreground border-2 border-primary hover:bg-primary/90 rounded-full transition-all duration-700 shadow-[0_0_20px_rgba(29,185,84,0.5)] hover:shadow-[0_0_40px_rgba(29,185,84,0.8)] w-full text-center flex items-center justify-center"
+                      className="btn-reveal group relative px-6 py-4 bg-primary text-primary-foreground border-2 border-primary hover:bg-primary/90 rounded-xl transition-all duration-500 shadow-[0_0_20px_rgba(29,185,84,0.3)] hover:shadow-[0_0_35px_rgba(29,185,84,0.6)] w-full text-center flex items-center justify-center"
                     >
-                      <span className="relative font-bold text-[11px] sm:text-xs tracking-widest uppercase flex items-center justify-center gap-2">
+                      <span className="relative font-black text-xs sm:text-sm tracking-widest uppercase flex items-center justify-center">
                         {service.label}
                       </span>
                     </a>
@@ -155,10 +155,10 @@ export function Hero() {
                 </div>
               </div>
 
-              {/* Hover Feedback (Desktop & Mobile) unificado e menor */}
-              <div className="w-full h-[120px] pointer-events-none z-20 mt-2">
+              {/* Hover Feedback (Apenas Desktop) - Remove espaço vazio no mobile */}
+              <div className="hidden lg:block w-full h-[100px] pointer-events-none z-20 mt-2">
                 <div 
-                  className={`bg-surface/90 backdrop-blur-xl border border-primary/30 p-4 rounded-2xl shadow-[0_0_40px_rgba(29,185,84,0.15)] transition-all duration-300 transform text-left ${hoveredService ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+                  className={`bg-surface/90 backdrop-blur-xl border border-primary/30 p-4 rounded-xl shadow-[0_0_30px_rgba(29,185,84,0.15)] transition-all duration-300 transform text-left ${hoveredService ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
                 >
                   {activeService && (
                     <>
@@ -173,23 +173,24 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Lado Direito - Imagem dos Sócios */}
-          <div className="flex-1 w-full relative min-h-[450px] lg:min-h-full flex items-end justify-center lg:justify-end z-10 mt-4 lg:mt-0 hero-reveal">
-             <div className="relative w-full max-w-[450px] lg:max-w-[550px] xl:max-w-[650px] aspect-[4/5] lg:aspect-auto lg:h-full flex items-end">
+          {/* Lado Direito - Imagem dos Sócios (5 colunas) */}
+          <div className="col-span-1 lg:col-span-5 w-full relative min-h-[350px] sm:min-h-[450px] lg:min-h-[600px] flex items-end justify-center z-10 mt-8 lg:mt-0 hero-reveal order-2">
+             <div className="relative w-[90%] sm:w-[70%] lg:w-full h-full flex items-end">
                 <Image 
                   src="/VINICIUS_GLAUBER.png" 
                   alt="Vinícius Valente e Glauber Luciano" 
                   fill 
-                  className="object-contain object-bottom drop-shadow-[0_0_30px_rgba(0,0,0,0.5)]" 
+                  className="object-contain object-bottom drop-shadow-[0_0_40px_rgba(0,0,0,0.6)]" 
                   priority
+                  sizes="(max-width: 1024px) 90vw, 50vw"
                 />
                 
                 {/* Tags de Nome Flutuantes */}
-                <div className="absolute left-[10%] bottom-[30%] lg:left-[5%] lg:bottom-[35%] bg-primary px-3 py-1.5 shadow-[0_0_20px_rgba(29,185,84,0.4)] rotate-[-3deg] animate-in fade-in zoom-in duration-1000 delay-500 z-20">
-                   <span className="font-heading font-black text-primary-foreground text-[10px] sm:text-xs tracking-widest uppercase">VINÍCIUS VALENTE</span>
+                <div className="absolute left-[0%] bottom-[35%] lg:left-[-10%] lg:bottom-[45%] bg-primary px-3 py-1.5 shadow-[0_0_20px_rgba(29,185,84,0.4)] rotate-[-4deg] animate-in fade-in zoom-in duration-1000 delay-500 z-20">
+                   <span className="font-heading font-black text-primary-foreground text-[9px] sm:text-[10px] md:text-xs tracking-widest uppercase">VINÍCIUS VALENTE</span>
                 </div>
-                <div className="absolute right-[5%] bottom-[20%] lg:right-[0%] lg:bottom-[25%] bg-primary px-3 py-1.5 shadow-[0_0_20px_rgba(29,185,84,0.4)] rotate-[3deg] animate-in fade-in zoom-in duration-1000 delay-700 z-20">
-                   <span className="font-heading font-black text-primary-foreground text-[10px] sm:text-xs tracking-widest uppercase">GLAUBER LUCIANO</span>
+                <div className="absolute right-[0%] bottom-[20%] lg:right-[-5%] lg:bottom-[30%] bg-primary px-3 py-1.5 shadow-[0_0_20px_rgba(29,185,84,0.4)] rotate-[4deg] animate-in fade-in zoom-in duration-1000 delay-700 z-20">
+                   <span className="font-heading font-black text-primary-foreground text-[9px] sm:text-[10px] md:text-xs tracking-widest uppercase">GLAUBER LUCIANO</span>
                 </div>
              </div>
           </div>
