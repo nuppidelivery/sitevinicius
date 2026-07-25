@@ -121,7 +121,7 @@ export function Hero() {
             </div>
 
             <div className="flex flex-col gap-3 mt-2">
-              <h3 className="hero-reveal font-mono text-[10px] tracking-[0.2em] uppercase text-muted text-center lg:text-left">Para profissionais: domine e lucre</h3>
+              <h3 className="hero-reveal font-mono text-[10px] tracking-[0.2em] uppercase text-muted text-center lg:text-left">aprenda toda minha metodologia</h3>
               <div className="flex justify-center lg:justify-start w-full">
                 {services.filter(s => s.group === 'aprender').map(service => (
                   <a 
@@ -149,7 +149,7 @@ export function Hero() {
                 src="/VINICIUS_GLAUBER.png" 
                 alt="Vinícius Valente e Glauber Luciano" 
                 fill 
-                className="object-contain object-bottom drop-shadow-[0_0_40px_rgba(0,0,0,0.6)]" 
+                className="object-contain object-bottom drop-shadow-[0_0_40px_rgba(0,0,0,0.6)] contrast-[1.15] saturate-[1.1] brightness-[0.95]" 
                 priority
                 sizes="(max-width: 1024px) 100vw, 55vw"
               />
