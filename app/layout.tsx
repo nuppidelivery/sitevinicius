@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { PixelEvents } from "@/components/tracking/pixel-events";
+import { WhatsAppButton } from "@/components/ui/whatsapp-button";
 import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -54,6 +55,7 @@ export default function RootLayout({
           <Navbar />
           {children}
           <Footer />
+          <WhatsAppButton />
         </SmoothScrollProvider>
       </body>
     </html>
