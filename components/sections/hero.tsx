@@ -103,7 +103,7 @@ export function Hero() {
             {/* Hover Card Display (Desktop) - Agora posicionado no lado esquerdo sob o texto */}
             <div className="hidden lg:block w-full h-[120px] pointer-events-none z-20 mt-4">
               {hoveredService && (
-                <div className="bg-surface/90 backdrop-blur-xl border border-primary/30 p-5 rounded-2xl shadow-[0_0_40px_rgba(29,185,84,0.15)] animate-in fade-in slide-in-from-bottom-4 duration-300">
+                <div className="bg-surface/90 backdrop-blur-xl border border-primary/30 p-5 rounded-2xl shadow-[0_0_40px_rgba(29,185,84,0.15)] animate-in fade-in slide-in-from-bottom-4 duration-700">
                   <div className="font-bold text-primary mb-1 text-sm">{hoveredService.label}</div>
                   <p className="text-sm text-foreground/90 leading-relaxed font-medium">
                     {hoveredService.hover}
@@ -127,9 +127,9 @@ export function Hero() {
                     rel="noreferrer"
                     onMouseEnter={() => setHoveredService(service)}
                     onMouseLeave={() => setHoveredService(null)}
-                    className="btn-reveal group relative px-4 py-4 bg-background/50 backdrop-blur-sm border-2 border-primary hover:bg-primary/20 rounded-full transition-all duration-300 overflow-hidden shadow-[0_0_15px_rgba(29,185,84,0.3)] hover:shadow-[0_0_30px_rgba(29,185,84,0.6)] w-full text-center flex items-center justify-center"
+                    className="btn-reveal group relative px-4 py-4 bg-background/50 backdrop-blur-sm border-2 border-primary hover:bg-primary/20 rounded-full transition-all duration-700 overflow-hidden shadow-[0_0_15px_rgba(29,185,84,0.3)] hover:shadow-[0_0_30px_rgba(29,185,84,0.6)] w-full text-center flex items-center justify-center"
                   >
-                    <span className="relative font-bold text-[13px] sm:text-sm text-primary transition-colors duration-300 flex items-center justify-center gap-2">
+                    <span className="relative font-bold text-[13px] sm:text-sm text-primary transition-colors duration-700 flex items-center justify-center gap-2">
                       {service.label}
                     </span>
                   </a>
@@ -148,7 +148,7 @@ export function Hero() {
                     rel="noreferrer"
                     onMouseEnter={() => setHoveredService(service)}
                     onMouseLeave={() => setHoveredService(null)}
-                    className="btn-reveal group relative px-6 py-5 bg-primary text-primary-foreground border-2 border-primary hover:bg-primary/90 rounded-full transition-all duration-300 shadow-[0_0_20px_rgba(29,185,84,0.5)] hover:shadow-[0_0_40px_rgba(29,185,84,0.8)] w-full text-center flex items-center justify-center"
+                    className="btn-reveal group relative px-6 py-5 bg-primary text-primary-foreground border-2 border-primary hover:bg-primary/90 rounded-full transition-all duration-700 shadow-[0_0_20px_rgba(29,185,84,0.5)] hover:shadow-[0_0_40px_rgba(29,185,84,0.8)] w-full text-center flex items-center justify-center"
                   >
                     <span className="relative font-bold text-sm sm:text-base tracking-wide uppercase flex items-center justify-center gap-2">
                       {service.label}
@@ -161,7 +161,7 @@ export function Hero() {
             {/* Mobile Hover Feedback */}
             <div className="lg:hidden mt-2 min-h-[140px] w-full">
               {hoveredService && (
-                <div className="bg-surface border border-primary/40 p-5 rounded-2xl text-left animate-in fade-in duration-300 shadow-[0_0_20px_rgba(29,185,84,0.2)]">
+                <div className="bg-surface border border-primary/40 p-5 rounded-2xl text-left animate-in fade-in duration-700 shadow-[0_0_20px_rgba(29,185,84,0.2)]">
                   <div className="font-bold text-primary mb-2 text-sm">{hoveredService.label}</div>
                   <p className="text-sm text-muted leading-relaxed">
                     {hoveredService.hover}

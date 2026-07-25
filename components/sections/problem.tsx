@@ -58,14 +58,14 @@ export function Problem() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: idx * 0.1 }}
-              className="group relative bg-surface border border-surface-border hover:border-primary/50 transition-all duration-500 p-6 sm:p-8 md:p-10 rounded-xl overflow-hidden shadow-lg hover:shadow-[0_0_30px_rgba(29,185,84,0.15)]"
+              className="group relative bg-surface border border-surface-border hover:border-primary/50 transition-all duration-700 p-6 sm:p-8 md:p-10 rounded-xl overflow-hidden shadow-lg hover:shadow-[0_0_30px_rgba(29,185,84,0.15)]"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
               <div className="relative z-10">
-                <div className="mb-6 opacity-80 group-hover:scale-110 group-hover:opacity-100 transition-all duration-300 transform origin-left">
+                <div className="mb-6 opacity-80 group-hover:scale-110 group-hover:opacity-100 transition-all duration-700 transform origin-left">
                   {problem.icon}
                 </div>
-                <h3 className="font-heading text-2xl font-bold mb-4 leading-snug group-hover:text-primary transition-colors duration-300">{problem.title}</h3>
+                <h3 className="font-heading text-2xl font-bold mb-4 leading-snug group-hover:text-primary transition-colors duration-700">{problem.title}</h3>
                 <p className="text-muted leading-[1.7] text-pretty">{problem.desc}</p>
               </div>
             </motion.div>

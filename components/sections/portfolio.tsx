@@ -37,7 +37,7 @@ export function Portfolio() {
               Veja como transformamos negócios comuns em líderes de mercado através de design e tecnologia de alta performance.
             </p>
           </div>
-          <button className="text-sm font-semibold text-primary hover:text-primary-dark transition-colors flex items-center gap-2 pb-2">
+          <button className="text-[13px] font-bold uppercase tracking-widest text-primary hover:text-primary-dark transition-colors flex items-center gap-2 pb-2">
             Ver todos os cases <ArrowUpRight className="w-4 h-4" />
           </button>
         </div>
@@ -54,8 +54,8 @@ export function Portfolio() {
               <Card className="h-full p-0 overflow-hidden group cursor-pointer border border-surface-border">
                 {/* Image Placeholder with Gradient */}
                 <div className={`h-64 w-full bg-gradient-to-br ${project.color} relative overflow-hidden flex items-center justify-center`}>
-                  <div className="absolute inset-0 bg-surface/10 backdrop-blur-[2px] group-hover:backdrop-blur-0 transition-all duration-500" />
-                  <span className="font-heading text-xl font-bold text-foreground/50 group-hover:scale-110 transition-transform duration-500">Visualizar Case</span>
+                  <div className="absolute inset-0 bg-surface/10 backdrop-blur-[2px] group-hover:backdrop-blur-0 transition-all duration-700" />
+                  <span className="font-heading text-xl font-bold uppercase tracking-widest text-foreground/50 group-hover:scale-110 transition-transform duration-700">Visualizar Case</span>
                 </div>
                 
                 <div className="p-6">

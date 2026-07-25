@@ -89,7 +89,7 @@ export function Process() {
               key={idx}
               className="process-card bg-surface p-6 sm:p-8 md:p-10 lg:p-8 relative group"
             >
-              <div className="absolute top-0 left-0 right-0 h-[2px] bg-primary transform scale-x-0 origin-left transition-transform duration-500 group-hover:scale-x-100" />
+              <div className="absolute top-0 left-0 right-0 h-[2px] bg-primary transform scale-x-0 origin-left transition-transform duration-700 group-hover:scale-x-100" />
               <div className="font-mono text-5xl font-medium text-surface-light mb-8 leading-none" style={{ WebkitTextStroke: '1px var(--border)' }}>
                 {step.number}
               </div>

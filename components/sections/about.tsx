@@ -28,7 +28,7 @@ export function About() {
             className="w-full lg:w-[40%] max-w-[400px] mx-auto lg:mx-0 lg:mt-4"
           >
             <div className="relative group rounded-xl overflow-hidden shadow-[0_0_40px_rgba(29,185,84,0.15)] border border-surface-border p-2 bg-surface">
-              <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-10 pointer-events-none" />
               <div className="relative aspect-square md:aspect-[4/5] w-full overflow-hidden rounded-lg bg-surface-border">
                 <Image
                   src="/quem-sou-eu.jpeg"

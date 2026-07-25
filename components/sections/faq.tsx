@@ -63,10 +63,10 @@ export function FAQ() {
                 <span className="text-lg md:text-xl font-medium text-foreground group-hover:text-primary transition-colors">
                   {faq.q}
                 </span>
-                <Plus className={`w-6 h-6 text-primary shrink-0 transition-transform duration-300 ${openIndex === idx ? 'rotate-45' : ''}`} />
+                <Plus className={`w-6 h-6 text-primary shrink-0 transition-transform duration-700 ${openIndex === idx ? 'rotate-45' : ''}`} />
               </button>
               <div
-                className={`overflow-hidden transition-all duration-300 ease-in-out ${openIndex === idx ? 'max-h-[500px] opacity-100 pb-8' : 'max-h-0 opacity-0'}`}
+                className={`overflow-hidden transition-all duration-700 ease-in-out ${openIndex === idx ? 'max-h-[500px] opacity-100 pb-8' : 'max-h-0 opacity-0'}`}
               >
                 <p className="text-muted leading-[1.8] text-base pr-8 text-pretty">
                   {faq.a}

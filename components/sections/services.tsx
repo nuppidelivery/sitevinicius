@@ -66,7 +66,7 @@ export function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: idx * 0.1 }}
-              className="group bg-background hover:bg-surface transition-all duration-300 p-6 md:p-8 lg:p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 md:gap-8 border-l-[3px] border-transparent hover:border-primary cursor-pointer"
+              className="group bg-background hover:bg-surface transition-all duration-700 p-6 md:p-8 lg:p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 md:gap-8 border-l-[3px] border-transparent hover:border-primary cursor-pointer"
             >
               <div className="flex flex-col md:flex-row items-start md:items-center gap-6 lg:gap-12 flex-1">
                 <div className="font-mono text-sm text-primary tracking-[0.1em]">{service.number}</div>
@@ -75,7 +75,7 @@ export function Services() {
                   <p className="text-muted leading-[1.6] text-sm md:text-base text-pretty">{service.desc}</p>
                 </div>
               </div>
-              <ArrowRight className="text-primary w-6 h-6 transition-transform duration-300 group-hover:translate-x-2 shrink-0 hidden md:block" />
+              <ArrowRight className="text-primary w-6 h-6 transition-transform duration-700 group-hover:translate-x-2 shrink-0 hidden md:block" />
             </motion.div>
           ))}
         </div>
