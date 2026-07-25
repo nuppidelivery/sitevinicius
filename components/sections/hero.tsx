@@ -18,6 +18,16 @@ const services = [
 export function Hero() {
   const containerRef = useRef<HTMLElement>(null);
   const [hoveredService, setHoveredService] = useState<typeof services[0] | null>(null);
+  const [activeService, setActiveService] = useState<typeof services[0] | null>(null);
+
+  const handleMouseEnter = (service: typeof services[0]) => {
+    setHoveredService(service);
+    setActiveService(service);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredService(null);
+  };
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -100,16 +110,20 @@ export function Hero() {
               </p>
             </div>
 
-            {/* Hover Card Display (Desktop) - Agora posicionado no lado esquerdo sob o texto */}
+            {/* Hover Card Display (Desktop) */}
             <div className="hidden lg:block w-full h-[120px] pointer-events-none z-20 mt-4">
-              {hoveredService && (
-                <div className="bg-surface/90 backdrop-blur-xl border border-primary/30 p-5 rounded-2xl shadow-[0_0_40px_rgba(29,185,84,0.15)] animate-in fade-in slide-in-from-bottom-4 duration-700">
-                  <div className="font-bold text-primary mb-1 text-sm">{hoveredService.label}</div>
-                  <p className="text-sm text-foreground/90 leading-relaxed font-medium">
-                    {hoveredService.hover}
-                  </p>
-                </div>
-              )}
+              <div 
+                className={`bg-surface/90 backdrop-blur-xl border border-primary/30 p-5 rounded-2xl shadow-[0_0_40px_rgba(29,185,84,0.15)] transition-all duration-300 transform ${hoveredService ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+              >
+                {activeService && (
+                  <>
+                    <div className="font-bold text-primary mb-1 text-sm">{activeService.label}</div>
+                    <p className="text-sm text-foreground/90 leading-relaxed font-medium">
+                      {activeService.hover}
+                    </p>
+                  </>
+                )}
+              </div>
             </div>
           </div>
 
@@ -125,11 +139,11 @@ export function Hero() {
                     href={`https://wa.me/5591996286994?text=${encodeURIComponent(service.whatsapp)}`}
                     target="_blank"
                     rel="noreferrer"
-                    onMouseEnter={() => setHoveredService(service)}
-                    onMouseLeave={() => setHoveredService(null)}
+                    onMouseEnter={() => handleMouseEnter(service)}
+                    onMouseLeave={handleMouseLeave}
                     className="btn-reveal group relative px-4 py-4 bg-background/50 backdrop-blur-sm border-2 border-primary hover:bg-primary/20 rounded-full transition-all duration-700 overflow-hidden shadow-[0_0_15px_rgba(29,185,84,0.3)] hover:shadow-[0_0_30px_rgba(29,185,84,0.6)] w-full text-center flex items-center justify-center"
                   >
-                    <span className="relative font-bold text-[13px] sm:text-sm text-primary transition-colors duration-700 flex items-center justify-center gap-2">
+                    <span className="relative font-bold uppercase tracking-wider text-[11px] sm:text-xs text-primary transition-colors duration-700 flex items-center justify-center gap-2">
                       {service.label}
                     </span>
                   </a>
@@ -146,11 +160,11 @@ export function Hero() {
                     href={`https://wa.me/5591996286994?text=${encodeURIComponent(service.whatsapp)}`}
                     target="_blank"
                     rel="noreferrer"
-                    onMouseEnter={() => setHoveredService(service)}
-                    onMouseLeave={() => setHoveredService(null)}
+                    onMouseEnter={() => handleMouseEnter(service)}
+                    onMouseLeave={handleMouseLeave}
                     className="btn-reveal group relative px-6 py-5 bg-primary text-primary-foreground border-2 border-primary hover:bg-primary/90 rounded-full transition-all duration-700 shadow-[0_0_20px_rgba(29,185,84,0.5)] hover:shadow-[0_0_40px_rgba(29,185,84,0.8)] w-full text-center flex items-center justify-center"
                   >
-                    <span className="relative font-bold text-sm sm:text-base tracking-wide uppercase flex items-center justify-center gap-2">
+                    <span className="relative font-bold text-xs sm:text-sm tracking-widest uppercase flex items-center justify-center gap-2">
                       {service.label}
                     </span>
                   </a>
@@ -159,15 +173,19 @@ export function Hero() {
             </div>
 
             {/* Mobile Hover Feedback */}
-            <div className="lg:hidden mt-2 min-h-[140px] w-full">
-              {hoveredService && (
-                <div className="bg-surface border border-primary/40 p-5 rounded-2xl text-left animate-in fade-in duration-700 shadow-[0_0_20px_rgba(29,185,84,0.2)]">
-                  <div className="font-bold text-primary mb-2 text-sm">{hoveredService.label}</div>
-                  <p className="text-sm text-muted leading-relaxed">
-                    {hoveredService.hover}
-                  </p>
-                </div>
-              )}
+            <div className="lg:hidden mt-2 h-[140px] w-full">
+              <div 
+                className={`bg-surface border border-primary/40 p-5 rounded-2xl text-left shadow-[0_0_20px_rgba(29,185,84,0.2)] transition-all duration-300 transform ${hoveredService ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+              >
+                {activeService && (
+                  <>
+                    <div className="font-bold text-primary mb-2 text-sm">{activeService.label}</div>
+                    <p className="text-sm text-muted leading-relaxed">
+                      {activeService.hover}
+                    </p>
+                  </>
+                )}
+              </div>
             </div>
           </div>
         </div>
