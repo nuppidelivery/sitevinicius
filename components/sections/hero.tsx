@@ -83,11 +83,11 @@ export function Hero() {
           <span className="font-mono text-xs md:text-sm tracking-[0.25em] text-primary uppercase font-bold">Engenharia de Aquisição</span>
         </div>
 
-        <h1 className="hero-reveal text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-8 max-w-[1000px] leading-[1.1] text-foreground mx-auto">
+        <h1 className="hero-reveal text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 max-w-[900px] leading-[1.1] text-foreground mx-auto">
           O seu próximo cliente está sendo comprado pelo seu <span className="text-primary italic font-normal">concorrente.</span>
         </h1>
 
-        <div className="hero-reveal text-base md:text-xl text-muted mb-12 max-w-3xl leading-[1.6] text-pretty mx-auto flex flex-col items-center">
+        <div className="hero-reveal text-sm md:text-lg text-muted mb-10 max-w-3xl leading-[1.6] text-pretty mx-auto flex flex-col items-center px-2">
           <p>
             Não vendo cliques, estruturo engenharia de aquisição. O mercado chama de tráfego pago; eu chamo de comprar clientes por um valor menor do que eles deixam no seu caixa. Identifico o vazamento de dinheiro no seu funil e transformo o que antes era custo em investimento que se paga sozinho.
           </p>
@@ -118,12 +118,12 @@ export function Hero() {
                   rel="noreferrer"
                   onMouseEnter={() => setHoveredService(service)}
                   onMouseLeave={() => setHoveredService(null)}
-                  className="btn-reveal group relative px-5 py-3 bg-surface border border-surface-border hover:border-primary/50 hover:bg-primary/5 rounded-sm transition-all duration-300 overflow-hidden"
+                  className="btn-reveal group relative px-6 py-3.5 sm:px-7 sm:py-4 bg-primary/10 border border-primary/40 hover:bg-primary hover:border-primary rounded-md transition-all duration-300 overflow-hidden shadow-[0_0_15px_rgba(29,185,84,0.1)] hover:shadow-[0_0_25px_rgba(29,185,84,0.3)] w-full sm:w-auto text-center"
                 >
-                  <div className="absolute inset-0 bg-primary/10 translate-y-[100%] group-hover:translate-y-0 transition-transform duration-300" />
-                  <span className="relative font-bold text-sm text-foreground group-hover:text-primary transition-colors duration-300 flex items-center gap-2">
+                  <div className="absolute inset-0 bg-primary/20 translate-y-[100%] group-hover:translate-y-0 transition-transform duration-300" />
+                  <span className="relative font-bold text-sm sm:text-base text-primary group-hover:text-primary-foreground transition-colors duration-300 flex items-center justify-center gap-2">
                     {service.label}
-                    <MessageCircle className="w-4 h-4 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300" />
+                    <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300" />
                   </span>
                 </a>
               ))}
@@ -141,11 +141,11 @@ export function Hero() {
                   rel="noreferrer"
                   onMouseEnter={() => setHoveredService(service)}
                   onMouseLeave={() => setHoveredService(null)}
-                  className="btn-reveal group relative px-8 py-4 bg-primary text-primary-foreground border border-primary hover:bg-primary/90 rounded-sm transition-all duration-300 shadow-[0_0_20px_rgba(29,185,84,0.3)] hover:shadow-[0_0_40px_rgba(29,185,84,0.5)]"
+                  className="btn-reveal group relative px-8 py-4 sm:px-10 sm:py-5 bg-primary text-primary-foreground border border-primary hover:bg-primary/90 rounded-md transition-all duration-300 shadow-[0_0_20px_rgba(29,185,84,0.3)] hover:shadow-[0_0_40px_rgba(29,185,84,0.5)] w-full sm:w-auto text-center"
                 >
-                  <span className="relative font-bold text-sm tracking-wide uppercase flex items-center gap-2">
+                  <span className="relative font-bold text-base sm:text-lg tracking-wide uppercase flex items-center justify-center gap-2">
                     {service.label}
-                    <MessageCircle className="w-4 h-4 opacity-80" />
+                    <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6 opacity-80" />
                   </span>
                 </a>
               ))}
