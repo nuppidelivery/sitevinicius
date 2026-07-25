@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import { ArrowDown, MessageCircle } from "lucide-react";
+import { useEffect, useRef } from "react";
+import { ArrowDown } from "lucide-react";
 import Image from "next/image";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -18,17 +18,6 @@ const services = [
 
 export function Hero() {
   const containerRef = useRef<HTMLElement>(null);
-  const [hoveredService, setHoveredService] = useState<typeof services[0] | null>(null);
-  const [activeService, setActiveService] = useState<typeof services[0] | null>(null);
-
-  const handleMouseEnter = (service: typeof services[0]) => {
-    setHoveredService(service);
-    setActiveService(service);
-  };
-
-  const handleMouseLeave = () => {
-    setHoveredService(null);
-  };
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -69,9 +58,9 @@ export function Hero() {
   }, []);
 
   return (
-    <section ref={containerRef} className="relative min-h-[100svh] flex flex-col items-center justify-center overflow-hidden pt-20 pb-16 md:pt-24 md:pb-20">
+    <section ref={containerRef} className="relative min-h-[100svh] flex flex-col justify-end overflow-hidden pt-24 pb-0 bg-background">
       {/* Background Video */}
-      <div className="absolute inset-0 z-0 overflow-hidden bg-background">
+      <div className="absolute inset-0 z-0 overflow-hidden">
         <video 
           src="/0725.mp4" 
           loop  
@@ -87,117 +76,97 @@ export function Hero() {
         <div className="absolute inset-0 z-0 bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)]" />
       </div>
 
-      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 flex flex-col pt-8 md:pt-12">
+      {/* Container Principal */}
+      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 w-full flex-grow flex flex-col lg:flex-row items-center lg:items-end justify-between mt-4">
         
-        {/* Label Centralizado no Topo */}
-        <div className="hero-reveal flex items-center justify-center w-full mb-12 lg:mb-16">
-          <span className="flex h-[2px] w-6 md:w-8 bg-primary mr-3 md:mr-4" />
-          <span className="font-mono text-[10px] md:text-xs tracking-[0.25em] text-primary uppercase font-bold">Engenharia de Aquisição</span>
-          <span className="flex h-[2px] w-6 md:w-8 bg-primary ml-3 md:ml-4" />
+        {/* Lado Esquerdo - Textos e Botões */}
+        <div className="w-full lg:w-[55%] flex flex-col items-center lg:items-start text-center lg:text-left mb-8 lg:mb-24 relative z-30">
+          
+          {/* Label */}
+          <div className="hero-reveal flex items-center justify-center lg:justify-start w-full mb-8">
+            <span className="flex h-[2px] w-6 md:w-8 bg-primary mr-3 md:mr-4" />
+            <span className="font-mono text-[10px] md:text-xs tracking-[0.25em] text-primary uppercase font-bold">Engenharia de Aquisição</span>
+            <span className="flex h-[2px] w-6 md:w-8 bg-primary ml-3 md:ml-4 lg:hidden" />
+          </div>
+
+          <h1 className="hero-reveal text-2xl sm:text-3xl md:text-4xl lg:text-[3rem] font-bold tracking-tight mb-5 leading-[1.1] text-foreground text-balance max-w-2xl lg:max-w-none mx-auto lg:mx-0">
+            O seu próximo cliente está sendo comprado pelo seu <span className="text-primary italic font-normal">concorrente.</span>
+          </h1>
+
+          <div className="hero-reveal text-sm md:text-base text-muted mb-8 leading-[1.6] text-pretty max-w-xl mx-auto lg:mx-0">
+            <p>
+              Não vendo cliques, estruturo engenharia de aquisição. O mercado chama de tráfego pago; eu chamo de comprar clientes por um valor menor do que eles deixam no seu caixa. Identifico o vazamento de dinheiro no seu funil e transformo o que antes era custo em investimento que se paga sozinho.
+            </p>
+          </div>
+
+          {/* Action Groups */}
+          <div className="w-full flex flex-col gap-6 relative z-30 max-w-xl mx-auto lg:mx-0">
+            <div className="flex flex-col gap-3">
+              <h3 className="hero-reveal font-mono text-[10px] tracking-[0.2em] uppercase text-muted text-center lg:text-left">Para empresas: delegue a aquisição</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full">
+                {services.filter(s => s.group === 'contratar').map(service => (
+                  <a 
+                    key={service.id}
+                    href={`https://wa.me/5591996286994?text=${encodeURIComponent(service.whatsapp)}`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="btn-reveal group relative px-4 py-3.5 bg-primary text-white border border-primary hover:bg-primary/80 rounded-xl transition-all duration-500 overflow-hidden shadow-[0_0_15px_rgba(29,185,84,0.3)] hover:shadow-[0_0_30px_rgba(29,185,84,0.6)] w-full text-center flex items-center justify-center drop-shadow-md"
+                  >
+                    <span className="relative font-bold uppercase tracking-widest text-[10px] sm:text-xs transition-colors duration-500 flex items-center justify-center">
+                      {service.label}
+                    </span>
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-3 mt-2">
+              <h3 className="hero-reveal font-mono text-[10px] tracking-[0.2em] uppercase text-muted text-center lg:text-left">Para profissionais: domine e lucre</h3>
+              <div className="flex justify-center lg:justify-start w-full">
+                {services.filter(s => s.group === 'aprender').map(service => (
+                  <a 
+                    key={service.id}
+                    href={`https://wa.me/5591996286994?text=${encodeURIComponent(service.whatsapp)}`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="btn-reveal group relative px-6 py-4 bg-primary text-white border border-primary hover:bg-primary/90 rounded-xl transition-all duration-500 shadow-[0_0_20px_rgba(29,185,84,0.4)] hover:shadow-[0_0_40px_rgba(29,185,84,0.7)] w-full text-center flex items-center justify-center drop-shadow-md"
+                  >
+                    <span className="relative font-black text-xs sm:text-sm tracking-widest uppercase flex items-center justify-center">
+                      {service.label}
+                    </span>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center w-full mt-4 lg:mt-8 z-20 relative">
-          
-          {/* Lado Esquerdo - Textos e Botões (7 colunas) */}
-          <div className="col-span-1 lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left w-full order-1">
-            
-            <h1 className="hero-reveal text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-5 leading-[1.1] text-foreground text-balance max-w-2xl lg:max-w-none mx-auto lg:mx-0">
-              O seu próximo cliente está sendo comprado pelo seu <span className="text-primary italic font-normal">concorrente.</span>
-            </h1>
-
-            <div className="hero-reveal text-sm md:text-base text-muted mb-8 leading-[1.6] text-pretty max-w-xl mx-auto lg:mx-0">
-              <p>
-                Não vendo cliques, estruturo engenharia de aquisição. O mercado chama de tráfego pago; eu chamo de comprar clientes por um valor menor do que eles deixam no seu caixa. Identifico o vazamento de dinheiro no seu funil e transformo o que antes era custo em investimento que se paga sozinho.
-              </p>
-            </div>
-
-            {/* Action Groups na Esquerda */}
-            <div className="w-full flex flex-col gap-6 relative z-30 max-w-xl mx-auto lg:mx-0">
-              <div className="flex flex-col gap-3">
-                <h3 className="hero-reveal font-mono text-[10px] tracking-[0.2em] uppercase text-muted text-center lg:text-left">Para empresas: delegue a aquisição</h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full">
-                  {services.filter(s => s.group === 'contratar').map(service => (
-                    <a 
-                      key={service.id}
-                      href={`https://wa.me/5591996286994?text=${encodeURIComponent(service.whatsapp)}`}
-                      target="_blank"
-                      rel="noreferrer"
-                      onMouseEnter={() => handleMouseEnter(service)}
-                      onMouseLeave={handleMouseLeave}
-                      className="btn-reveal group relative px-4 py-3.5 bg-background/60 backdrop-blur-md border-2 border-primary hover:bg-primary/20 rounded-xl transition-all duration-500 overflow-hidden shadow-[0_0_15px_rgba(29,185,84,0.15)] hover:shadow-[0_0_25px_rgba(29,185,84,0.4)] w-full text-center flex items-center justify-center"
-                    >
-                      <span className="relative font-bold uppercase tracking-widest text-[10px] sm:text-xs text-primary transition-colors duration-500 flex items-center justify-center">
-                        {service.label}
-                      </span>
-                    </a>
-                  ))}
-                </div>
+        {/* Lado Direito - Imagem dos Sócios */}
+        {/* Usamos absolute alignment na base via lg:h-[85vh] para garantir que ela sempre toque o final da section */}
+        <div className="w-full lg:w-[45%] lg:absolute lg:right-0 lg:bottom-0 relative h-[400px] sm:h-[500px] lg:h-[85vh] flex items-end justify-center z-20 hero-reveal mt-12 lg:mt-0 pointer-events-none">
+           <div className="relative w-[90%] sm:w-[75%] lg:w-full h-full flex items-end justify-center lg:justify-end">
+              <Image 
+                src="/VINICIUS_GLAUBER.png" 
+                alt="Vinícius Valente e Glauber Luciano" 
+                fill 
+                className="object-contain object-bottom drop-shadow-[0_0_40px_rgba(0,0,0,0.6)]" 
+                priority
+                sizes="(max-width: 1024px) 90vw, 50vw"
+              />
+              
+              {/* Tags de Nome Flutuantes */}
+              <div className="absolute left-[0%] bottom-[35%] lg:left-[-5%] lg:bottom-[45%] bg-primary px-3 py-1.5 shadow-[0_0_20px_rgba(29,185,84,0.4)] rotate-[-4deg] animate-in fade-in zoom-in duration-1000 delay-500 z-30">
+                 <span className="font-heading font-black text-white text-[9px] sm:text-[10px] md:text-xs tracking-widest uppercase">VINÍCIUS VALENTE</span>
               </div>
-
-              <div className="flex flex-col gap-3">
-                <h3 className="hero-reveal font-mono text-[10px] tracking-[0.2em] uppercase text-muted text-center lg:text-left">Para profissionais: domine e lucre</h3>
-                <div className="flex justify-center lg:justify-start w-full">
-                  {services.filter(s => s.group === 'aprender').map(service => (
-                    <a 
-                      key={service.id}
-                      href={`https://wa.me/5591996286994?text=${encodeURIComponent(service.whatsapp)}`}
-                      target="_blank"
-                      rel="noreferrer"
-                      onMouseEnter={() => handleMouseEnter(service)}
-                      onMouseLeave={handleMouseLeave}
-                      className="btn-reveal group relative px-6 py-4 bg-primary text-primary-foreground border-2 border-primary hover:bg-primary/90 rounded-xl transition-all duration-500 shadow-[0_0_20px_rgba(29,185,84,0.3)] hover:shadow-[0_0_35px_rgba(29,185,84,0.6)] w-full text-center flex items-center justify-center"
-                    >
-                      <span className="relative font-black text-xs sm:text-sm tracking-widest uppercase flex items-center justify-center">
-                        {service.label}
-                      </span>
-                    </a>
-                  ))}
-                </div>
+              <div className="absolute right-[0%] bottom-[20%] lg:right-[-2%] lg:bottom-[30%] bg-primary px-3 py-1.5 shadow-[0_0_20px_rgba(29,185,84,0.4)] rotate-[4deg] animate-in fade-in zoom-in duration-1000 delay-700 z-30">
+                 <span className="font-heading font-black text-white text-[9px] sm:text-[10px] md:text-xs tracking-widest uppercase">GLAUBER LUCIANO</span>
               </div>
-
-              {/* Hover Feedback (Apenas Desktop) - Remove espaço vazio no mobile */}
-              <div className="hidden lg:block w-full h-[100px] pointer-events-none z-20 mt-2">
-                <div 
-                  className={`bg-surface/90 backdrop-blur-xl border border-primary/30 p-4 rounded-xl shadow-[0_0_30px_rgba(29,185,84,0.15)] transition-all duration-300 transform text-left ${hoveredService ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
-                >
-                  {activeService && (
-                    <>
-                      <div className="font-bold text-primary mb-1 text-xs">{activeService.label}</div>
-                      <p className="text-xs text-foreground/90 leading-relaxed font-medium">
-                        {activeService.hover}
-                      </p>
-                    </>
-                  )}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Lado Direito - Imagem dos Sócios (5 colunas) */}
-          <div className="col-span-1 lg:col-span-5 w-full relative min-h-[350px] sm:min-h-[450px] lg:min-h-[600px] flex items-end justify-center z-10 mt-8 lg:mt-0 hero-reveal order-2">
-             <div className="relative w-[90%] sm:w-[70%] lg:w-full h-full flex items-end">
-                <Image 
-                  src="/VINICIUS_GLAUBER.png" 
-                  alt="Vinícius Valente e Glauber Luciano" 
-                  fill 
-                  className="object-contain object-bottom drop-shadow-[0_0_40px_rgba(0,0,0,0.6)]" 
-                  priority
-                  sizes="(max-width: 1024px) 90vw, 50vw"
-                />
-                
-                {/* Tags de Nome Flutuantes */}
-                <div className="absolute left-[0%] bottom-[35%] lg:left-[-10%] lg:bottom-[45%] bg-primary px-3 py-1.5 shadow-[0_0_20px_rgba(29,185,84,0.4)] rotate-[-4deg] animate-in fade-in zoom-in duration-1000 delay-500 z-20">
-                   <span className="font-heading font-black text-primary-foreground text-[9px] sm:text-[10px] md:text-xs tracking-widest uppercase">VINÍCIUS VALENTE</span>
-                </div>
-                <div className="absolute right-[0%] bottom-[20%] lg:right-[-5%] lg:bottom-[30%] bg-primary px-3 py-1.5 shadow-[0_0_20px_rgba(29,185,84,0.4)] rotate-[4deg] animate-in fade-in zoom-in duration-1000 delay-700 z-20">
-                   <span className="font-heading font-black text-primary-foreground text-[9px] sm:text-[10px] md:text-xs tracking-widest uppercase">GLAUBER LUCIANO</span>
-                </div>
-             </div>
-          </div>
+           </div>
         </div>
       </div>
-
-      <div className="scroll-indicator absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted animate-pulse z-10">
+      
+      {/* Scroll Indicator agora fica à esquerda no desktop para não sumir atrás da foto */}
+      <div className="scroll-indicator absolute bottom-6 left-1/2 lg:left-[25%] -translate-x-1/2 flex flex-col items-center gap-2 text-muted animate-pulse z-30">
         <span className="font-mono text-[10px] uppercase tracking-widest">Scroll</span>
         <ArrowDown className="w-4 h-4" />
       </div>
