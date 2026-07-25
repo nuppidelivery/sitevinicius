@@ -76,40 +76,44 @@ export function Hero() {
         <div className="absolute inset-0 z-0 bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)]" />
       </div>
 
-      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
+      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center lg:items-start justify-between gap-12 lg:gap-8 pt-8">
         
-        <div className="hero-reveal flex items-center mb-6 md:mb-8">
-          <span className="flex h-[2px] w-8 bg-primary mr-3" />
-          <span className="font-mono text-xs md:text-sm tracking-[0.25em] text-primary uppercase font-bold">Engenharia de Aquisição</span>
-        </div>
+        {/* Lado Esquerdo - Textos */}
+        <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left max-w-[800px] lg:max-w-[600px] xl:max-w-[700px]">
+          <div className="hero-reveal flex items-center mb-6 md:mb-8">
+            <span className="flex h-[2px] w-8 bg-primary mr-3 lg:ml-0" />
+            <span className="font-mono text-xs md:text-sm tracking-[0.25em] text-primary uppercase font-bold">Engenharia de Aquisição</span>
+          </div>
 
-        <h1 className="hero-reveal text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 max-w-[900px] leading-[1.1] text-foreground mx-auto">
-          O seu próximo cliente está sendo comprado pelo seu <span className="text-primary italic font-normal">concorrente.</span>
-        </h1>
+          <h1 className="hero-reveal text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-[1.1] text-foreground">
+            O seu próximo cliente está sendo comprado pelo seu <span className="text-primary italic font-normal">concorrente.</span>
+          </h1>
 
-        <div className="hero-reveal text-sm md:text-lg text-muted mb-10 max-w-3xl leading-[1.6] text-pretty mx-auto flex flex-col items-center px-2">
-          <p>
-            Não vendo cliques, estruturo engenharia de aquisição. O mercado chama de tráfego pago; eu chamo de comprar clientes por um valor menor do que eles deixam no seu caixa. Identifico o vazamento de dinheiro no seu funil e transformo o que antes era custo em investimento que se paga sozinho.
-          </p>
-        </div>
+          <div className="hero-reveal text-sm md:text-lg text-muted mb-10 leading-[1.6] text-pretty">
+            <p>
+              Não vendo cliques, estruturo engenharia de aquisição. O mercado chama de tráfego pago; eu chamo de comprar clientes por um valor menor do que eles deixam no seu caixa. Identifico o vazamento de dinheiro no seu funil e transformo o que antes era custo em investimento que se paga sozinho.
+            </p>
+          </div>
 
-        {/* Action Groups */}
-        <div className="w-full max-w-4xl mx-auto flex flex-col gap-12 relative">
-          
-          {/* Hover Card Display (Desktop only to prevent layout shift on mobile) */}
-          <div className="hidden md:block absolute -top-32 left-1/2 -translate-x-1/2 w-full max-w-2xl h-[120px] pointer-events-none z-20">
+          {/* Hover Card Display (Desktop) - Agora posicionado no lado esquerdo sob o texto */}
+          <div className="hidden lg:block w-full h-[120px] pointer-events-none z-20 mt-4">
             {hoveredService && (
-              <div className="bg-surface/90 backdrop-blur-xl border border-primary/30 p-4 rounded-xl shadow-[0_0_40px_rgba(29,185,84,0.15)] animate-in fade-in slide-in-from-bottom-4 duration-300">
+              <div className="bg-surface/90 backdrop-blur-xl border border-primary/30 p-5 rounded-2xl shadow-[0_0_40px_rgba(29,185,84,0.15)] animate-in fade-in slide-in-from-bottom-4 duration-300">
+                <div className="font-bold text-primary mb-1 text-sm">{hoveredService.label}</div>
                 <p className="text-sm text-foreground/90 leading-relaxed font-medium">
                   {hoveredService.hover}
                 </p>
               </div>
             )}
           </div>
+        </div>
 
+        {/* Lado Direito - Action Groups */}
+        <div className="flex-1 w-full max-w-2xl lg:max-w-md xl:max-w-lg mx-auto flex flex-col gap-8 relative lg:mt-4">
+          
           <div className="flex flex-col gap-4">
-            <h3 className="hero-reveal font-mono text-[10px] tracking-[0.2em] uppercase text-muted">Para empresas: delegue a engenharia de aquisição</h3>
-            <div className="flex flex-wrap justify-center gap-3">
+            <h3 className="hero-reveal font-mono text-[10px] tracking-[0.2em] uppercase text-muted text-center lg:text-left">Para empresas: delegue a engenharia de aquisição</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 w-full">
               {services.filter(s => s.group === 'contratar').map(service => (
                 <a 
                   key={service.id}
@@ -118,21 +122,19 @@ export function Hero() {
                   rel="noreferrer"
                   onMouseEnter={() => setHoveredService(service)}
                   onMouseLeave={() => setHoveredService(null)}
-                  className="btn-reveal group relative px-6 py-3.5 sm:px-7 sm:py-4 bg-primary/10 border border-primary/40 hover:bg-primary hover:border-primary rounded-md transition-all duration-300 overflow-hidden shadow-[0_0_15px_rgba(29,185,84,0.1)] hover:shadow-[0_0_25px_rgba(29,185,84,0.3)] w-full sm:w-auto text-center"
+                  className="btn-reveal group relative px-4 py-3.5 sm:py-4 bg-background/50 backdrop-blur-sm border-2 border-primary hover:bg-primary/20 rounded-full transition-all duration-300 overflow-hidden shadow-[0_0_15px_rgba(29,185,84,0.3)] hover:shadow-[0_0_30px_rgba(29,185,84,0.6)] w-full text-center flex items-center justify-center"
                 >
-                  <div className="absolute inset-0 bg-primary/20 translate-y-[100%] group-hover:translate-y-0 transition-transform duration-300" />
-                  <span className="relative font-bold text-sm sm:text-base text-primary group-hover:text-primary-foreground transition-colors duration-300 flex items-center justify-center gap-2">
+                  <span className="relative font-bold text-xs sm:text-sm text-primary transition-colors duration-300 flex items-center justify-center gap-2">
                     {service.label}
-                    <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300" />
                   </span>
                 </a>
               ))}
             </div>
           </div>
 
-          <div className="flex flex-col gap-4">
-            <h3 className="hero-reveal font-mono text-[10px] tracking-[0.2em] uppercase text-muted">Para profissionais: domine e lucre com esse processo</h3>
-            <div className="flex justify-center">
+          <div className="flex flex-col gap-4 mt-2">
+            <h3 className="hero-reveal font-mono text-[10px] tracking-[0.2em] uppercase text-muted text-center lg:text-left">Para profissionais: domine e lucre</h3>
+            <div className="flex justify-center lg:justify-start w-full">
               {services.filter(s => s.group === 'aprender').map(service => (
                 <a 
                   key={service.id}
@@ -141,21 +143,20 @@ export function Hero() {
                   rel="noreferrer"
                   onMouseEnter={() => setHoveredService(service)}
                   onMouseLeave={() => setHoveredService(null)}
-                  className="btn-reveal group relative px-8 py-4 sm:px-10 sm:py-5 bg-primary text-primary-foreground border border-primary hover:bg-primary/90 rounded-md transition-all duration-300 shadow-[0_0_20px_rgba(29,185,84,0.3)] hover:shadow-[0_0_40px_rgba(29,185,84,0.5)] w-full sm:w-auto text-center"
+                  className="btn-reveal group relative px-6 py-4 sm:py-5 bg-primary text-primary-foreground border-2 border-primary hover:bg-primary/90 rounded-full transition-all duration-300 shadow-[0_0_20px_rgba(29,185,84,0.5)] hover:shadow-[0_0_40px_rgba(29,185,84,0.8)] w-full text-center flex items-center justify-center"
                 >
-                  <span className="relative font-bold text-base sm:text-lg tracking-wide uppercase flex items-center justify-center gap-2">
+                  <span className="relative font-bold text-sm sm:text-base tracking-wide uppercase flex items-center justify-center gap-2">
                     {service.label}
-                    <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6 opacity-80" />
                   </span>
                 </a>
               ))}
             </div>
           </div>
 
-          {/* Mobile Hover Feedback (Shows below buttons on mobile since we hid the absolute card) */}
-          <div className="md:hidden mt-4 min-h-[140px]">
+          {/* Mobile Hover Feedback */}
+          <div className="lg:hidden mt-2 min-h-[140px]">
             {hoveredService && (
-              <div className="bg-surface border border-primary/20 p-4 rounded-xl text-left animate-in fade-in duration-300">
+              <div className="bg-surface border border-primary/40 p-4 rounded-2xl text-left animate-in fade-in duration-300 shadow-[0_0_20px_rgba(29,185,84,0.2)]">
                 <div className="font-bold text-primary mb-2 text-sm">{hoveredService.label}</div>
                 <p className="text-xs text-muted leading-relaxed">
                   {hoveredService.hover}

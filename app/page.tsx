@@ -11,7 +11,7 @@ import { Cta } from "@/components/sections/cta";
 
 export default function Home() {
   return (
-    <main className="flex-1 flex flex-col w-full overflow-x-hidden">
+    <main className="flex-1 flex flex-col w-full">
       <Hero />
       <MarqueeText phrases={[
         "Decidir depois é decidir perder dinheiro.", 

@@ -43,6 +43,8 @@ export function Process() {
           start: "center center",
           end: "+=150%", // scroll height
           pin: true,
+          pinSpacing: true,
+          anticipatePin: 1,
           scrub: 1.5, // 1.5s delay to smooth out the scrub
         }
       });
