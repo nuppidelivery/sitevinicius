@@ -58,7 +58,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section ref={containerRef} className="relative min-h-[100svh] flex flex-col items-center justify-center overflow-hidden pt-32 pb-24 md:pt-40 md:pb-32">
+    <section ref={containerRef} className="relative min-h-[100svh] flex flex-col items-center justify-center overflow-hidden pt-20 pb-16 md:pt-24 md:pb-20">
       {/* Background Video */}
       <div className="absolute inset-0 z-0 overflow-hidden bg-background">
         <video 
@@ -90,7 +90,7 @@ export function Hero() {
           {/* Lado Esquerdo - Textos */}
           <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left max-w-[95%] sm:max-w-[85%] lg:max-w-[600px] xl:max-w-[700px] mx-auto lg:mx-0">
             
-            <h1 className="hero-reveal text-4xl sm:text-5xl md:text-6xl lg:text-[4rem] font-bold tracking-tight mb-8 leading-[1.1] text-foreground">
+            <h1 className="hero-reveal text-4xl sm:text-5xl md:text-6xl lg:text-[4rem] font-bold tracking-tight mb-8 leading-[1.1] text-foreground text-balance">
               O seu próximo cliente está sendo comprado pelo seu <span className="text-primary italic font-normal">concorrente.</span>
             </h1>
 
