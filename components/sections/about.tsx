@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { CheckCircle2, TrendingUp, Settings2 } from "lucide-react";
+import { SectionArrow } from "@/components/ui/section-arrow";
 
 export function About() {
   const badges = [
@@ -25,7 +26,7 @@ export function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="w-full lg:w-[40%] max-w-[400px] mx-auto lg:mx-0 lg:mt-4"
+            className="w-[85%] sm:w-[70%] md:w-[60%] lg:w-[40%] max-w-[400px] mx-auto lg:mx-0 lg:mt-4 order-2 lg:order-1"
           >
             <div className="relative group rounded-xl overflow-hidden shadow-[0_0_40px_rgba(29,185,84,0.15)] border border-surface-border p-2 bg-surface">
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-10 pointer-events-none" />
@@ -47,7 +48,7 @@ export function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="w-full lg:w-[60%] flex flex-col"
+            className="w-full lg:w-[60%] flex flex-col order-1 lg:order-2"
           >
             <div className="flex items-center mb-6">
               <span className="flex h-[1px] w-8 bg-primary mr-3"></span>
@@ -82,6 +83,7 @@ export function About() {
           </motion.div>
         </div>
       </div>
+      <SectionArrow />
     </section>
   );
 }

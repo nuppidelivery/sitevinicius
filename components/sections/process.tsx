@@ -1,5 +1,6 @@
 "use client";
 
+import { SectionArrow } from "@/components/ui/section-arrow";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -99,6 +100,7 @@ export function Process() {
           ))}
         </div>
       </div>
+      <SectionArrow />
     </section>
   );
 }

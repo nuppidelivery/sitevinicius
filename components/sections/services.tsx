@@ -1,5 +1,6 @@
 "use client";
 
+import { SectionArrow } from "@/components/ui/section-arrow";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
@@ -80,6 +81,7 @@ export function Services() {
           ))}
         </div>
       </div>
+      <SectionArrow />
     </section>
   );
 }

@@ -1,5 +1,6 @@
 "use client";
 
+import { SectionArrow } from "@/components/ui/section-arrow";
 import { motion } from "framer-motion";
 import { Flame, Target, TrendingDown, Settings } from "lucide-react";
 
@@ -72,6 +73,7 @@ export function Problem() {
           ))}
         </div>
       </div>
+      <SectionArrow />
     </section>
   );
 }

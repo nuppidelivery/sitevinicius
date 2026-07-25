@@ -1,5 +1,6 @@
 "use client";
 
+import { SectionArrow } from "@/components/ui/section-arrow";
 import { motion } from "framer-motion";
 
 export function Testimonials() {
@@ -76,6 +77,7 @@ export function Testimonials() {
           ))}
         </div>
       </div>
+      <SectionArrow />
     </section>
   );
 }

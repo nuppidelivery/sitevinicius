@@ -1,5 +1,6 @@
 "use client";
 
+import { SectionArrow } from "@/components/ui/section-arrow";
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { ArrowUpRight } from "lucide-react";
@@ -71,6 +72,7 @@ export function Portfolio() {
         </div>
 
       </div>
+      <SectionArrow />
     </section>
   );
 }

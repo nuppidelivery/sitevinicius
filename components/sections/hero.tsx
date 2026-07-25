@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { ArrowDown, MessageCircle } from "lucide-react";
+import Image from "next/image";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
@@ -72,8 +73,8 @@ export function Hero() {
       {/* Background Video */}
       <div className="absolute inset-0 z-0 overflow-hidden bg-background">
         <video 
-          src="/hero-bg.mp4" 
-          loop 
+          src="/0725.mp4" 
+          loop  
           muted 
           playsInline 
           autoPlay 
@@ -95,98 +96,102 @@ export function Hero() {
           <span className="flex h-[2px] w-6 md:w-8 bg-primary ml-3 md:ml-4" />
         </div>
 
-        <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-16 lg:gap-12 w-full">
+        <div className="flex flex-col lg:flex-row items-center lg:items-stretch justify-between gap-12 w-full mt-4 lg:mt-8">
           
-          {/* Lado Esquerdo - Textos */}
-          <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left max-w-[95%] sm:max-w-[85%] lg:max-w-[600px] xl:max-w-[700px] mx-auto lg:mx-0">
+          {/* Lado Esquerdo - Textos e Botões */}
+          <div className="flex-1 flex flex-col items-center lg:items-start text-center lg:text-left w-full lg:max-w-[55%] z-20">
             
-            <h1 className="hero-reveal text-4xl sm:text-5xl md:text-6xl lg:text-[4rem] font-bold tracking-tight mb-8 leading-[1.1] text-foreground text-balance">
+            <h1 className="hero-reveal text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] font-bold tracking-tight mb-6 leading-[1.1] text-foreground text-balance">
               O seu próximo cliente está sendo comprado pelo seu <span className="text-primary italic font-normal">concorrente.</span>
             </h1>
 
-            <div className="hero-reveal text-base md:text-lg text-muted mb-10 leading-[1.7] text-pretty max-w-[90%] sm:max-w-full">
+            <div className="hero-reveal text-sm md:text-base text-muted mb-8 leading-[1.7] text-pretty max-w-[90%] sm:max-w-full">
               <p>
                 Não vendo cliques, estruturo engenharia de aquisição. O mercado chama de tráfego pago; eu chamo de comprar clientes por um valor menor do que eles deixam no seu caixa. Identifico o vazamento de dinheiro no seu funil e transformo o que antes era custo em investimento que se paga sozinho.
               </p>
             </div>
 
-            {/* Hover Card Display (Desktop) */}
-            <div className="hidden lg:block w-full h-[120px] pointer-events-none z-20 mt-4">
-              <div 
-                className={`bg-surface/90 backdrop-blur-xl border border-primary/30 p-5 rounded-2xl shadow-[0_0_40px_rgba(29,185,84,0.15)] transition-all duration-300 transform ${hoveredService ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
-              >
-                {activeService && (
-                  <>
-                    <div className="font-bold text-primary mb-1 text-sm">{activeService.label}</div>
-                    <p className="text-sm text-foreground/90 leading-relaxed font-medium">
-                      {activeService.hover}
-                    </p>
-                  </>
-                )}
+            {/* Action Groups na Esquerda */}
+            <div className="w-full flex flex-col gap-6 relative mt-4">
+              <div className="flex flex-col gap-4">
+                <h3 className="hero-reveal font-mono text-[10px] tracking-[0.2em] uppercase text-muted text-center lg:text-left">Para empresas: delegue a aquisição</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full">
+                  {services.filter(s => s.group === 'contratar').map(service => (
+                    <a 
+                      key={service.id}
+                      href={`https://wa.me/5591996286994?text=${encodeURIComponent(service.whatsapp)}`}
+                      target="_blank"
+                      rel="noreferrer"
+                      onMouseEnter={() => handleMouseEnter(service)}
+                      onMouseLeave={handleMouseLeave}
+                      className="btn-reveal group relative px-4 py-3 bg-background/50 backdrop-blur-sm border-2 border-primary hover:bg-primary/20 rounded-full transition-all duration-700 overflow-hidden shadow-[0_0_15px_rgba(29,185,84,0.3)] hover:shadow-[0_0_30px_rgba(29,185,84,0.6)] w-full text-center flex items-center justify-center"
+                    >
+                      <span className="relative font-bold uppercase tracking-wider text-[10px] sm:text-[11px] text-primary transition-colors duration-700 flex items-center justify-center gap-2">
+                        {service.label}
+                      </span>
+                    </a>
+                  ))}
+                </div>
+              </div>
+
+              <div className="flex flex-col gap-4">
+                <h3 className="hero-reveal font-mono text-[10px] tracking-[0.2em] uppercase text-muted text-center lg:text-left">Para profissionais: domine e lucre</h3>
+                <div className="flex justify-center lg:justify-start w-full">
+                  {services.filter(s => s.group === 'aprender').map(service => (
+                    <a 
+                      key={service.id}
+                      href={`https://wa.me/5591996286994?text=${encodeURIComponent(service.whatsapp)}`}
+                      target="_blank"
+                      rel="noreferrer"
+                      onMouseEnter={() => handleMouseEnter(service)}
+                      onMouseLeave={handleMouseLeave}
+                      className="btn-reveal group relative px-5 py-3.5 bg-primary text-primary-foreground border-2 border-primary hover:bg-primary/90 rounded-full transition-all duration-700 shadow-[0_0_20px_rgba(29,185,84,0.5)] hover:shadow-[0_0_40px_rgba(29,185,84,0.8)] w-full text-center flex items-center justify-center"
+                    >
+                      <span className="relative font-bold text-[11px] sm:text-xs tracking-widest uppercase flex items-center justify-center gap-2">
+                        {service.label}
+                      </span>
+                    </a>
+                  ))}
+                </div>
+              </div>
+
+              {/* Hover Feedback (Desktop & Mobile) unificado e menor */}
+              <div className="w-full h-[120px] pointer-events-none z-20 mt-2">
+                <div 
+                  className={`bg-surface/90 backdrop-blur-xl border border-primary/30 p-4 rounded-2xl shadow-[0_0_40px_rgba(29,185,84,0.15)] transition-all duration-300 transform text-left ${hoveredService ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+                >
+                  {activeService && (
+                    <>
+                      <div className="font-bold text-primary mb-1 text-xs">{activeService.label}</div>
+                      <p className="text-xs text-foreground/90 leading-relaxed font-medium">
+                        {activeService.hover}
+                      </p>
+                    </>
+                  )}
+                </div>
               </div>
             </div>
           </div>
 
-          {/* Lado Direito - Action Groups */}
-          <div className="flex-1 w-full max-w-[95%] sm:max-w-2xl lg:max-w-md xl:max-w-lg mx-auto flex flex-col gap-10 relative lg:mt-4">
-            
-            <div className="flex flex-col gap-5">
-              <h3 className="hero-reveal font-mono text-[11px] tracking-[0.2em] uppercase text-muted text-center lg:text-left">Para empresas: delegue a aquisição</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 w-full">
-                {services.filter(s => s.group === 'contratar').map(service => (
-                  <a 
-                    key={service.id}
-                    href={`https://wa.me/5591996286994?text=${encodeURIComponent(service.whatsapp)}`}
-                    target="_blank"
-                    rel="noreferrer"
-                    onMouseEnter={() => handleMouseEnter(service)}
-                    onMouseLeave={handleMouseLeave}
-                    className="btn-reveal group relative px-4 py-4 bg-background/50 backdrop-blur-sm border-2 border-primary hover:bg-primary/20 rounded-full transition-all duration-700 overflow-hidden shadow-[0_0_15px_rgba(29,185,84,0.3)] hover:shadow-[0_0_30px_rgba(29,185,84,0.6)] w-full text-center flex items-center justify-center"
-                  >
-                    <span className="relative font-bold uppercase tracking-wider text-[11px] sm:text-xs text-primary transition-colors duration-700 flex items-center justify-center gap-2">
-                      {service.label}
-                    </span>
-                  </a>
-                ))}
-              </div>
-            </div>
-
-            <div className="flex flex-col gap-5 mt-2">
-              <h3 className="hero-reveal font-mono text-[11px] tracking-[0.2em] uppercase text-muted text-center lg:text-left">Para profissionais: domine e lucre</h3>
-              <div className="flex justify-center lg:justify-start w-full">
-                {services.filter(s => s.group === 'aprender').map(service => (
-                  <a 
-                    key={service.id}
-                    href={`https://wa.me/5591996286994?text=${encodeURIComponent(service.whatsapp)}`}
-                    target="_blank"
-                    rel="noreferrer"
-                    onMouseEnter={() => handleMouseEnter(service)}
-                    onMouseLeave={handleMouseLeave}
-                    className="btn-reveal group relative px-6 py-5 bg-primary text-primary-foreground border-2 border-primary hover:bg-primary/90 rounded-full transition-all duration-700 shadow-[0_0_20px_rgba(29,185,84,0.5)] hover:shadow-[0_0_40px_rgba(29,185,84,0.8)] w-full text-center flex items-center justify-center"
-                  >
-                    <span className="relative font-bold text-xs sm:text-sm tracking-widest uppercase flex items-center justify-center gap-2">
-                      {service.label}
-                    </span>
-                  </a>
-                ))}
-              </div>
-            </div>
-
-            {/* Mobile Hover Feedback */}
-            <div className="lg:hidden mt-2 h-[140px] w-full">
-              <div 
-                className={`bg-surface border border-primary/40 p-5 rounded-2xl text-left shadow-[0_0_20px_rgba(29,185,84,0.2)] transition-all duration-300 transform ${hoveredService ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
-              >
-                {activeService && (
-                  <>
-                    <div className="font-bold text-primary mb-2 text-sm">{activeService.label}</div>
-                    <p className="text-sm text-muted leading-relaxed">
-                      {activeService.hover}
-                    </p>
-                  </>
-                )}
-              </div>
-            </div>
+          {/* Lado Direito - Imagem dos Sócios */}
+          <div className="flex-1 w-full relative min-h-[450px] lg:min-h-full flex items-end justify-center lg:justify-end z-10 mt-4 lg:mt-0 hero-reveal">
+             <div className="relative w-full max-w-[450px] lg:max-w-[550px] xl:max-w-[650px] aspect-[4/5] lg:aspect-auto lg:h-full flex items-end">
+                <Image 
+                  src="/VINICIUS_GLAUBER.png" 
+                  alt="Vinícius Valente e Glauber Luciano" 
+                  fill 
+                  className="object-contain object-bottom drop-shadow-[0_0_30px_rgba(0,0,0,0.5)]" 
+                  priority
+                />
+                
+                {/* Tags de Nome Flutuantes */}
+                <div className="absolute left-[10%] bottom-[30%] lg:left-[5%] lg:bottom-[35%] bg-primary px-3 py-1.5 shadow-[0_0_20px_rgba(29,185,84,0.4)] rotate-[-3deg] animate-in fade-in zoom-in duration-1000 delay-500 z-20">
+                   <span className="font-heading font-black text-primary-foreground text-[10px] sm:text-xs tracking-widest uppercase">VINÍCIUS VALENTE</span>
+                </div>
+                <div className="absolute right-[5%] bottom-[20%] lg:right-[0%] lg:bottom-[25%] bg-primary px-3 py-1.5 shadow-[0_0_20px_rgba(29,185,84,0.4)] rotate-[3deg] animate-in fade-in zoom-in duration-1000 delay-700 z-20">
+                   <span className="font-heading font-black text-primary-foreground text-[10px] sm:text-xs tracking-widest uppercase">GLAUBER LUCIANO</span>
+                </div>
+             </div>
           </div>
         </div>
       </div>
