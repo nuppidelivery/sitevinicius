@@ -96,8 +96,9 @@ export function Hero() {
             <span className="flex h-[2px] w-6 md:w-8 bg-primary ml-3 md:ml-4 lg:hidden" />
           </div>
 
-          <h1 className="hero-reveal text-3xl sm:text-4xl lg:text-[2.5rem] font-bold tracking-tight mb-5 leading-[1.15] text-foreground mx-auto lg:mx-0 max-w-2xl lg:w-[110%]">
-            Quem aparece primeiro para o cliente, <br className="hidden lg:block" /> <span className="text-primary font-bold">você ou o seu concorrente?</span>
+          <h1 className="hero-reveal flex flex-col text-center lg:text-left tracking-tight mb-5 leading-[1.1] text-foreground mx-auto lg:mx-0 max-w-full">
+            <span className="text-[1.35rem] sm:text-3xl lg:text-[2rem] font-bold mb-1">Quem aparece primeiro para o cliente,</span>
+            <span className="text-2xl sm:text-[2.2rem] lg:text-[2.75rem] text-primary font-black">você ou o seu concorrente?</span>
           </h1>
 
           <div className="hero-reveal text-sm md:text-base text-muted mb-8 leading-[1.6] text-pretty max-w-xl mx-auto lg:mx-0">
