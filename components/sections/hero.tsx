@@ -97,7 +97,7 @@ export function Hero() {
           </div>
 
           <h1 className="hero-reveal text-3xl sm:text-4xl lg:text-[2.75rem] font-bold tracking-tight mb-5 leading-[1.15] text-foreground text-balance max-w-xl mx-auto lg:mx-0">
-            O seu próximo cliente está sendo comprado <br className="hidden lg:block" /> pelo seu <span className="text-primary italic font-normal">concorrente.</span>
+            Quem aparece primeiro para o cliente <br className="hidden lg:block" /> <span className="text-primary font-bold">você ou o seu concorrente?</span>
           </h1>
 
           <div className="hero-reveal text-sm md:text-base text-muted mb-8 leading-[1.6] text-pretty max-w-xl mx-auto lg:mx-0">
