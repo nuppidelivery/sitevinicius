@@ -41,14 +41,13 @@ export default function RootLayout({
             t.src=v;s=b.getElementsByTagName(e)[0];
             s.parentNode.insertBefore(t,s)}(window, document,'script',
             'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '1341790971340686');
-            fbq('track', 'PageView');
+            fbq('init', '1360895475508397');
           `}
         </Script>
       </head>
       <body className={`${inter.variable} ${montserrat.variable} font-sans bg-background text-foreground min-h-screen flex flex-col`}>
         <noscript>
-          <img height="1" width="1" style={{ display: "none" }} src="https://www.facebook.com/tr?id=1341790971340686&ev=PageView&noscript=1" alt="" />
+          <img height="1" width="1" style={{ display: "none" }} src="https://www.facebook.com/tr?id=1360895475508397&ev=PageView&noscript=1" alt="" />
         </noscript>
         <PixelEvents />
         <SmoothScrollProvider>

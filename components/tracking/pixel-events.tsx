@@ -6,28 +6,66 @@ import { usePathname } from "next/navigation";
 export function PixelEvents() {
   const pathname = usePathname();
   const trackedScrolls = useRef<Set<number>>(new Set());
-  const DEBUG = process.env.NODE_ENV === "development"; // Log apenas em dev
+  const DEBUG = process.env.NODE_ENV === "development";
 
   const log = (msg: string, data?: any) => {
     if (DEBUG) console.log(`[Meta Pixel Tracker] ${msg}`, data || "");
   };
 
-  const safeFbq = (action: string, eventName: string, data?: any) => {
+  const getCookie = (name: string) => {
+    if (typeof document === "undefined") return undefined;
+    const value = `; ${document.cookie}`;
+    const parts = value.split(`; ${name}=`);
+    if (parts.length === 2) return parts.pop()?.split(";").shift();
+    return undefined;
+  };
+
+  const generateEventId = () => {
+    return Math.random().toString(36).substring(2, 15) + Date.now().toString(36);
+  };
+
+  const fireMetaEvent = (eventName: string, data: any = {}, custom: boolean = false) => {
+    const eventId = generateEventId();
+    const action = custom ? "trackCustom" : "track";
+
+    // 1. Disparo Frontend (Pixel)
     if (typeof window !== "undefined" && window.fbq) {
-      window.fbq(action, eventName, data);
-      log(`Fired ${eventName}`, data);
+      window.fbq(action, eventName, data, { eventID: eventId });
+      log(`Fired ${eventName} (Pixel)`, { data, eventId });
     } else {
-      log(`fbq not found, missed ${eventName}`, data);
+      log(`fbq not found, missed ${eventName} (Pixel)`, data);
     }
+
+    // 2. Disparo Backend (CAPI)
+    const fbp = getCookie("_fbp");
+    const fbc = getCookie("_fbc");
+
+    fetch("/api/capi", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        event_name: eventName,
+        event_time: Math.floor(Date.now() / 1000),
+        event_source_url: window.location.href,
+        event_id: eventId,
+        user_data: {
+          fbp,
+          fbc,
+        },
+        custom_data: data,
+      }),
+    }).catch(err => {
+      log(`Failed to send CAPI for ${eventName}`, err);
+    });
   };
 
   // Disparar ViewContent e registrar PageView a cada mudança de rota (SPA)
   useEffect(() => {
-    // Em SPAs como Next.js, o carregamento inicial dispara o PageView no layout, 
-    // mas precisamos garantir que disparos em novas páginas funcionem.
-    // O ViewContent acompanha cada nova visualização.
-    safeFbq("track", "PageView");
-    safeFbq("track", "ViewContent", { content_name: document.title, content_url: window.location.href });
+    // Como removemos do layout.tsx, sempre disparamos aqui com event_id
+    fireMetaEvent("PageView");
+    fireMetaEvent("ViewContent", { content_name: document.title, content_url: window.location.href });
     
     // Resetar o tracking de scroll ao mudar de página
     trackedScrolls.current.clear();
@@ -49,7 +87,7 @@ export function PixelEvents() {
       thresholds.forEach((threshold) => {
         if (percentage >= threshold && !trackedScrolls.current.has(threshold)) {
           trackedScrolls.current.add(threshold);
-          safeFbq("trackCustom", `Scroll${threshold}`);
+          fireMetaEvent(`Scroll${threshold}`, {}, true);
         }
       });
     };
@@ -74,26 +112,37 @@ export function PixelEvents() {
       
       let category = "navigation";
       let isCta = false;
+      let standardEvent = "";
 
       // 1. Verificar se é WhatsApp
       if (href.includes("wa.me") || href.includes("api.whatsapp.com") || text.toLowerCase().includes("whatsapp")) {
         category = "whatsapp";
         isCta = true;
+        standardEvent = "Contact";
       } 
       // 2. Verificar se é Email
       else if (href.includes("mailto:")) {
         category = "email";
         isCta = true;
+        standardEvent = "Contact";
       }
-      // 3. Verificar se é botão explícito
-      else if (tagName === "button" || tagName === "input") {
-        category = "button_click";
+      // 3. Verificar se é compra (Purchase)
+      else if (/comprar|checkout|pagamento/i.test(text) || href.includes("checkout")) {
+        category = "purchase_click";
         isCta = true;
+        standardEvent = "Purchase";
       }
-      // 4. Verificar se tem texto forte de CTA em links
-      else if (/falar|quero|saiba mais|agendar|comprar|assinar|ver casos/i.test(text)) {
-        category = "cta_link";
+      // 4. Verificar se é cadastro (CompleteRegistration)
+      else if (/cadastrar|criar conta|assinar/i.test(text)) {
+        category = "registration_click";
         isCta = true;
+        standardEvent = "CompleteRegistration";
+      }
+      // 5. Verificar se é botão explícito de Lead
+      else if (tagName === "button" || tagName === "input" || /agendar|enviar|quero|resultados|saiba mais/i.test(text)) {
+        category = "lead_click";
+        isCta = true;
+        standardEvent = "Lead";
       }
 
       if (isCta) {
@@ -102,17 +151,14 @@ export function PixelEvents() {
           page_url: window.location.href,
           button_id: id,
           category: category,
-          timestamp: new Date().toISOString(),
         };
 
         // Disparo Customizado de CTA
-        safeFbq("trackCustom", "CTA_Click", eventData);
+        fireMetaEvent("CTA_Click", eventData, true);
 
-        // Disparos Padrão (Standard Events) dependendo da categoria
-        if (category === "whatsapp" || category === "email") {
-          safeFbq("track", "Contact", eventData);
-        } else if (category === "button_click" && /agendar|enviar|quero|resultados/i.test(text)) {
-          safeFbq("track", "Lead", eventData);
+        // Disparo Padrão (Standard Event)
+        if (standardEvent) {
+          fireMetaEvent(standardEvent, eventData);
         }
       }
     };
