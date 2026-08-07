@@ -24,7 +24,7 @@ export function PixelEvents() {
     return Math.random().toString(36).substring(2, 15) + Date.now().toString(36);
   };
 
-  const fireMetaEvent = (eventName: string, data: any = {}, custom: boolean = false) => {
+  const fireMetaEvent = (eventName: string, data: any = {}, custom: boolean = false, browserOnly: boolean = false) => {
     const eventId = generateEventId();
     const action = custom ? "trackCustom" : "track";
 
@@ -37,33 +37,34 @@ export function PixelEvents() {
     }
 
     // 2. Disparo Backend (CAPI)
-    const fbp = getCookie("_fbp");
-    const fbc = getCookie("_fbc");
+    if (!browserOnly) {
+      const fbp = getCookie("_fbp");
+      const fbc = getCookie("_fbc");
 
-    fetch("/api/capi", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        event_name: eventName,
-        event_time: Math.floor(Date.now() / 1000),
-        event_source_url: window.location.href,
-        event_id: eventId,
-        user_data: {
-          fbp,
-          fbc,
+      fetch("/api/capi", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
         },
-        custom_data: data,
-      }),
-    }).catch(err => {
-      log(`Failed to send CAPI for ${eventName}`, err);
-    });
+        body: JSON.stringify({
+          event_name: eventName,
+          event_time: Math.floor(Date.now() / 1000),
+          event_source_url: window.location.href,
+          event_id: eventId,
+          user_data: {
+            fbp,
+            fbc,
+          },
+          custom_data: data,
+        }),
+      }).catch(err => {
+        log(`Failed to send CAPI for ${eventName}`, err);
+      });
+    }
   };
 
   // Disparar ViewContent e registrar PageView a cada mudança de rota (SPA)
   useEffect(() => {
-    // Como removemos do layout.tsx, sempre disparamos aqui com event_id
     fireMetaEvent("PageView");
     fireMetaEvent("ViewContent", { content_name: document.title, content_url: window.location.href });
     
@@ -71,25 +72,56 @@ export function PixelEvents() {
     trackedScrolls.current.clear();
   }, [pathname]);
 
-  // Scroll Tracking
+  // Timer Tracking (30s, 60s, 120s) - Limpo na desmontagem ou troca de rota
   useEffect(() => {
+    const timers: NodeJS.Timeout[] = [];
+    const thresholds = [30, 60, 120];
+    
+    thresholds.forEach((time) => {
+      const timer = setTimeout(() => {
+        // Apenas browser-side
+        fireMetaEvent(`Time${time}s`, { page_url: window.location.href }, true, true);
+      }, time * 1000);
+      timers.push(timer);
+    });
+
+    return () => {
+      timers.forEach(clearTimeout);
+    };
+  }, [pathname]);
+
+  // Scroll Tracking com Throttle (50%, 75%, 90%)
+  useEffect(() => {
+    let ticking = false;
+
     const handleScroll = () => {
-      const scrollY = window.scrollY;
-      const docHeight = document.documentElement.scrollHeight;
-      const winHeight = window.innerHeight;
-      const maxScroll = docHeight - winHeight;
-      
-      if (maxScroll <= 0) return;
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const scrollY = window.scrollY;
+          const docHeight = document.documentElement.scrollHeight;
+          const winHeight = window.innerHeight;
+          const maxScroll = docHeight - winHeight;
+          
+          if (maxScroll <= 0) {
+            ticking = false;
+            return;
+          }
 
-      const percentage = (scrollY / maxScroll) * 100;
-      const thresholds = [25, 50, 75, 90, 100];
+          const percentage = (scrollY / maxScroll) * 100;
+          const thresholds = [50, 75, 90];
 
-      thresholds.forEach((threshold) => {
-        if (percentage >= threshold && !trackedScrolls.current.has(threshold)) {
-          trackedScrolls.current.add(threshold);
-          fireMetaEvent(`Scroll${threshold}`, {}, true);
-        }
-      });
+          thresholds.forEach((threshold) => {
+            if (percentage >= threshold && !trackedScrolls.current.has(threshold)) {
+              trackedScrolls.current.add(threshold);
+              // Apenas browser-side
+              fireMetaEvent(`Scroll${threshold}`, { page_url: window.location.href }, true, true);
+            }
+          });
+          
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -108,57 +140,51 @@ export function PixelEvents() {
       const tagName = cta.tagName.toLowerCase();
       const href = cta.getAttribute("href") || "";
       const text = (cta.innerText || cta.getAttribute("value") || cta.getAttribute("aria-label") || "").trim();
-      const id = cta.id || "";
       
+      // Detecção de clique no WhatsApp (separado de conversões de lead genéricas)
+      if (href.includes("wa.me") || href.includes("api.whatsapp.com") || text.toLowerCase().includes("whatsapp")) {
+        const buttonLocation = cta.closest('section')?.id || 'undefined';
+        const eventData = {
+          button_text: text.substring(0, 50),
+          page_url: window.location.href,
+          page_path: window.location.pathname,
+          button_location: buttonLocation
+        };
+        // Dual-tracking (CAPI + Pixel)
+        fireMetaEvent("WhatsAppClick", eventData, true, false);
+        return; // Interrompe para não disparar outras lógicas
+      }
+
+      // Lógicas secundárias e eventos genéricos
       let category = "navigation";
       let isCta = false;
       let standardEvent = "";
 
-      // 1. Verificar se é WhatsApp
-      if (href.includes("wa.me") || href.includes("api.whatsapp.com") || text.toLowerCase().includes("whatsapp")) {
-        category = "whatsapp";
-        isCta = true;
-        standardEvent = "Contact";
-      } 
-      // 2. Verificar se é Email
-      else if (href.includes("mailto:")) {
+      if (href.includes("mailto:")) {
         category = "email";
         isCta = true;
         standardEvent = "Contact";
-      }
-      // 3. Verificar se é compra (Purchase)
-      else if (/comprar|checkout|pagamento/i.test(text) || href.includes("checkout")) {
+      } else if (/comprar|checkout|pagamento/i.test(text) || href.includes("checkout")) {
         category = "purchase_click";
         isCta = true;
         standardEvent = "Purchase";
-      }
-      // 4. Verificar se é cadastro (CompleteRegistration)
-      else if (/cadastrar|criar conta|assinar/i.test(text)) {
+      } else if (/cadastrar|criar conta|assinar/i.test(text)) {
         category = "registration_click";
         isCta = true;
         standardEvent = "CompleteRegistration";
-      }
-      // 5. Verificar se é botão explícito de Lead
-      else if (tagName === "button" || tagName === "input" || /agendar|enviar|quero|resultados|saiba mais/i.test(text)) {
-        category = "lead_click";
-        isCta = true;
-        standardEvent = "Lead";
       }
 
       if (isCta) {
         const eventData = {
           button_text: text.substring(0, 50),
           page_url: window.location.href,
-          button_id: id,
           category: category,
         };
 
-        // Disparo Customizado de CTA
-        fireMetaEvent("CTA_Click", eventData, true);
-
-        // Disparo Padrão (Standard Event)
+        // Disparo Customizado de CTA e Padrão para itens legados
+        fireMetaEvent("CTA_Click", eventData, true, false);
         if (standardEvent) {
-          fireMetaEvent(standardEvent, eventData);
+          fireMetaEvent(standardEvent, eventData, false, false);
         }
       }
     };
