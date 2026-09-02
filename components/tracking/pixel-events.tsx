@@ -3,9 +3,10 @@
 import { useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 
-export function PixelEvents() {
+export function PixelEvents({ initialEventId }: { initialEventId?: string }) {
   const pathname = usePathname();
   const trackedScrolls = useRef<Set<number>>(new Set());
+  const isInitialMount = useRef(true);
   const DEBUG = process.env.NODE_ENV === "development";
 
   const log = (msg: string, data?: any) => {
@@ -24,8 +25,14 @@ export function PixelEvents() {
     return Math.random().toString(36).substring(2, 15) + Date.now().toString(36);
   };
 
-  const fireMetaEvent = (eventName: string, data: any = {}, custom: boolean = false, browserOnly: boolean = false) => {
-    const eventId = generateEventId();
+  const fireMetaEvent = (
+    eventName: string,
+    data: any = {},
+    custom: boolean = false,
+    browserOnly: boolean = false,
+    forceEventId?: string
+  ) => {
+    const eventId = forceEventId || generateEventId();
     const action = custom ? "trackCustom" : "track";
 
     // 1. Disparo Frontend (Pixel)
@@ -65,12 +72,19 @@ export function PixelEvents() {
 
   // Disparar ViewContent e registrar PageView a cada mudança de rota (SPA)
   useEffect(() => {
-    fireMetaEvent("PageView");
+    if (isInitialMount.current && initialEventId) {
+      // Usa o ID gerado no servidor para deduplicar o PageView do script base
+      fireMetaEvent("PageView", {}, false, false, initialEventId);
+      isInitialMount.current = false;
+    } else {
+      fireMetaEvent("PageView");
+    }
+    
     fireMetaEvent("ViewContent", { content_name: document.title, content_url: window.location.href });
     
     // Resetar o tracking de scroll ao mudar de página
     trackedScrolls.current.clear();
-  }, [pathname]);
+  }, [pathname, initialEventId]);
 
   // Timer Tracking (30s, 60s, 120s) - Limpo na desmontagem ou troca de rota
   useEffect(() => {

@@ -22,12 +22,15 @@ export const metadata: Metadata = {
 };
 
 import { SmoothScrollProvider } from "@/components/layout/smooth-scroll";
+import crypto from 'crypto';
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const initialEventId = crypto.randomUUID();
+
   return (
     <html lang="pt-BR" className="dark scroll-smooth">
       <head>
@@ -42,6 +45,7 @@ export default function RootLayout({
             s.parentNode.insertBefore(t,s)}(window, document,'script',
             'https://connect.facebook.net/en_US/fbevents.js');
             fbq('init', '1360895475508397');
+            fbq('track', 'PageView', {}, { eventID: '${initialEventId}' });
           `}
         </Script>
       </head>
@@ -49,7 +53,7 @@ export default function RootLayout({
         <noscript>
           <img height="1" width="1" style={{ display: "none" }} src="https://www.facebook.com/tr?id=1360895475508397&ev=PageView&noscript=1" alt="" />
         </noscript>
-        <PixelEvents />
+        <PixelEvents initialEventId={initialEventId} />
         <SmoothScrollProvider>
           <Navbar />
           {children}
