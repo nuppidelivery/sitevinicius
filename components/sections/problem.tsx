@@ -8,23 +8,23 @@ export function Problem() {
   const problems = [
     {
       icon: <Flame className="w-8 h-8 text-primary" />,
-      title: "Leads baratos que não pagam a conta",
-      desc: "Métrica de vaidade engana. Seu CPL (custo por lead) pode ser baixo, mas se eles não têm limite no cartão ou não respondem no WhatsApp, você está financiando curiosos em vez de atrair compradores."
+      title: "Leads que não compram",
+      desc: "Leads baratos não enchem o caixa. Se eles não respondem ou não têm dinheiro para comprar, você está apenas financiando curiosos."
     },
     {
       icon: <Target className="w-8 h-8 text-primary" />,
-      title: "Demora fatal no atendimento",
-      desc: "Você gera o lead, mas seu time demora três horas para responder. Nesse intervalo, a emoção de compra evaporou e ele já acionou outra empresa. Você pagou por um cliente e deu de presente para a concorrência."
+      title: "Demora no atendimento",
+      desc: "Seu time demora para responder. Nesse intervalo, o cliente esfria e procura outra empresa. Você paga pelo lead e dá de presente para a concorrência."
     },
     {
       icon: <TrendingDown className="w-8 h-8 text-primary" />,
-      title: "Fadiga de anúncios sem renovação",
-      desc: "A mesma imagem rodando há meses. O algoritmo cansa, o custo dispara e sua empresa some do radar. Escala exige um processo fabril de criação, teste e descarte rápido daquilo que não funciona mais."
+      title: "Fadiga de anúncios",
+      desc: "Anúncios antigos fazem o custo disparar e sua empresa sumir do radar. Escalar exige testar e descartar rápido o que não funciona."
     },
     {
       icon: <Settings className="w-8 h-8 text-primary" />,
-      title: "A caixa-preta da sua agência",
-      desc: "Você não sabe qual campanha traz retorno e qual torra o dinheiro. Se a sua agência desaparecer hoje, você perde todo o histórico de inteligência. Sem governança de dados, você é refém."
+      title: "Falta de controle",
+      desc: "Você não sabe qual campanha traz retorno. Sem governança dos próprios dados, você vira refém e perde inteligência de mercado."
     }
   ];
 
@@ -44,10 +44,10 @@ export function Problem() {
             <span className="flex h-[1px] w-8 bg-primary ml-3"></span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold max-w-3xl mb-6 leading-[1.1] text-balance mx-auto">
-            O seu problema de vendas não é falta de leads, é falta de <em className="italic font-normal text-primary">inteligência na conversão.</em>
+            O problema não é falta de leads, é falta de <em className="italic font-normal text-primary">processo comercial.</em>
           </h2>
           <p className="text-lg text-muted max-w-2xl leading-[1.7] text-pretty mx-auto">
-            Você aumenta a verba, mas o lucro encolhe. Essa conta não fecha porque você está tratando uma guerra de atenção com armas amadoras. O diagnóstico quase sempre é o mesmo:
+            Aumentar a verba sem ter uma estrutura organizada só faz o seu lucro encolher. O diagnóstico quase sempre é o mesmo:
           </p>
         </motion.div>
 

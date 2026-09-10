@@ -23,7 +23,7 @@ export function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="https://www.instagram.com/viniciusvalent_/" target="_blank" rel="noopener noreferrer" className="text-xs text-muted hover:text-primary transition-colors tracking-[0.05em] uppercase">
+              <Link href="https://www.instagram.com/viniciusweb.ads/" target="_blank" rel="noopener noreferrer" className="text-xs text-muted hover:text-primary transition-colors tracking-[0.05em] uppercase">
                 Instagram
               </Link>
             </li>

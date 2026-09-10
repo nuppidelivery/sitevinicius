@@ -38,8 +38,8 @@ const config: Config = {
         "hero-glow": "conic-gradient(from 180deg at 50% 50%, #1DB95433 0deg, #179b4411 180deg, #1DB95433 360deg)",
       },
       fontFamily: {
-        sans: ["var(--font-inter)"],
-        heading: ["var(--font-montserrat)"],
+        sans: ["var(--font-sora)"],
+        heading: ["var(--font-sora)"],
       },
       keyframes: {
         marquee: {

@@ -5,21 +5,21 @@ import { Check, X } from "lucide-react";
 
 export function Comparison() {
   const withoutService = [
-    "Dinheiro injetado em anúncios sem saber se volta",
-    "Comercial refém de indicações que demoram a chegar",
-    "Mensagens vazias que o cliente apenas ignora",
-    "Vendas na montanha-russa: um mês bom, três ruins",
-    "Vendedores implorando atenção de curiosos",
-    "Falta de controle, dados e governança estratégica"
+    "Anúncios sem previsibilidade de retorno",
+    "Dependência exclusiva de indicações",
+    "Mensagens ignoradas pelos clientes",
+    "Faturamento imprevisível",
+    "Equipe perdendo tempo com curiosos",
+    "Falta de controle e inteligência de dados"
   ];
 
   const withService = [
-    "Retorno medido sobre cada real investido",
-    "Esteira de aquisição que funciona todos os dias",
-    "Comunicação baseada no comportamento e dor do cliente",
-    "Faturamento escalável e margem protegida",
-    "WhatsApp com fluxo contínuo de clientes qualificados",
-    "Total visibilidade da operação em painéis ao vivo"
+    "Retorno claro sobre o investimento",
+    "Atração de clientes todos os dias",
+    "Comunicação focada no cliente",
+    "Faturamento estável e previsível",
+    "WhatsApp recebendo contatos qualificados",
+    "Visibilidade total da sua operação"
   ];
 
   return (

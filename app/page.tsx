@@ -2,9 +2,6 @@ import { Hero } from "@/components/sections/hero";
 import { MarqueeText } from "@/components/sections/marquee-text";
 import { Problem } from "@/components/sections/problem";
 import { Comparison } from "@/components/sections/comparison";
-import { Services } from "@/components/sections/services";
-import { Process } from "@/components/sections/process";
-import { Results } from "@/components/sections/results";
 import { About } from "@/components/sections/about";
 import { FAQ } from "@/components/sections/faq";
 import { Cta } from "@/components/sections/cta";
@@ -13,6 +10,7 @@ export default function Home() {
   return (
     <main className="flex-1 flex flex-col w-full">
       <Hero />
+      <About />
       <MarqueeText phrases={[
         "Decidir depois é decidir perder dinheiro.", 
         "Atenção custa caro, mas a invisibilidade custa a sua empresa.", 
@@ -22,17 +20,6 @@ export default function Home() {
       ]} />
       <Problem />
       <Comparison />
-      <Services />
-      <MarqueeText phrases={[
-        "Menos promessa mágica, mais matemática de vendas.", 
-        "Investimento real se paga com fluxo de caixa previsível.", 
-        "Parar de adivinhar é o primeiro passo para começar a escalar.", 
-        "Nenhuma campanha salva uma oferta que o mercado rejeita.", 
-        "Transformamos a complexidade tecnológica em dinheiro na conta."
-      ]} />
-      <Process />
-      <Results />
-      <About />
       <FAQ />
       <MarqueeText phrases={[
         "Você pode aprender errando ou escalar com processo validado.", 

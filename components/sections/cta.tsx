@@ -23,27 +23,21 @@ export function Cta() {
           </div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-[72px] font-bold mb-6 leading-[1.1] text-balance mx-auto">
-            Decisões baseadas em achismos custam o futuro da sua <em className="italic font-normal text-primary">empresa.</em>
+            Pronto para atrair mais <em className="italic font-normal text-primary">clientes?</em>
           </h2>
           
           <p className="text-lg md:text-xl text-muted mb-12 max-w-2xl mx-auto leading-[1.7] text-pretty">
-            O dinheiro que você não está ganhando agora mesmo está indo para alguém mais preparado. Agende uma conversa estratégica e vamos desenhar um ecossistema focado no retorno do seu capital.
+            Agende uma conversa e vamos desenhar uma estrutura de vendas focada no crescimento e previsibilidade do seu negócio.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center w-full sm:w-auto">
             <a 
-              href="https://wa.me/5591996286994?text=Olá, Vinícius! O meu negócio precisa de previsibilidade de caixa. Gostaria de agendar uma análise estratégica."
+              href="https://wa.me/5591996286994?text=Olá, Vinícius! Gostaria de uma análise para atrair mais clientes."
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center justify-center h-14 min-h-[56px] px-8 text-sm font-bold tracking-[0.1em] uppercase w-full sm:w-auto shadow-[0_0_20px_rgba(29,185,84,0.3)] hover:shadow-[0_0_30px_rgba(29,185,84,0.5)] transition-all bg-primary text-primary-foreground rounded-sm hover:bg-primary/90"
             >
-              Mapear meu crescimento agora
-            </a>
-            <a 
-              href="mailto:contato@viniciusvalente.com.br"
-              className="inline-flex items-center justify-center h-14 min-h-[56px] px-6 text-sm font-bold tracking-[0.05em] w-full sm:w-auto border border-transparent hover:border-surface-border transition-colors text-foreground rounded-sm"
-            >
-              Prefiro e-mail
+              Falar no WhatsApp
             </a>
           </div>
         </motion.div>

@@ -69,17 +69,28 @@ export function About() {
               ))}
             </div>
 
-            <div className="space-y-6 text-muted text-lg leading-[1.7] text-pretty">
+            <div className="space-y-6 text-muted text-lg leading-[1.7] text-pretty mb-10">
               <p>
-                Meu trabalho não é criar campanhas bonitinhas para gerar curtidas. Meu trabalho é construir ecossistemas de aquisição que compram clientes por um valor menor do que eles deixam no seu caixa.
+                Não vendo anúncios, construo estruturas de vendas. O foco é simples: fazer o seu negócio atrair clientes prontos para comprar, de forma previsível e contínua.
               </p>
               <p>
-                Trato o seu dinheiro com o respeito de um investidor. Antes de subir qualquer campanha, identifico por onde a sua margem atual está vazando, estruturo a jornada de compra e implemento rastreamento preciso. Sem isso, tráfego é apenas aposta.
+                Antes de iniciar qualquer campanha, mapeio seu funil de ponta a ponta e configuro o rastreamento de dados adequado. Isso evita o desperdício do seu investimento.
               </p>
               <p>
-                O meu objetivo não é te entregar relatórios confusos para justificar gastos. É entregar previsibilidade financeira, onde a tecnologia e os dados trabalham a favor do seu faturamento, protegendo o seu tempo e a sua escala.
+                O objetivo não é entregar um relatório cheio de métricas que não pagam as contas. É entregar previsibilidade, onde a tecnologia e os dados trabalham para aumentar suas vendas, protegendo o seu tempo.
               </p>
             </div>
+
+            <a 
+              href="https://wa.me/5591996286994?text=Olá, Vinícius! Quero parar de jogar dinheiro fora com anúncios e ter lucro previsível."
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex w-full sm:w-fit items-center justify-center px-8 py-4 bg-primary text-white border border-primary hover:bg-primary/90 rounded-xl transition-all duration-500 shadow-[0_0_20px_rgba(29,185,84,0.3)] hover:shadow-[0_0_30px_rgba(29,185,84,0.5)] drop-shadow-md"
+            >
+              <span className="font-bold tracking-widest uppercase text-sm font-heading">
+                Falar no WhatsApp
+              </span>
+            </a>
           </motion.div>
         </div>
       </div>
