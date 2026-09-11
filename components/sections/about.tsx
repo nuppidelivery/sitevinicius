@@ -35,7 +35,7 @@ export function About() {
                   src="/quem-sou-eu.jpeg"
                   alt="Vinícius Valente"
                   fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="object-cover object-[center_20%] md:object-center transition-transform duration-700 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, 40vw"
                 />
               </div>
@@ -50,26 +50,17 @@ export function About() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="w-full lg:w-[60%] flex flex-col order-1 lg:order-2"
           >
-            <div className="flex items-center mb-6">
+            <div className="flex items-center mb-6 order-1">
               <span className="flex h-[1px] w-8 bg-primary mr-3"></span>
               <span className="font-mono text-[11px] tracking-[0.25em] text-primary uppercase font-bold">Quem sou eu</span>
             </div>
             
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 leading-[1.1] text-balance">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 leading-[1.1] text-balance order-2">
               Muito além de <em className="italic font-normal text-primary">apertar botões.</em>
             </h2>
 
-            {/* Badges */}
-            <div className="flex flex-wrap gap-3 mb-8">
-              {badges.map((badge, idx) => (
-                <div key={idx} className="flex items-center gap-2 bg-surface-border/50 border border-primary/20 px-3 py-1.5 rounded-full backdrop-blur-sm shadow-[0_0_10px_rgba(29,185,84,0.05)] hover:shadow-[0_0_15px_rgba(29,185,84,0.15)] transition-shadow">
-                  {badge.icon}
-                  <span className="font-mono text-xs font-semibold text-foreground/90">{badge.text}</span>
-                </div>
-              ))}
-            </div>
-
-            <div className="space-y-6 text-muted text-lg leading-[1.7] text-pretty mb-10">
+            {/* Texto */}
+            <div className="space-y-6 text-muted text-lg leading-[1.7] text-pretty mb-10 order-3 lg:order-4">
               <p>
                 Não vendo anúncios, construo estruturas de vendas. O foco é simples: fazer o seu negócio atrair clientes prontos para comprar, de forma previsível e contínua.
               </p>
@@ -81,11 +72,21 @@ export function About() {
               </p>
             </div>
 
+            {/* Badges */}
+            <div className="flex flex-wrap gap-3 mb-8 order-4 lg:order-3">
+              {badges.map((badge, idx) => (
+                <div key={idx} className="flex items-center gap-2 bg-surface-border/50 border border-primary/20 px-3 py-1.5 rounded-full backdrop-blur-sm shadow-[0_0_10px_rgba(29,185,84,0.05)] hover:shadow-[0_0_15px_rgba(29,185,84,0.15)] transition-shadow">
+                  {badge.icon}
+                  <span className="font-mono text-xs font-semibold text-foreground/90">{badge.text}</span>
+                </div>
+              ))}
+            </div>
+
             <a 
               href="https://wa.me/5591996286994?text=Olá, Vinícius! Quero parar de jogar dinheiro fora com anúncios e ter lucro previsível."
               target="_blank"
               rel="noreferrer"
-              className="inline-flex w-full sm:w-fit items-center justify-center px-8 py-4 bg-primary text-white border border-primary hover:bg-primary/90 rounded-xl transition-all duration-500 shadow-[0_0_20px_rgba(29,185,84,0.3)] hover:shadow-[0_0_30px_rgba(29,185,84,0.5)] drop-shadow-md"
+              className="inline-flex w-full sm:w-fit items-center justify-center px-8 py-4 bg-primary text-white border border-primary hover:bg-primary/90 rounded-xl transition-all duration-500 shadow-[0_0_20px_rgba(29,185,84,0.3)] hover:shadow-[0_0_30px_rgba(29,185,84,0.5)] drop-shadow-md order-5"
             >
               <span className="font-bold tracking-widest uppercase text-sm font-heading">
                 Falar no WhatsApp
