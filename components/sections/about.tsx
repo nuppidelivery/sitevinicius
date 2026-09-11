@@ -18,15 +18,43 @@ export function About() {
       <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[500px] h-[500px] bg-primary/10 blur-[120px] rounded-full pointer-events-none" />
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center lg:items-start">
+        <div className="flex flex-col lg:grid lg:grid-cols-12 gap-8 lg:gap-x-16 lg:gap-y-0 items-center lg:items-start">
           
+          {/* Text Top (Title & Badges) */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="w-full flex flex-col order-1 lg:order-none lg:col-span-7 lg:col-start-6 lg:row-start-1 lg:mb-8"
+          >
+            <div className="flex items-center mb-6">
+              <span className="flex h-[1px] w-8 bg-primary mr-3"></span>
+              <span className="font-mono text-[11px] tracking-[0.25em] text-primary uppercase font-bold">Quem sou eu</span>
+            </div>
+            
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 leading-[1.1] text-balance">
+              Muito além de <em className="italic font-normal text-primary">apertar botões.</em>
+            </h2>
+
+            {/* Badges */}
+            <div className="flex flex-wrap gap-3">
+              {badges.map((badge, idx) => (
+                <div key={idx} className="flex items-center gap-2 bg-surface-border/50 border border-primary/20 px-3 py-1.5 rounded-full backdrop-blur-sm shadow-[0_0_10px_rgba(29,185,84,0.05)] hover:shadow-[0_0_15px_rgba(29,185,84,0.15)] transition-shadow">
+                  {badge.icon}
+                  <span className="font-mono text-xs font-semibold text-foreground/90">{badge.text}</span>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
           {/* Image Side */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="w-[85%] sm:w-[70%] md:w-[60%] lg:w-[40%] max-w-[400px] mx-auto lg:mx-0 lg:mt-4 order-2 lg:order-1"
+            className="w-[85%] sm:w-[70%] md:w-[60%] lg:w-full max-w-[400px] mx-auto lg:mx-0 lg:mt-4 order-2 lg:order-none lg:col-span-5 lg:col-start-1 lg:row-span-2 lg:row-start-1"
           >
             <div className="relative group rounded-xl overflow-hidden shadow-[0_0_40px_rgba(29,185,84,0.15)] border border-surface-border p-2 bg-surface">
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-10 pointer-events-none" />
@@ -42,25 +70,15 @@ export function About() {
             </div>
           </motion.div>
 
-          {/* Text Side */}
+          {/* Text Bottom (Text & Button) */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="w-full lg:w-[60%] flex flex-col order-1 lg:order-2"
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="w-full flex flex-col order-3 lg:order-none lg:col-span-7 lg:col-start-6 lg:row-start-2"
           >
-            <div className="flex items-center mb-6 order-1">
-              <span className="flex h-[1px] w-8 bg-primary mr-3"></span>
-              <span className="font-mono text-[11px] tracking-[0.25em] text-primary uppercase font-bold">Quem sou eu</span>
-            </div>
-            
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 leading-[1.1] text-balance order-2">
-              Muito além de <em className="italic font-normal text-primary">apertar botões.</em>
-            </h2>
-
-            {/* Texto */}
-            <div className="space-y-6 text-muted text-lg leading-[1.7] text-pretty mb-10 order-3 lg:order-4">
+            <div className="space-y-6 text-muted text-lg leading-[1.7] text-pretty mb-10">
               <p>
                 Não vendo anúncios, construo estruturas de vendas. O foco é simples: fazer o seu negócio atrair clientes prontos para comprar, de forma previsível e contínua.
               </p>
@@ -72,21 +90,11 @@ export function About() {
               </p>
             </div>
 
-            {/* Badges */}
-            <div className="flex flex-wrap gap-3 mb-8 order-4 lg:order-3">
-              {badges.map((badge, idx) => (
-                <div key={idx} className="flex items-center gap-2 bg-surface-border/50 border border-primary/20 px-3 py-1.5 rounded-full backdrop-blur-sm shadow-[0_0_10px_rgba(29,185,84,0.05)] hover:shadow-[0_0_15px_rgba(29,185,84,0.15)] transition-shadow">
-                  {badge.icon}
-                  <span className="font-mono text-xs font-semibold text-foreground/90">{badge.text}</span>
-                </div>
-              ))}
-            </div>
-
             <a 
               href="https://wa.me/5591996286994?text=Olá, Vinícius! Quero parar de jogar dinheiro fora com anúncios e ter lucro previsível."
               target="_blank"
               rel="noreferrer"
-              className="inline-flex w-full sm:w-fit items-center justify-center px-8 py-4 bg-primary text-white border border-primary hover:bg-primary/90 rounded-xl transition-all duration-500 shadow-[0_0_20px_rgba(29,185,84,0.3)] hover:shadow-[0_0_30px_rgba(29,185,84,0.5)] drop-shadow-md order-5"
+              className="inline-flex w-full sm:w-fit items-center justify-center px-8 py-4 bg-primary text-white border border-primary hover:bg-primary/90 rounded-xl transition-all duration-500 shadow-[0_0_20px_rgba(29,185,84,0.3)] hover:shadow-[0_0_30px_rgba(29,185,84,0.5)] drop-shadow-md"
             >
               <span className="font-bold tracking-widest uppercase text-sm font-heading">
                 Falar no WhatsApp
